@@ -22,10 +22,12 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Tinhoso": "res://characters/Tinhoso.dch",
 "souza_leao": "res://characters/souza_leao.dch"
 }
 directories/dtl_directory={
-"maintest": "res://timelines test/maintest.dtl"
+"maintest": "res://timelines test/maintest.dtl",
+"morte": "res://timelines test/morte.dtl"
 }
 layout/style_directory={
 "": "res://resources/estilo2.tres",

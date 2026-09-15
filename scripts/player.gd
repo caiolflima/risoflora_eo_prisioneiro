@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 const SPEED = 3.0
 const MOUSE_SENSITIVITY = 0.003
+#const TESTE := "res://scene/ambiente2.tscn"
 
 @onready var head: Node3D = $Head
 @onready var camera_3d: Camera3D = $Head/Camera3D
@@ -63,3 +64,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+
+#func _on_area_3d_body_entered(_body: Node3D) -> void:
+#	get_tree().change_scene_to_file(TESTE)	
+
+
+#func _on_area_3d_body_shape_entered(_body_rid: RID, _body: Node3D, _body_shape_index: int, _local_shape_index: int) -> void:
+	#get_tree().change_scene_to_file(TESTE)	

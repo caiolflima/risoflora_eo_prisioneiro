@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7mcxhakxs5ds"]
+
+[ext_resource type="Script" uid="uid://c352bsoiuv6cd" path="res://scene/world.gd" id="1_8u7xx"]
+[ext_resource type="PackedScene" uid="uid://b06fhe8pdujn3" path="res://scene/player.tscn" id="2_ne7yf"]
+[ext_resource type="PackedScene" uid="uid://ckk6018bj2tdf" path="res://resources/Prison_base_14_09_2026.glb" id="3_rfus2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8u7xx"]
+size = Vector3(0.31347656, 1, 1)
+
+[node name="ambiente" type="Node3D"]
+script = ExtResource("1_8u7xx")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+use_collision = true
+size = Vector3(20, 1, 20)
+
+[node name="Player" parent="." instance=ExtResource("2_ne7yf")]
+
+[node name="Prison_base_14_09_2026" parent="." instance=ExtResource("3_rfus2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46977067, 0.40784627, -1.8806934)
+visible = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.2462717, 0.96920085, 0, -0.96920085, 0.2462717, 0, 10.952457, 0)
+light_color = Color(1, 0.19607843, 0.27058825, 1)
+light_energy = 4.0
+spot_range = 15.31408
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.901072, 1.4751515, 2.7113943)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19471455, 0.56518126, 0.41931152)
+shape = SubResource("BoxShape3D_8u7xx")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43652344, -0.7866659, 0.28097272)
+light_color = Color(1, 1, 0.38431373, 1)
+light_energy = 0.09
+shadow_enabled = true
+omni_range = 0.8450224
+
+[connection signal="body_shape_entered" from="Area3D" to="." method="_on_area_3d_body_shape_entered"]
+[connection signal="body_shape_entered" from="Area3D" to="Player" method="_on_area_3d_body_shape_entered"]

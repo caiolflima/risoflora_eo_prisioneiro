@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bt3witgistx70" path="res://resources/souza2.png" id="2_hjaqi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4qnqm"]
+radius = 0.4165039
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_xo3ru")
@@ -21,4 +22,5 @@ transform = Transform3D(1, 0, 0, 0, 0.81996214, 0.5724178, 0, -0.5724178, 0.8199
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.105, 0, 0, 0, 0.0688862, 0.0792445, 0, -0.0792445, 0.0688862, 0, 1.065, 0)
+pixel_size = 0.007
 texture = ExtResource("2_hjaqi")
