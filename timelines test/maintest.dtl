@@ -1,0 +1,7 @@
+[wait_input]
+join souza_leao (neutral) left
+souza_leao: Hello World game jam test!
+update souza_leao (angry)
+souza_leao: Hey! Por que eu to preso?!
+update souza_leao (happy)
+souza_leao: Pelo menos ainda to vivo!
