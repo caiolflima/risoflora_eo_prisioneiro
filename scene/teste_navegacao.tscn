@@ -1,12 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjhbv33fer3tl"]
+[gd_scene load_steps=8 format=3 uid="uid://cjhbv33fer3tl"]
 
 [ext_resource type="PackedScene" uid="uid://ckk6018bj2tdf" path="res://resources/Prison_base_14_09_2026.glb" id="1_a0rmf"]
 [ext_resource type="Script" uid="uid://dsi4lafhuwpd1" path="res://scene/souza.gd" id="2_7lpv4"]
 [ext_resource type="Texture2D" uid="uid://dpc42j82kh55r" path="res://resources/souza1.png" id="3_gvead"]
 [ext_resource type="PackedScene" uid="uid://cx6kql5tkvydv" path="res://scene/camera_manager.tscn" id="4_gvead"]
+[ext_resource type="Texture2D" uid="uid://bv5ohc4v8emgx" path="res://resources/tileset aberto.png" id="4_rlf72"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rlf72"]
 size = Vector3(1, 1.2568359, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ohbt3"]
+size = Vector3(0.8979492, 1.4631348, 0.45703125)
 
 [node name="Node3D" type="Node3D"]
 
@@ -26,12 +30,24 @@ transform = Transform3D(1, 0, 0, 0, 0.89080834, 0.45437923, 0, -0.45437923, 0.89
 pixel_size = 0.0008
 texture = ExtResource("3_gvead")
 
-[node name="Area3D" type="Area3D" parent="Souza/Sprite3D"]
+[node name="souza_area" type="Area3D" parent="Souza/Sprite3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Souza/Sprite3D/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Souza/Sprite3D/souza_area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12841797, 0)
 shape = SubResource("BoxShape3D_rlf72")
 
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.9397999, -0.20155029, 0.27595907, 1.869289e-08, 0.80754733, 0.58980256, -0.34172493, -0.55429655, 0.7589331, 1.1966637, 0.7244493, -1.4906346)
+pixel_size = 0.015
+texture = ExtResource("4_rlf72")
+
+[node name="bolino" type="Area3D" parent="Sprite3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/bolino"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05102539, 0.67974246, 0.27148438)
+shape = SubResource("BoxShape3D_ohbt3")
+
 [node name="camera_manager" parent="." instance=ExtResource("4_gvead")]
 
-[connection signal="input_event" from="Souza/Sprite3D/Area3D" to="Souza" method="_on_area_3d_input_event"]
+[connection signal="input_event" from="Souza/Sprite3D/souza_area" to="Souza" method="_on_souza_area_input_event"]
+[connection signal="input_event" from="Sprite3D/bolino" to="Souza" method="_on_bolino_input_event"]

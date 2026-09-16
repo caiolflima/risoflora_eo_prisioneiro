@@ -1,0 +1,6 @@
+join souza_leao left
+souza_leao: E o nome desse bicho que apareceu aqui?
+leave souza_leao
+[text_input text="Nome" var="Nome_test" placeholder="Nome" default="Tinhoso"]
+join Tinhoso center
+Tinhoso: {Nome_test}, {Nome_test}!!!
