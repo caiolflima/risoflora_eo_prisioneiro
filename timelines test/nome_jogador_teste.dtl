@@ -1,6 +1,21 @@
 join souza_leao left
-souza_leao: E o nome desse bicho que apareceu aqui?
+souza_leao: Qual seu nome?
 leave souza_leao
-[text_input text="Nome" var="Nome_test" placeholder="Nome" default="Tinhoso"]
+[text_input text="Nome" var="Nome_test" placeholder="Nome" default="Nome"]
 join Tinhoso center
 Tinhoso: {Nome_test}, {Nome_test}!!!
+souza_leao: Quais seus pronomes?
+- Ele/Dele
+	set {pronome1} = "ele"
+	set {pronome2} = "dele"
+	set {pronome3} = ""
+- Ela/Dela
+	set {pronome1} = "ela"
+	set {pronome2} = "dela"
+	set {pronome3} = "a"
+- Ile/Dile
+	set {pronome1} = "ile"
+	set {pronome2} = "dile"
+	set {pronome3} = "e"
+souza_leao: {pronome3} Senhor{pronome3} será bem tratad{pronome3} aqui!\
+{pronome1} já disse tudo! Cuidem bem {pronome2} por aqui!

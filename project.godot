@@ -70,7 +70,10 @@ audio/channel_defaults={
 }
 }
 variables={
-"Nome_test": ""
+"Nome_test": "",
+"pronome1": "",
+"pronome2": "",
+"pronome3": ""
 }
 glossary/default_case_sensitive=true
 
