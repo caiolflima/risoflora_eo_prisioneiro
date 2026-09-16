@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Risoflora_e_o_Prisioneiro"
+config/name="Risoflora_e_o_Bucaneiro"
 run/main_scene="uid://bdewwl4osybb1"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"

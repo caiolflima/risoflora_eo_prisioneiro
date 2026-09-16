@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjhbv33fer3tl"]
+
+[ext_resource type="PackedScene" uid="uid://ckk6018bj2tdf" path="res://resources/Prison_base_14_09_2026.glb" id="1_a0rmf"]
+[ext_resource type="Script" uid="uid://dsi4lafhuwpd1" path="res://scene/souza.gd" id="2_7lpv4"]
+[ext_resource type="Texture2D" uid="uid://dpc42j82kh55r" path="res://resources/souza1.png" id="3_gvead"]
+[ext_resource type="PackedScene" uid="uid://cx6kql5tkvydv" path="res://scene/camera_manager.tscn" id="4_gvead"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rlf72"]
+size = Vector3(1, 1.2568359, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Prison_base_14_09_2026" parent="." instance=ExtResource("1_a0rmf")]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -2.1689744, 0, -1.3666263)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, -1.8243041, 3.835678, 1.2842124)
+omni_range = 9.774077
+
+[node name="Souza" type="Node3D" parent="."]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 2.5045383, 1.2074258, -2.060222)
+script = ExtResource("2_7lpv4")
+
+[node name="Sprite3D" type="Sprite3D" parent="Souza"]
+transform = Transform3D(1, 0, 0, 0, 0.89080834, 0.45437923, 0, -0.45437923, 0.89080834, 0, 0, 0)
+pixel_size = 0.0008
+texture = ExtResource("3_gvead")
+
+[node name="Area3D" type="Area3D" parent="Souza/Sprite3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Souza/Sprite3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12841797, 0)
+shape = SubResource("BoxShape3D_rlf72")
+
+[node name="camera_manager" parent="." instance=ExtResource("4_gvead")]
+
+[connection signal="input_event" from="Souza/Sprite3D/Area3D" to="Souza" method="_on_area_3d_input_event"]
