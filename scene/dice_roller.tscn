@@ -1,0 +1,111 @@
+[gd_scene load_steps=9 format=3 uid="uid://boi44h3hsqonv"]
+
+[ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="1_6umbb"]
+[ext_resource type="Script" uid="uid://bgyxxps1syo16" path="res://scene/dice.gd" id="2_xgpka"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n4amk"]
+size = Vector3(40, 0.1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6umbb"]
+size = Vector3(40, 0.1, 40)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xgpka"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xgpka"]
+size = Vector3(9, 12, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nod6w"]
+albedo_color = Color(1, 0.4392157, 0.5411765, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ieyng"]
+material = SubResource("StandardMaterial3D_nod6w")
+size = Vector3(9, 12, 1)
+
+[node name="DiceRoller" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.146828, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_n4amk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_6umbb")
+
+[node name="Dice" parent="." instance=ExtResource("1_6umbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.091641426, 4.4002686, 0)
+physics_material_override = SubResource("PhysicsMaterial_xgpka")
+gravity_scale = 3.0
+script = ExtResource("2_xgpka")
+rotation_speed_min = 5.0
+rotation_speed_max = 10.0
+throw_speed_min = -10.0
+throw_speed_max = -5.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2474623, 3.1997547, -1.6636896)
+light_energy = 3.0
+omni_range = 8.87134
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11.32303, -0.32855988)
+keep_aspect = 0
+projection = 1
+size = 8.527
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26531005, 0, -3.5802028)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_xgpka")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("BoxMesh_ieyng")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26531005, 0, 2.8424962)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+shape = SubResource("BoxShape3D_xgpka")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
+mesh = SubResource("BoxMesh_ieyng")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7589993, 0, -0.5792382)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
+shape = SubResource("BoxShape3D_xgpka")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4"]
+visible = false
+mesh = SubResource("BoxMesh_ieyng")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.245845, 0, -0.5792382)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5"]
+shape = SubResource("BoxShape3D_xgpka")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5"]
+mesh = SubResource("BoxMesh_ieyng")
