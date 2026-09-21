@@ -48,29 +48,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2474623, 3.1997547, -1.663
 light_energy = 3.0
 omni_range = 8.87134
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(1152, 648)
-render_target_update_mode = 4
-
-[node name="Camera3D" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11.32303, -0.32855988)
-keep_aspect = 0
-projection = 1
-size = 8.527
-
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26531005, 0, -3.5802028)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26531005, 2.7414246, -3.5802028)
 visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
@@ -80,7 +59,7 @@ shape = SubResource("BoxShape3D_xgpka")
 mesh = SubResource("BoxMesh_ieyng")
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26531005, 0, 2.8424962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26531005, 2.7414246, 2.8424962)
 visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
@@ -90,7 +69,7 @@ shape = SubResource("BoxShape3D_xgpka")
 mesh = SubResource("BoxMesh_ieyng")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7589993, 0, -0.5792382)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7589993, 2.7414246, -0.5792382)
 visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4"]
@@ -101,7 +80,7 @@ visible = false
 mesh = SubResource("BoxMesh_ieyng")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.245845, 0, -0.5792382)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.245845, 2.7414246, -0.5792382)
 visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5"]

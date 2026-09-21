@@ -1,5 +1,5 @@
 extends Node3D
-const MOUSE_SENSITIVITY = 0.003
+const MOUSE_SENSITIVITY = 0.01
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:

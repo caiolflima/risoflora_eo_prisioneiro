@@ -22,3 +22,8 @@ souza_leao: Quais seus pronomes?
 	set {pronome4} = "e"
 souza_leao: {pronome4} Senhor{pronome3} será bem tratad{pronome4} aqui!\
 [wave amp=50.0 freq=5.0 connected=1]{pronome1} já disse tudo! Cuidem bem {pronome2} por aqui![/wave]
+souza_leao: [wave amp=50.0 freq=5.0 connected=1]{Nome_test}, agora faz um teste ai pra gente![/wave]
+[signal arg="ligar_teste"]
+[wait time="1.0"]
+do 
+souza_leao: O resultado do seu teste fo {resultado}!

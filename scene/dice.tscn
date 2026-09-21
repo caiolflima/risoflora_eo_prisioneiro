@@ -23,6 +23,7 @@ shape = SubResource("BoxShape3D_xgpka")
 
 [node name="Face3" type="Marker3D" parent="Faces"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15256771, 0.2628798, 0.5226434)
+visible = false
 gizmo_extents = 5.0
 script = ExtResource("2_jktb0")
 value = 3
@@ -35,24 +36,28 @@ value = 2
 
 [node name="Face4" type="Marker3D" parent="Faces"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.478726, 0.2628798, -0.041141927)
+visible = false
 gizmo_extents = 5.0
 script = ExtResource("2_jktb0")
 value = 4
 
 [node name="Face1" type="Marker3D" parent="Faces"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.4982508, 0.2628798, -0.041141927)
+visible = false
 gizmo_extents = 5.0
 script = ExtResource("2_jktb0")
 value = 1
 
 [node name="Face5" type="Marker3D" parent="Faces"]
 transform = Transform3D(1.3113416e-07, 0.99999994, -4.3711385e-08, 3.821371e-15, 4.3711385e-08, 0.99999994, 1, -1.3113414e-07, 1.9106853e-15, -0.13411507, 0.49057907, 0.057490885)
+visible = false
 gizmo_extents = 5.0
 script = ExtResource("2_jktb0")
 value = 5
 
 [node name="Face6" type="Marker3D" parent="Faces"]
 transform = Transform3D(1.3113416e-07, 0.9999999, -3.8213705e-15, -4.371139e-08, 1.9106853e-15, -0.9999999, -1, 1.3113414e-07, 4.3711385e-08, -0.13411507, -0.4998613, 0.057490885)
+visible = false
 gizmo_extents = 5.0
 script = ExtResource("2_jktb0")
 value = 6

@@ -74,7 +74,9 @@ variables={
 "pronome1": "",
 "pronome2": "",
 "pronome3": "",
-"pronome4": ""
+"pronome4": "",
+"resultado": 0.0,
+"visivel": false
 }
 glossary/default_case_sensitive=true
 
