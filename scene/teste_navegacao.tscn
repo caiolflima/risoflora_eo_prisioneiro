@@ -56,13 +56,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05102539, 0.67974246, 0.271
 shape = SubResource("BoxShape3D_ohbt3")
 
 [node name="camera_manager" parent="." instance=ExtResource("4_gvead")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3731594, 3.356758, 1.1850982)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3731594, 14.07245, 2.7138963)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DiceRoller" parent="CanvasLayer" instance=ExtResource("6_ohbt3")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.3731594, 11.052158, 1.1850982)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3731594, 11.052158, 1.1850982)
 script = SubResource("GDScript_nrt13")
 
 [connection signal="input_event" from="Souza/Sprite3D/souza_area" to="Souza" method="_on_souza_area_input_event"]

@@ -45,6 +45,7 @@ throw_speed_max = -5.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2474623, 3.1997547, -1.6636896)
+visible = false
 light_energy = 3.0
 omni_range = 8.87134
 
@@ -88,3 +89,7 @@ shape = SubResource("BoxShape3D_xgpka")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5"]
 mesh = SubResource("BoxMesh_ieyng")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.25468636, 0.96702373, 0, -0.96702373, -0.25468636, 0, 7.83313, 0)
+visible = false
