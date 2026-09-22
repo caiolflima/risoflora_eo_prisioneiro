@@ -23,7 +23,10 @@ souza_leao: Quais seus pronomes?
 souza_leao: {pronome4} Senhor{pronome3} será bem tratad{pronome4} aqui!\
 [wave amp=50.0 freq=5.0 connected=1]{pronome1} já disse tudo! Cuidem bem {pronome2} por aqui![/wave]
 souza_leao: [wave amp=50.0 freq=5.0 connected=1]{Nome_test}, agora faz um teste ai pra gente![/wave]
+leave Tinhoso
 [signal arg="ligar_teste"]
-[wait time="1.5"]
-[signal arg="coletar_resultado"]
-souza_leao: O resultado do seu teste fo {resultado}!
+[wait time="3.0"]
+[signal arg="coletar_resultado1"]
+[signal arg="coletar_resultado2"]
+souza_leao: O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+[signal arg="limpar_resultado"]

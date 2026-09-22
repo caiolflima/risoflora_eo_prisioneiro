@@ -4,33 +4,45 @@ extends RigidBody3D
 @export var rotation_speed_max: float
 @export var throw_speed_min: float
 @export var throw_speed_max: float
+@export var lista_resultado: Array
 @export var resultado: float
+@export var resultado_teste: String
+@export var critico: float
 @onready var faces: Node3D = $Faces
-#@export var resultado: float
 
+signal coletar_resultado2
 var start_position: Transform3D
 var result_emitted := false
-
+var dice
 
 func _ready() -> void:
+	#dice.mesh = $".".new()
+	#dice.position = transform
+	#add_child($".")
 	
 	start_position = transform
 	$".".hide()
 	Dialogic.signal_event.connect(_on_signal)
+	
+	if resultado != 0:
+		coletar_resultado2.emit(resultado)
+		
 	_roll()
 
 func _on_signal(signal_passed_in):
 	if signal_passed_in =="ligar_teste":
 		$".".show()
 		_roll()
-	elif signal_passed_in =="coletar_resultado": #metodo focado em coletar o resultado
-		_get_result()
-		Dialogic.VAR.resultado = resultado
-	
-#abaixo - quando o dado para de girar revela o valor:
-func _physics_process(_delta: float) -> void:
-	if sleeping and not result_emitted: #testando pegar o resultado apenas quando visivel
-		_get_result()
+	elif signal_passed_in =="coletar_resultado1": #metodo focado em coletar o resultado
+		#abaixo - quando o dado para de girar revela o valor:
+		#func _physics_process(_delta: float) -> void:
+		if sleeping and not result_emitted: #testando pegar o resultado apenas quando chamado
+			_get_result()
+			Global.resultado_dado = resultado
+			print(resultado)
+			print(Global.resultado_dado)
+			Global.lista_resultado_dado.append(Global.resultado_dado)
+
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("roll"):
@@ -38,7 +50,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _get_result() -> void:
 	resultado = _get_rolled_value()
-	print(resultado)
 	#Dialogic.VAR.set_variable("resultado", resultado) #devolve o resultado para o dialogicc
 	result_emitted = true
 	
@@ -62,8 +73,8 @@ func _roll() -> void:
 	var rotation_z = randf_range(rotation_speed_min, rotation_speed_max)
 	apply_torque_impulse(Vector3(rotation_x, rotation_y, rotation_z))
 	
-	if sleeping and not result_emitted: #testando pegar o resultado apenas quando visivel
-		_get_result()
+	#if sleeping and not result_emitted:
+	#	_get_result()
 	
 
 func _get_rolled_value() -> int:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cjhbv33fer3tl"]
+[gd_scene load_steps=15 format=3 uid="uid://cjhbv33fer3tl"]
 
 [ext_resource type="PackedScene" uid="uid://ckk6018bj2tdf" path="res://resources/Prison_base_14_09_2026.glb" id="1_a0rmf"]
 [ext_resource type="Script" uid="uid://dsccd25i6e4wt" path="res://scene/teste_navegacao.gd" id="1_nrt13"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dpc42j82kh55r" path="res://resources/souza1.png" id="3_gvead"]
 [ext_resource type="PackedScene" uid="uid://cx6kql5tkvydv" path="res://scene/camera_manager.tscn" id="4_gvead"]
 [ext_resource type="Texture2D" uid="uid://bv5ohc4v8emgx" path="res://resources/tileset aberto.png" id="4_rlf72"]
-[ext_resource type="PackedScene" uid="uid://boi44h3hsqonv" path="res://scene/dice_roller.tscn" id="6_ohbt3"]
+[ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="7_nrt13"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rlf72"]
 size = Vector3(1, 1.2568359, 1)
@@ -14,10 +14,21 @@ size = Vector3(1, 1.2568359, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ohbt3"]
 size = Vector3(0.8979492, 1.4631348, 0.45703125)
 
-[sub_resource type="GDScript" id="GDScript_nrt13"]
-script/source = "extends Node3D
-const GAME_PATH := \"res://scene/teste_navegacao.tscn\"
-"
+[sub_resource type="BoxMesh" id="BoxMesh_ohbt3"]
+size = Vector3(40, 0.1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nrt13"]
+size = Vector3(40, 0.1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e65k6"]
+size = Vector3(9, 12, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nod6w"]
+albedo_color = Color(1, 0.4392157, 0.5411765, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u57jd"]
+material = SubResource("StandardMaterial3D_nod6w")
+size = Vector3(9, 12, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_nrt13")
@@ -56,13 +67,64 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05102539, 0.67974246, 0.271
 shape = SubResource("BoxShape3D_ohbt3")
 
 [node name="camera_manager" parent="." instance=ExtResource("4_gvead")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3731594, 14.07245, 2.7138963)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3731594, 14.07245, 5.233482)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DiceRoller" parent="CanvasLayer" instance=ExtResource("6_ohbt3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3731594, 11.052158, 1.1850982)
-script = SubResource("GDScript_nrt13")
+[node name="StaticBody3D" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.438842, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D"]
+mesh = SubResource("BoxMesh_ohbt3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D"]
+shape = SubResource("BoxShape3D_nrt13")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26531005, 11.327094, -3.5802028)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D2"]
+shape = SubResource("BoxShape3D_e65k6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D2"]
+mesh = SubResource("BoxMesh_u57jd")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26531005, 11.327094, 2.8424962)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D3"]
+shape = SubResource("BoxShape3D_e65k6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D3"]
+mesh = SubResource("BoxMesh_u57jd")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7589993, 11.327094, -0.5792382)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D4"]
+shape = SubResource("BoxShape3D_e65k6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D4"]
+visible = false
+mesh = SubResource("BoxMesh_u57jd")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.245845, 11.327094, -0.5792382)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D5"]
+shape = SubResource("BoxShape3D_e65k6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D5"]
+mesh = SubResource("BoxMesh_u57jd")
+
+[node name="Dice" parent="." instance=ExtResource("7_nrt13")]
+visible = false
 
 [connection signal="input_event" from="Souza/Sprite3D/souza_area" to="Souza" method="_on_souza_area_input_event"]
 [connection signal="input_event" from="Sprite3D/bolino" to="Souza" method="_on_bolino_input_event"]
+[connection signal="coletar_resultado2" from="Dice" to="." method="_on_dice_coletar_resultado_2"]
