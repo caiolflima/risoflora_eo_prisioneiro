@@ -7,7 +7,6 @@ extends RigidBody3D
 @export var resultado: float
 @onready var faces: Node3D = $Faces
 
-signal coletar_resultado2
 var start_position: Transform3D
 var result_emitted := false
 
@@ -15,10 +14,6 @@ func _ready() -> void:
 	start_position = transform
 	$".".hide()
 	Dialogic.signal_event.connect(_on_signal)
-	
-	if resultado != 0:
-		coletar_resultado2.emit(resultado)
-		
 	_roll()
 
 func _on_signal(signal_passed_in):

@@ -8,7 +8,7 @@ func _ready() -> void:
 	Dialogic.signal_event.connect(_on_signal)
 		
 func spawn():
-	for i in 3:
+	for i in Global.hackear:
 		var dado = spawn_dado.instantiate()
 		dado.global_position = Vector3(2,14,0)
 		add_child(dado)

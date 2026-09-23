@@ -127,4 +127,3 @@ visible = false
 
 [connection signal="input_event" from="Souza/Sprite3D/souza_area" to="Souza" method="_on_souza_area_input_event"]
 [connection signal="input_event" from="Sprite3D/bolino" to="Souza" method="_on_bolino_input_event"]
-[connection signal="coletar_resultado2" from="Dice" to="." method="_on_dice_coletar_resultado_2"]
