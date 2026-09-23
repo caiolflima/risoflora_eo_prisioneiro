@@ -24,6 +24,7 @@ souza_leao: {pronome4} Senhor{pronome3} será bem tratad{pronome4} aqui!\
 [wave amp=50.0 freq=5.0 connected=1]{pronome1} já disse tudo! Cuidem bem {pronome2} por aqui![/wave]
 souza_leao: [wave amp=50.0 freq=5.0 connected=1]{Nome_test}, agora faz um teste ai pra gente![/wave]
 leave Tinhoso
+[signal arg="spawn_dices"]
 [signal arg="ligar_teste"]
 [wait time="3.0"]
 [signal arg="coletar_resultado1"]
