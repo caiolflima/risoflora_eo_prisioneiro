@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqtldloqsa354"]
+
+[ext_resource type="PackedScene" uid="uid://gu1kcasmnatk" path="res://resources/modelos/blocking_prison2.glb" id="1_wdb30"]
+[ext_resource type="Script" uid="uid://cttwtcff2p5of" path="res://scene/cadeia.gd" id="1_x7eou"]
+[ext_resource type="Texture2D" uid="uid://cit3qodehutle" path="res://resources/retratos/persona-5-dancing-star-night-shin-megami-tensei-persona-4-shin-megami-tensei-persona-3-persona-3-dancing-moon-night-joker.jpg" id="2_h4fw7"]
+[ext_resource type="Texture2D" uid="uid://byvsscf0pjbsy" path="res://resources/retratos/alicate.png" id="3_ucoss"]
+[ext_resource type="Texture2D" uid="uid://cvfnavxk371gy" path="res://resources/retratos/galego.png" id="4_nixei"]
+[ext_resource type="Texture2D" uid="uid://cjjdrxirm4vcs" path="res://resources/in_game/tenente.png" id="5_qsb5b"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_x7eou")
+
+[node name="Iluminacao" type="Node" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.060627878, 3.6766229, -2.5516107)
+light_color = Color(1, 0, 0.23921569, 1)
+shadow_enabled = true
+omni_range = 5.4819937
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6884756, 3.6766229, -5.88962)
+light_color = Color(0, 0.3529412, 0.9137255, 1)
+omni_range = 8.362467
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2423306, 3.6766229, 2.3309004)
+light_color = Color(0.08627451, 0.29411766, 1, 1)
+omni_range = 8.362467
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, 0, 4.908741, 0)
+spot_range = 7.2052364
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.8366952, 5.5796766, -3.7724383)
+shadow_enabled = true
+spot_range = 7.8056345
+spot_angle = 18.815884
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, 1.2947745, 5.5796766, 0.7602155)
+light_color = Color(1, 1, 0.65882355, 1)
+light_energy = 5.909
+shadow_enabled = true
+spot_range = 6.7255216
+spot_angle = 17.547218
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.9072824, 5.5796766, -4.742958)
+light_energy = 3.182
+light_indirect_energy = 2.091
+light_specular = 4.318
+shadow_enabled = true
+spot_range = 7.8056345
+spot_angle = 6.460147
+
+[node name="blocking_prison2" parent="." instance=ExtResource("1_wdb30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1000266, 0, -3.546163)
+
+[node name="Player" type="Sprite3D" parent="."]
+transform = Transform3D(0.1301363, 0.016140457, -0.049030896, 0, 0.13298005, 0.043775637, 0.051619213, -0.040691424, 0.123610936, -1.8337183, 1.0410209, -4.6453)
+texture = ExtResource("2_h4fw7")
+
+[node name="Alicate" type="Sprite3D" parent="."]
+transform = Transform3D(0.29991892, 0.039146174, -0.11891683, 0, 0.30870366, 0.10162201, 0.1251944, -0.09377958, 0.28488022, -1.4867334, 1.0410209, -5.956335)
+texture = ExtResource("3_ucoss")
+
+[node name="Galego" type="Sprite3D" parent="."]
+transform = Transform3D(0.32433712, 0.006487103, -0.019706272, 2.23457e-09, 0.30870366, 0.10162201, 0.020746574, -0.10141475, 0.30807403, -2.397256, 0.93298864, -5.7171383)
+gi_mode = 2
+texture = ExtResource("4_nixei")
+
+[node name="Soldado" type="Sprite3D" parent="."]
+transform = Transform3D(0.10121243, 0.09656852, -0.29335222, 3.1545349e-09, 0.30870366, 0.101622015, 0.30883825, -0.031647407, 0.09613737, 2.4799414, 0.93298864, 0.6405277)
+gi_mode = 2
+modulate = Color(0.27450982, 1, 1, 1)
+billboard = 1
+texture = ExtResource("5_qsb5b")
+
+[node name="Cabo" type="Sprite3D" parent="."]
+transform = Transform3D(0.10121243, 0.09656852, -0.29335222, 3.1545349e-09, 0.30870366, 0.101622015, 0.30883825, -0.031647407, 0.09613737, 0.9256811, 0.93298864, 2.3088017)
+gi_mode = 2
+modulate = Color(0.27450982, 0.5254902, 1, 1)
+billboard = 1
+texture = ExtResource("5_qsb5b")
+
+[node name="Tenente2" type="Sprite3D" parent="."]
+transform = Transform3D(0.10121243, 0.09656852, -0.29335222, 3.1545349e-09, 0.30870366, 0.101622015, 0.30883825, -0.031647407, 0.09613737, 0.40230465, 0.93298864, 0.30098915)
+gi_mode = 2
+billboard = 1
+texture = ExtResource("5_qsb5b")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.48706347, 0.69708455, -0.52615815, 0, 0.6024482, 0.798158, 0.8733666, -0.38875362, 0.2934305, -4.1784554, 5.5380926, 0.025748491)
+projection = 1
+fov = 46.3
+size = 7.451
+near = 0.015

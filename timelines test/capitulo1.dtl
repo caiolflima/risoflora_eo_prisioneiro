@@ -1,0 +1,76 @@
+join Soldado left
+Soldado: Vamos, meliante. Dessa vez tu não foge.
+join Tenente right
+Tenente: Pra quê isso, omi? Por causa de soldado assim que os protestos acabaram com a polícia militar.
+Soldado: Privatizar foi melhor mesmo, Tenente. Pelo menos a MiliCo. tem GYMPASS, né?
+leave Tenente
+leave Soldado
+join Cabo left
+Cabo: …
+leave Cabo
+join Soldado left
+Soldado: Agora deu pra defender bandido, foi?
+join Tenente right
+Tenente: Mais respeito, soldado! E não é nada disso, visse? A gente ainda tem que fichar essa peça boa aí e gente desse tipo só abre a boca quando tá de bom humor.
+leave Soldado
+leave Tenente
+Player: ... desse tipo?  …
+join Tenente left
+Tenente: Piratas do ciberespaço, meliantes e marginais! Tu não pode negar que não é.
+Tenente: Enfim, vê se me ajuda e me dá um nome decente dessa vez pra eu pôr na tua ficha…
+[text_input text="Inserir Nome:" var="Nome_test" placeholder="Nome"]
+Tenente: Até que gostei desse, visse? E fala aí, a gente te chama como?
+- Ele/Dele
+	set {pronome1} = "ele"
+	set {pronome2} = "dele"
+	set {pronome3} = ""
+	set {pronome4} = "o"
+- Ela/Dela
+	set {pronome1} = "ela"
+	set {pronome2} = "dela"
+	set {pronome3} = "a"
+	set {pronome4} = "a"
+- Ile/Dile
+	set {pronome1} = "ile"
+	set {pronome2} = "dile"
+	set {pronome3} = "e"
+	set {pronome4} = "e"
+- Elu/Delu
+	set {pronome1} = "elu"
+	set {pronome2} = "delu"
+	set {pronome3} = "u"
+	set {pronome4} = "u"
+Tenente: Tá certo, {Nome_test}. Agora preencha essa ficha que teus pariceiro tão te esperando na cela.
+[clear time="1.0"]
+[signal arg="mostrar_ficha"]
+[wait time="3.0"]
+[signal arg="mostrar_button"]
+[wait_input]
+[wait time="0.5"]
+[signal arg="fechar_ficha"]
+join Soldado left
+Soldado: Acorda, bando de fi do cão. Tem comparsa de vocês entrando pelo cano.
+[signal arg="acordar_presos"]
+leave Soldado
+join Galego left
+Galego: Vê só que tiração, meu rato. Nem vou te contar onde eu queria que meu cano tivesse entrando
+join Tenente right
+Tenente: Respeita a autoridade, rapaz. Quer aumentar a pena por desacato?
+Galego: Com todo respeito, mas desde quando soldado raso é autoridade, delegado? Eu já abro uma exceção pra porco como o senhor que captura nós com vida e trouxe {Nome_test} inteir{pronome4}. Agora querer que eu trate isso aí que nem gente é pedir demais de mim.
+leave Tenente
+join Alicate right
+Alicate: Tá de amizade com porco, Galego?
+Galego: Dispense, Alicate. Num tá vendo que {Nome_test} voltou?
+Alicate: Voltou ou trouxeram?
+Galego: E isso importa?
+Alicate: Tás bem, criança? O que fizeram contigo?
+leave Alicate
+join Player right
+Player: Dale, comparsas, suave? Perdi muita coisa? Aliás, boy.. não inventem de fugir não que esses bichos não brincam.
+leave --All--
+join Tenente left
+Tenente: Chega de papo furado. {Nome_test}, ajoelhe.
+join Player right
+Player: …
+Player: Por quê? E aqui agora é igreja, é?
+Tenente: Ajoelhe-se e peça perdão pelo que fez.

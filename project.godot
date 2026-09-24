@@ -25,10 +25,21 @@ AudioManager="*res://audio manager/audio_manager.tscn"
 [dialogic]
 
 directories/dch_directory={
+"Alicate": "res://characters/Alicate.dch",
+"Boi": "res://characters/Boi.dch",
+"Cabo": "res://characters/Cabo.dch",
+"Galego": "res://characters/Galego.dch",
+"Noiva": "res://characters/Noiva.dch",
+"Player": "res://characters/Player.dch",
+"Risoflora": "res://characters/Risoflora.dch",
+"Soldado": "res://characters/Soldado.dch",
+"Tenente": "res://characters/Tenente.dch",
 "Tinhoso": "res://characters/Tinhoso.dch",
+"Vela": "res://characters/Vela.dch",
 "souza_leao": "res://characters/souza_leao.dch"
 }
 directories/dtl_directory={
+"capitulo1": "res://timelines test/capitulo1.dtl",
 "maintest": "res://timelines test/maintest.dtl",
 "morte": "res://timelines test/morte.dtl",
 "nome_jogador_teste": "res://timelines test/nome_jogador_teste.dtl"
