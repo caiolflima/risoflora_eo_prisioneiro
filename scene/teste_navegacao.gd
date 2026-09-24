@@ -1,5 +1,6 @@
 extends Node3D
 @onready var spawn_dado = preload("res://scene/dice.tscn") #endereco da cena do dado
+@onready var ficha = preload("res://scene/ui_test.tscn") #endereco da cena do dado
 @export var lista_resultado: Array
 @export var critico: float
 @export var dices: Array
@@ -42,3 +43,10 @@ func _on_signal(signal_passed_in):
 		for dado in dices: #faz a limpeza dos dados instanciados 
 			if is_instance_valid(dado):
 				dado.queue_free()
+	if signal_passed_in =="mostrar_ficha":
+		var ficha_tutorial = ficha.instantiate()
+		ficha_tutorial.global_position = Vector3(2,10,0)
+		add_child(ficha_tutorial)
+
+		
+		

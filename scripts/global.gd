@@ -5,6 +5,11 @@ extends Node
 @export var lista_resultado_dado: Array
 @export var resultado_teste: String
 
+#variaveis de nome e pronome
+@export var Nome: String
+@export var pronome1: String
+@export var pronome2: String
+
 #variaveis globais de ficha de personagem
 @export var hackear: int = 2
 @export var detonar: int = 1
