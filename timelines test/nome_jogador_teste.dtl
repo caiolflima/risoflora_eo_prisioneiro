@@ -29,12 +29,25 @@ leave Tinhoso
 [wait time="3.0"]
 [signal arg="coletar_resultado1"]
 [signal arg="coletar_resultado2"]
-souza_leao: O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+if {resultado_teste} == "Sucesso Crítico":
+	audio "res://resources/audio/sucesso.ogg"
+	souza_leao: O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+elif {resultado_teste} == "Sucesso Completo":
+	audio "res://resources/audio/sucesso.ogg"
+	souza_leao: O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+elif {resultado_teste} == "Sucesso Parcial":
+	audio "res://resources/audio/sucesso.ogg"
+	souza_leao: O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+elif {} == "Resultado Ruim":
+	audio "res://resources/audio/sucesso.ogg"
+	souza_leao: O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
 [signal arg="limpar_resultado"]
 souza_leao: Agora revise sua ficha ai
 [wait time="1.0"]
 [clear time="1.0" text="false" portraits="false"]
 [signal arg="mostrar_ficha"]
 [wait time="3.0"]
-- Confirmar
-	[signal arg="fechar_ficha"]
+[signal arg="mostrar_button"]
+[wait_input]
+audio "res://resources/audio/select.ogg"
+[signal arg="fechar_ficha"]

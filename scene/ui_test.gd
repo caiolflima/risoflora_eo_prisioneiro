@@ -28,7 +28,7 @@ func _ready() -> void:
 	pronomes = Global.pronome1 + ", " + Global.pronome2
 	ficha = ficha.replace("[PLAYER]", Global.Nome)
 	#$Sprite3D/SubViewport/Panel/RichTextLabel.text = ficha.replace("[PLAYER]", Global.Nome)
-	$Sprite3D/SubViewport/Panel/RichTextLabel.text = ficha.replace("[PRONOMES]", pronomes)
+	$RichTextLabel.text = ficha.replace("[PRONOMES]", pronomes)
 	Dialogic.signal_event.connect(_on_signal)
 
 #func _on_area_3d_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
@@ -37,6 +37,10 @@ func _ready() -> void:
 #			$".".queue_free()
 
 func _on_signal(signal_passed_in):
+	if signal_passed_in =="mostrar_button":
+		$Button.show()
 	if signal_passed_in =="fechar_ficha":
 		$".".queue_free()
 	
+func _on_button_pressed() -> void:
+	$".".queue_free()

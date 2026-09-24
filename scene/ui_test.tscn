@@ -1,11 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxtav1qm5uqeg"]
+[gd_scene load_steps=7 format=3 uid="uid://dxtav1qm5uqeg"]
 
 [ext_resource type="Script" uid="uid://dw41iaf7gt4a7" path="res://scene/ui_test.gd" id="1_jxegp"]
 [ext_resource type="FontFile" uid="uid://ctc4at40xwm1g" path="res://resources/DotGothic16-Regular.ttf" id="1_kgktq"]
 [ext_resource type="Texture2D" uid="uid://csdd5rjrmah7x" path="res://resources/pngtree-blue-fingerprint-image_2296579.jpg" id="3_0mxwe"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_ynh1a"]
-viewport_path = NodePath("Sprite3D/SubViewport")
+[ext_resource type="Script" uid="uid://cft5tpm8pmqby" path="res://scene/button.gd" id="4_yqy6f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgktq"]
 corner_radius_top_left = 30
@@ -16,82 +14,58 @@ corner_radius_bottom_left = 30
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_yqy6f"]
 blend_mode = 3
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mxwe"]
-bg_color = Color(0.33333334, 0.33333334, 0.33333334, 0.5647059)
-border_color = Color(1.1066791, 1.106679, 1.106679, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqy6f"]
-bg_color = Color(0.24356923, 0.24356925, 0.24356908, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_0mxwe"]
-size = Vector3(2.6476173, 1.0170898, 0.87649155)
-
 [node name="UI_Test" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 0.39233708, 0.9198215, 0, -0.9198215, 0.39233708, 0, 0, 0)
 script = ExtResource("1_jxegp")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-billboard = 1
-texture = SubResource("ViewportTexture_ynh1a")
-
-[node name="SubViewport" type="SubViewport" parent="Sprite3D"]
-transparent_bg = true
-size = Vector2i(1920, 1080)
-
-[node name="Panel" type="Panel" parent="Sprite3D/SubViewport"]
+[node name="Panel" type="Panel" parent="."]
+z_index = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -592.695
-offset_top = 52.18
-offset_right = 607.30493
-offset_bottom = 1052.1809
+offset_left = -527.0
+offset_top = 47.0
+offset_right = 473.0
+offset_bottom = 597.0
 grow_horizontal = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_kgktq")
+metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite3D/SubViewport/Panel"]
-layout_mode = 0
-offset_left = 42.375
-offset_top = 23.325
-offset_right = 1176.63
-offset_bottom = 758.325
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+z_index = 1
+offset_left = 68.0
+offset_top = 78.0
+offset_right = 1017.82
+offset_bottom = 466.925
+mouse_filter = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("1_kgktq")
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "insert text"
 fit_content = true
 scroll_following = true
 scroll_following_visible_characters = true
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite3D/SubViewport/Panel"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 material = SubResource("CanvasItemMaterial_yqy6f")
-position = Vector2(557.975, 807.465)
-scale = Vector2(0.5, 0.5)
+position = Vector2(396, 544)
+scale = Vector2(0.22, 0.22)
 texture = ExtResource("3_0mxwe")
 
-[node name="Button" type="Button" parent="Sprite3D/SubViewport"]
-visible = false
-offset_left = 813.755
-offset_top = 975.075
-offset_right = 1069.2933
-offset_bottom = 1041.6993
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_kgktq")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_0mxwe")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_yqy6f")
-action_mode = 0
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true
+
+[node name="Button" type="Button" parent="."]
+z_index = 2
+offset_left = 450.0
+offset_top = 538.0
+offset_right = 625.0
+offset_bottom = 569.0
 text = "Confirmar Identidade"
+script = ExtResource("4_yqy6f")
 
-[node name="Area3D" type="Area3D" parent="Sprite3D/SubViewport/Button"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14090729, -1.8742371, 4.2477074)
-visible = false
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sprite3D/SubViewport/Button/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06458855, 0.073287964, -0.07644844)
-visible = false
-shape = SubResource("BoxShape3D_0mxwe")
-
-[connection signal="input_event" from="Sprite3D/SubViewport/Button/Area3D" to="." method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

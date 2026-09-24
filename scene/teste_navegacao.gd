@@ -1,23 +1,26 @@
 extends Node3D
 @onready var spawn_dado = preload("res://scene/dice.tscn") #endereco da cena do dado
-@onready var ficha = preload("res://scene/ui_test.tscn") #endereco da cena do dado
+@onready var ficha = preload("res://scene/ui_test.tscn") #endereco da cena da ficha
 @export var lista_resultado: Array
 @export var critico: float
 @export var dices: Array
 
 func _ready() -> void:	
 	Dialogic.signal_event.connect(_on_signal)
+	AudioManager.play("Main") #toca a musica ambiente
 		
 func spawn():
 	for i in Global.hackear:
 		var dado = spawn_dado.instantiate()
 		dado.global_position = Vector3(2,14,0)
 		add_child(dado)
-		dices.append(dado)
+		dices.append(dado) #coleta os resultados dos dados para a lista
 
 func _on_signal(signal_passed_in):
 	if signal_passed_in =="spawn_dices": #spawn ganhou sinal proprio
 		spawn()
+		AudioManager.play("Roll")
+		
 	if signal_passed_in =="coletar_resultado2":
 		for i in Global.lista_resultado_dado: #verifica qual foi o maior resultado da lista de dados
 			if i > Global.resultado_dado:
@@ -47,6 +50,8 @@ func _on_signal(signal_passed_in):
 		var ficha_tutorial = ficha.instantiate()
 		ficha_tutorial.global_position = Vector3(2,10,0)
 		add_child(ficha_tutorial)
+
+		print("Ficha")
 
 		
 		
