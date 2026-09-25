@@ -1,0 +1,9 @@
+[signal arg="citacao1"]
+[wait time="3.0"]
+[signal arg="titulo"]
+[wait time="4.0"]
+[signal arg="iniciar"]
+[wait time="3.0"]
+[signal arg="iniciar2"]
+[wait time="2.0"]
+jump capitulo1/

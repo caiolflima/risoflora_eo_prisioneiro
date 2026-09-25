@@ -46,8 +46,8 @@ shadow_enabled = true
 spot_range = 6.7255216
 spot_angle = 17.547218
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.9072824, 5.5796766, -4.742958)
+[node name="SpotLight_bandidos" type="SpotLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.517756, 5.5796766, -5.860512)
 light_energy = 3.182
 light_indirect_energy = 2.091
 light_specular = 4.318
@@ -59,7 +59,7 @@ spot_angle = 6.460147
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1000266, 0, -3.546163)
 
 [node name="Player" type="Sprite3D" parent="."]
-transform = Transform3D(0.1301363, 0.016140457, -0.049030896, 0, 0.13298005, 0.043775637, 0.051619213, -0.040691424, 0.123610936, -1.8337183, 1.0410209, -4.6453)
+transform = Transform3D(0.08049073, 0.035817217, -0.108804256, -1.5383724e-09, 0.13298006, 0.043775637, 0.11454798, -0.025168099, 0.07645474, -0.50901127, 1.4355521, 0.10262489)
 texture = ExtResource("2_h4fw7")
 
 [node name="Alicate" type="Sprite3D" parent="."]
@@ -85,8 +85,8 @@ modulate = Color(0.27450982, 0.5254902, 1, 1)
 billboard = 1
 texture = ExtResource("5_qsb5b")
 
-[node name="Tenente2" type="Sprite3D" parent="."]
-transform = Transform3D(0.10121243, 0.09656852, -0.29335222, 3.1545349e-09, 0.30870366, 0.101622015, 0.30883825, -0.031647407, 0.09613737, 0.40230465, 0.93298864, 0.30098915)
+[node name="Tenente" type="Sprite3D" parent="."]
+transform = Transform3D(0.10121243, 0.09656852, -0.29335222, 3.1545349e-09, 0.30870366, 0.101622015, 0.30883825, -0.031647407, 0.09613737, 0.7296972, 0.93298864, 0.75234413)
 gi_mode = 2
 billboard = 1
 texture = ExtResource("5_qsb5b")
