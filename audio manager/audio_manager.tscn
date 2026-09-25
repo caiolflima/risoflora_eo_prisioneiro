@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://kccniox87bme"]
 
 [ext_resource type="Script" uid="uid://cehafjxak5bt" path="res://audio manager/audio_manager.gd" id="1_61kre"]
-[ext_resource type="AudioStream" uid="uid://dln7ovihfdqji" path="res://resources/audio/Ivel-Bartore-RISE-UP_-LANCER.ogg" id="2_holtv"]
+[ext_resource type="AudioStream" uid="uid://ddjwyiim2rws1" path="res://resources/audio/teste_loop3.ogg" id="2_qqitq"]
 [ext_resource type="AudioStream" uid="uid://5xvyijcj4p7r" path="res://resources/audio/roll.ogg" id="3_qqitq"]
 
 [node name="Audio_Manager" type="Node" node_paths=PackedStringArray("clips")]
@@ -12,8 +12,9 @@ clips = NodePath("Clips")
 
 [node name="Main" type="AudioStreamPlayer" parent="Clips"]
 process_mode = 3
-stream = ExtResource("2_holtv")
-volume_db = -5.0
+stream = ExtResource("2_qqitq")
+volume_db = -15.0
+playback_type = 1
 
 [node name="Roll" type="AudioStreamPlayer" parent="Clips"]
 process_mode = 3
