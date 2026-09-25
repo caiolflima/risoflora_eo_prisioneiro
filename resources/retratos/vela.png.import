@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://57m26g53fe54"
-path="res://.godot/imported/tenente.png-75c8169889e7739ddfc1b4e064ea454a.ctex"
+uid="uid://ylhwuk7b1qob"
+path="res://.godot/imported/vela.png-6565e55b1a1fa535d4074ecc7ae8e20e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/retratos/tenente.png"
-dest_files=["res://.godot/imported/tenente.png-75c8169889e7739ddfc1b4e064ea454a.ctex"]
+source_file="res://resources/retratos/vela.png"
+dest_files=["res://.godot/imported/vela.png-6565e55b1a1fa535d4074ecc7ae8e20e.ctex"]
 
 [params]
 
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

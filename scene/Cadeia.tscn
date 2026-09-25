@@ -1,11 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqtldloqsa354"]
+[gd_scene load_steps=14 format=3 uid="uid://cqtldloqsa354"]
 
 [ext_resource type="PackedScene" uid="uid://gu1kcasmnatk" path="res://resources/modelos/blocking_prison2.glb" id="1_wdb30"]
 [ext_resource type="Script" uid="uid://cttwtcff2p5of" path="res://scene/cadeia.gd" id="1_x7eou"]
-[ext_resource type="Texture2D" uid="uid://cit3qodehutle" path="res://resources/retratos/persona-5-dancing-star-night-shin-megami-tensei-persona-4-shin-megami-tensei-persona-3-persona-3-dancing-moon-night-joker.jpg" id="2_h4fw7"]
+[ext_resource type="Texture2D" uid="uid://udcwx48s4ldy" path="res://resources/retratos/buckaneiro.png" id="2_h4fw7"]
 [ext_resource type="Texture2D" uid="uid://byvsscf0pjbsy" path="res://resources/retratos/alicate.png" id="3_ucoss"]
 [ext_resource type="Texture2D" uid="uid://cvfnavxk371gy" path="res://resources/retratos/galego.png" id="4_nixei"]
 [ext_resource type="Texture2D" uid="uid://cjjdrxirm4vcs" path="res://resources/in_game/tenente.png" id="5_qsb5b"]
+[ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="7_ntrou"]
+[ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="8_obubp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5jpev"]
+size = Vector3(40, 0.1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k7lhr"]
+size = Vector3(40, 0.1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uluk1"]
+size = Vector3(9, 12, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nod6w"]
+albedo_color = Color(1, 0.4392157, 0.5411765, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4tksx"]
+material = SubResource("StandardMaterial3D_nod6w")
+size = Vector3(9, 12, 1)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_x7eou")
@@ -59,15 +77,15 @@ spot_angle = 6.460147
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1000266, 0, -3.546163)
 
 [node name="Player" type="Sprite3D" parent="."]
-transform = Transform3D(0.08049073, 0.035817217, -0.108804256, -1.5383724e-09, 0.13298006, 0.043775637, 0.11454798, -0.025168099, 0.07645474, -0.50901127, 1.4355521, 0.10262489)
+transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.0379943, 0.012507323, 0.032727998, -0.0071908818, 0.021844205, -0.50901127, 1.4355521, 0.10262489)
 texture = ExtResource("2_h4fw7")
 
 [node name="Alicate" type="Sprite3D" parent="."]
-transform = Transform3D(0.29991892, 0.039146174, -0.11891683, 0, 0.30870366, 0.10162201, 0.1251944, -0.09377958, 0.28488022, -1.4867334, 1.0410209, -5.956335)
+transform = Transform3D(0.050755512, 0.006624737, -0.020124387, 0, 0.05224216, 0.01719757, 0.021186743, -0.01587039, 0.0482105, -1.3552637, 1.0410209, -6.1935177)
 texture = ExtResource("3_ucoss")
 
 [node name="Galego" type="Sprite3D" parent="."]
-transform = Transform3D(0.32433712, 0.006487103, -0.019706272, 2.23457e-09, 0.30870366, 0.10162201, 0.020746574, -0.10141475, 0.30807403, -2.397256, 0.93298864, -5.7171383)
+transform = Transform3D(0.059877627, 0.0011976188, -0.003638084, 4.12536e-10, 0.056991447, 0.01876099, 0.0038301367, -0.018722724, 0.05687521, -2.5439844, 0.93298864, -5.9623165)
 gi_mode = 2
 texture = ExtResource("4_nixei")
 
@@ -91,9 +109,131 @@ gi_mode = 2
 billboard = 1
 texture = ExtResource("5_qsb5b")
 
+[node name="Tutorial" type="Sprite3D" parent="."]
+transform = Transform3D(0.81, 0, 0, 0, 0.26, 0, 0, 0, 0.365, -1.126831, 4.114258, -1.4403687)
+visible = false
+modulate = Color(0, 0, 0, 1)
+billboard = 1
+texture = ExtResource("7_ntrou")
+
+[node name="Tutorial Title" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 596.0
+offset_top = 119.0
+offset_right = 902.0
+offset_bottom = 216.0
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={30}]Tutorial[/font_size][/pulse]
+"
+horizontal_alignment = 1
+
+[node name="Tutorial Title3" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 372.0
+offset_top = 192.0
+offset_right = 1164.0
+offset_bottom = 555.0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "EM DETERMINADOS MOMENTOS, SUAS ESCOLHAS PODEM TER RESULTADOS VARIADOS.
+
+Nessas situações, suas habilidades são testadas com uma [bgcolor={white}][color=black]JOGADA DE AÇÃO[/color][/bgcolor].
+
+Você joga dados igual ao valor da habilidade testada e usa o melhor resultado.
+
+"
+
+[node name="Tutorial Title4" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 372.0
+offset_top = 192.0
+offset_right = 1128.0
+offset_bottom = 555.0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]6[/b][/pulse], a ação é um [b]sucesso completo[/b] – tudo corre bem. Se rolar mais que um dado com resultado [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]6[/b][/pulse], a ação é um [b]sucesso crítico[/b] – você ganha alguma vantagem adicional."
+
+[node name="Tutorial Title5" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 372.0
+offset_top = 192.0
+offset_right = 1128.0
+offset_bottom = 555.0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]4[/b][/pulse] ou [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]5[/b][/pulse], a ação é um [b]sucesso parcial[/b] – você alcança o que estava procurando fazer, mas surgem consequências: perigo, dano, efeito reduzido, etc."
+
+[node name="Tutorial Title6" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 372.0
+offset_top = 192.0
+offset_right = 1128.0
+offset_bottom = 555.0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Se o valor no dado mais alto é entre [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]1[/b][/pulse] e [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]3[/b][/pulse], a ação tem um [b]resultado ruim[/b]. As coisas dão errado. Você provavelmente não alcança o seu objetivo e ainda por cima sofre complicações."
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1454735, 3.6836596, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D"]
+mesh = SubResource("BoxMesh_5jpev")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D"]
+shape = SubResource("BoxShape3D_k7lhr")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8801634, 9.571912, -3.5802028)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D2"]
+shape = SubResource("BoxShape3D_uluk1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D2"]
+mesh = SubResource("BoxMesh_4tksx")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8801634, 9.571912, 2.8424962)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D3"]
+shape = SubResource("BoxShape3D_uluk1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D3"]
+mesh = SubResource("BoxMesh_4tksx")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.904473, 9.571912, -0.5792382)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D4"]
+shape = SubResource("BoxShape3D_uluk1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D4"]
+visible = false
+mesh = SubResource("BoxMesh_4tksx")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.1003714, 9.571912, -0.5792382)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D5"]
+shape = SubResource("BoxShape3D_uluk1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D5"]
+mesh = SubResource("BoxMesh_4tksx")
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.48706347, 0.69708455, -0.52615815, 0, 0.6024482, 0.798158, 0.8733666, -0.38875362, 0.2934305, -4.1784554, 5.5380926, 0.025748491)
+transform = Transform3D(0.48706347, 0.69708455, -0.52615815, 0, 0.6024482, 0.798158, 0.8733666, -0.38875362, 0.2934305, -6.866728, 10.126004, 1.0106423)
+visible = false
 projection = 1
 fov = 46.3
 size = 7.451
 near = 0.015
+
+[node name="Dice" parent="." instance=ExtResource("8_obubp")]
+visible = false

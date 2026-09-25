@@ -19,7 +19,7 @@
 &"portraits": {
 "Neutro": {
 "export_overrides": {
-"image": "\"res://resources/retratos/persona-5-dancing-star-night-shin-megami-tensei-persona-4-shin-megami-tensei-persona-3-persona-3-dancing-moon-night-joker.jpg\""
+"image": "\"res://resources/retratos/buckaneiro.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

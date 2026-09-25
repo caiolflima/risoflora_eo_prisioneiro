@@ -1,0 +1,83 @@
+[clear time="1.0"]
+[signal arg="tutorial_abrir"]
+[wait time="1.0"]
+[signal arg="tutorial_abrir1"]
+[wait time="2.0"]
+[wait_input]
+[signal arg="tutorial_abrir2"]
+[wait time="2.0"]
+[wait_input]
+[signal arg="tutorial_abrir3"]
+[wait time="2.0"]
+[wait_input]
+[signal arg="tutorial_abrir4"]
+[wait time="2.0"]
+[wait_input]
+[signal arg="tutorial_fechar"]
+join Tenente left
+Tenente: Ajoelhe-se e peça perdão pelo que fez.
+join Player right
+- Eu não fiz nada. [GINGAR] [2]
+	[clear time="1.0"]
+	set {Atributos.atributo_escolhido} = {Atributos.gingar}
+	[signal arg="spawn_dices"]
+	[signal arg="ligar_teste"]
+	[wait time="3.0"]
+	[signal arg="coletar_resultado1"]
+	[signal arg="coletar_resultado2"]
+	if {resultado_teste} == "Sucesso Crítico":
+		audio "res://resources/audio/sucesso_total.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		[clear time="1.0"]
+		jump capitulo 1_2/
+	if {resultado_teste} == "Sucesso Completo":
+		audio "res://resources/audio/sucesso.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		[clear time="1.0"]
+		jump capitulo 1_2/
+	if {resultado_teste} == "Sucesso Parcial":
+		audio "res://resources/audio/sucesso_parcial.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		OS LACAIOS DA MILITIA COMPANY AMEAÇAM TE AGREDIR. O TENENTE FAZ UM SINAL PARA QUE ELES PAREM.
+	if {resultado_teste} == "Resultado Ruim":
+		audio "res://resources/audio/resultado_rolagem3.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		[shake rate=20.0 level=5 connected=1]OS LACAIOS DA MILITIA COMPANY TE FORÇAM CONTRA O CHÃO,[/shake] \
+		FERINDO SEUS OMBROS, SEUS JOELHOS E SEU ORGULHO.
+		join Tenente center
+		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
+- Me obrigue! [DETONAR] [1]
+	[clear time="1.0"]
+	set {Atributos.atributo_escolhido} = {Atributos.detonar}
+	[signal arg="spawn_dices"]
+	[signal arg="ligar_teste"]
+	[wait time="3.0"]
+	[signal arg="coletar_resultado1"]
+	[signal arg="coletar_resultado2"]
+	if {resultado_teste} == "Sucesso Crítico":
+		audio "res://resources/audio/sucesso_total.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+	if {resultado_teste} == "Sucesso Completo":
+		audio "res://resources/audio/sucesso.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+	if {resultado_teste} == "Sucesso Parcial":
+		audio "res://resources/audio/sucesso_parcial.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		join Tenente center
+		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
+	if {resultado_teste} == "Resultado Ruim":
+		audio "res://resources/audio/resultado_rolagem3.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		join Tenente center
+		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
+[clear time="1.0"]
+join Player left
+Player: Não. E o senhor não pode me bater. Só porque estou preso? Eu tinha o direito de fugir. Agora o senhor não tem o direito de bater em mim, como não podia me tirar daqui e levar pra sua casa.
+join Tenente right
+Tenente: [shake rate=20.0 level=5 connected=1]NÃO SÓ PODIA COMO FIZ![/shake]
+- Não podia e agora tem juiz querendo pôr o senhor do nosso lado das grades que eu sei.
+	Tenente: Tá vendo?  Quando quiserem levar uma dentada, façam favor a um cachorro!
+- Posso ser marginal, mas conheço as leis. Só assim pra ser profissional em quebrar elas.
+	Tenente: E ainda se gaba depois de eu ter te feito um favor. É igual cachorro que morde a mão de quem alimenta.
+Player: Quem é cachorro? Eu? Nem sou cachorro nem o senhor me faz favor. Favor fiz eu, e não foi ao senhor, fique sabendo.
+jump capitulo 1_2/

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cit3qodehutle"
-path.s3tc="res://.godot/imported/persona-5-dancing-star-night-shin-megami-tensei-persona-4-shin-megami-tensei-persona-3-persona-3-dancing-moon-night-joker.jpg-93a33e40f6e4725e594bff3085a4693a.s3tc.ctex"
+uid="uid://udcwx48s4ldy"
+path.s3tc="res://.godot/imported/buckaneiro.png-84cd4e002b29b8691a3d2e4a91e6f3cc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://resources/retratos/persona-5-dancing-star-night-shin-megami-tensei-persona-4-shin-megami-tensei-persona-3-persona-3-dancing-moon-night-joker.jpg"
-dest_files=["res://.godot/imported/persona-5-dancing-star-night-shin-megami-tensei-persona-4-shin-megami-tensei-persona-3-persona-3-dancing-moon-night-joker.jpg-93a33e40f6e4725e594bff3085a4693a.s3tc.ctex"]
+source_file="res://resources/retratos/buckaneiro.png"
+dest_files=["res://.godot/imported/buckaneiro.png-84cd4e002b29b8691a3d2e4a91e6f3cc.s3tc.ctex"]
 
 [params]
 

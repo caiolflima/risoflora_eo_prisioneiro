@@ -39,10 +39,12 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Intro": "res://timelines test/Intro.dtl",
+"capitulo 1_2": "res://timelines test/capitulo 1_2.dtl",
 "capitulo1": "res://timelines test/capitulo1.dtl",
 "maintest": "res://timelines test/maintest.dtl",
 "morte": "res://timelines test/morte.dtl",
-"nome_jogador_teste": "res://timelines test/nome_jogador_teste.dtl"
+"nome_jogador_teste": "res://timelines test/nome_jogador_teste.dtl",
+"tutorial_1": "res://timelines test/tutorial_1.dtl"
 }
 layout/style_directory={
 "": "res://resources/estilo2.tres",
@@ -74,7 +76,7 @@ audio/channel_defaults={
 "audio_bus": "",
 "fade_length": 0.0,
 "loop": false,
-"volume": -10.0
+"volume": 0.0
 },
 "music": {
 "audio_bus": "",
@@ -84,14 +86,22 @@ audio/channel_defaults={
 }
 }
 variables={
+"Atributos": {
+"atributo_escolhido": 0,
+"detonar": 1,
+"esgueirar": 1,
+"gingar": 2,
+"hackear": 2,
+"lutar": 1,
+"socializar": 2
+},
 "Nome_test": "",
 "pronome1": "",
 "pronome2": "",
 "pronome3": "",
 "pronome4": "",
 "resultado": 0.0,
-"resultado_teste": "",
-"visivel": false
+"resultado_teste": ""
 }
 glossary/default_case_sensitive=true
 

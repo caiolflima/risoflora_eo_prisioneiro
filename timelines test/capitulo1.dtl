@@ -15,7 +15,7 @@ Tenente: Mais respeito, soldado! E não é nada disso, visse? A gente ainda tem 
 leave Soldado
 leave Tenente
 Player: ... desse tipo?  …
-join Tenente left
+join Tenente left [mirrored="true"]
 Tenente: Piratas do ciberespaço, meliantes e marginais! Tu não pode negar que não é.
 Tenente: Enfim, vê se me ajuda e me dá um nome decente dessa vez pra eu pôr na tua ficha…
 [text_input text="Inserir Nome:" var="Nome_test" placeholder="Nome"]
@@ -74,3 +74,4 @@ join Player right
 Player: …
 Player: Por quê? E aqui agora é igreja, é?
 Tenente: Ajoelhe-se e peça perdão pelo que fez.
+jump tutorial_1/

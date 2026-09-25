@@ -2,21 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmgc18xahagm"
-path.s3tc="res://.godot/imported/soldado.webp-c389712f35706825d7850f68c6cbdaec.s3tc.ctex"
+uid="uid://4rq12pdx55y4"
+path="res://.godot/imported/soldado.png-72a45b72f1b937d6dbe4531c93d915e9.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/retratos/soldado.webp"
-dest_files=["res://.godot/imported/soldado.webp-c389712f35706825d7850f68c6cbdaec.s3tc.ctex"]
+source_file="res://resources/retratos/soldado.png"
+dest_files=["res://.godot/imported/soldado.png-72a45b72f1b937d6dbe4531c93d915e9.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -24,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

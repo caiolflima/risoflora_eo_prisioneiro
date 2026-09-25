@@ -63,11 +63,11 @@ layout_mode = 0
 offset_left = 447.485
 offset_top = 308.0
 offset_right = 1428.916
-offset_bottom = 498.77002
+offset_bottom = 585.02
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "CAPÍTULO I
-[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={40}]CARANGUEJOS NA GAIOLA[/font_size][/pulse]
+[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={80}]CARANGUEJOS NA GAIOLA[/font_size][/pulse]
 "
 metadata/_edit_use_anchors_ = true
 
