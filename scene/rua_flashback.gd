@@ -1,20 +1,14 @@
 extends Node3D
-@onready var ficha = preload("res://scene/ui_test.tscn") #endereco da cena da ficha
 @onready var spawn_dado = preload("res://scene/dice.tscn") #endereco da cena do dado
 @export var lista_resultado: Array
 @export var critico: float
 @export var dices: Array
-const rua_flashback := "res://scene/rua_flashback.tscn"
+const cadeia := "res://scene/Cadeia.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#Dialogic.start("capitulo1")
 	Dialogic.signal_event.connect(_on_signal)
 	AudioManager.play("Main") #toca a musica ambiente
-	$Alicate.hide()
-	$Galego.hide()
-	$Iluminacao/SpotLight_bandidos.hide()
-	
 
 func spawn():
 	for i in Dialogic.VAR.Atributos.atributo_escolhido: #multiplica pelo atributo
@@ -22,7 +16,7 @@ func spawn():
 		dado.global_position = Vector3(-3,14,0)
 		add_child(dado)
 		dices.append(dado) #coleta os resultados dos dados para a lista
-	
+		
 func _on_signal(signal_passed_in):
 	if signal_passed_in =="spawn_dices": #spawn ganhou sinal proprio
 		spawn()
@@ -54,17 +48,7 @@ func _on_signal(signal_passed_in):
 			if is_instance_valid(dado):
 				dado.queue_free()
 				
-	if signal_passed_in =="mostrar_ficha":
-		var ficha_tutorial = ficha.instantiate()
-		ficha_tutorial.global_position = Vector3(2,10,0)
-		add_child(ficha_tutorial)
-
-	if signal_passed_in =="acordar_presos":
-		$Iluminacao/SpotLight_bandidos.show()
-		$Alicate.show()
-		$Galego.show()
-	
-	#aqui comeca o tutorial
+		#aqui comeca o tutorial
 	if signal_passed_in =="tutorial_abrir":
 		$Tutorial.show()
 		$"Tutorial/Tutorial Title".show()
@@ -74,17 +58,9 @@ func _on_signal(signal_passed_in):
 	if signal_passed_in =="tutorial_abrir2":
 		$"Tutorial/Tutorial Title3".hide()
 		$"Tutorial/Tutorial Title4".show()
-	if signal_passed_in =="tutorial_abrir3":
-		$"Tutorial/Tutorial Title4".hide()
-		$"Tutorial/Tutorial Title5".show()
-	if signal_passed_in =="tutorial_abrir4":
-		$"Tutorial/Tutorial Title5".hide()
-		$"Tutorial/Tutorial Title6".show()
 	if signal_passed_in =="tutorial_fechar":
 		$Tutorial.queue_free()
 		
-	if signal_passed_in =="flashback":
-		get_tree().change_scene_to_file(rua_flashback)
+	if signal_passed_in =="voltar_cadeia":
+		get_tree().change_scene_to_file(cadeia)
 		
-	if signal_passed_in =="fechar_jogo":
-		get_tree().quit()

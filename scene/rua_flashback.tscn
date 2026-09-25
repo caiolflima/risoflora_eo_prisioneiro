@@ -1,0 +1,165 @@
+[gd_scene load_steps=14 format=3 uid="uid://c2ukoixmuor3q"]
+
+[ext_resource type="Script" uid="uid://dtuy2y7og6i0u" path="res://scene/rua_flashback.gd" id="1_s2skm"]
+[ext_resource type="Texture2D" uid="uid://udcwx48s4ldy" path="res://resources/retratos/buckaneiro.png" id="1_whdps"]
+[ext_resource type="Texture2D" uid="uid://ylhwuk7b1qob" path="res://resources/retratos/vela.png" id="2_cmkfn"]
+[ext_resource type="Texture2D" uid="uid://c43bmcdl0igdc" path="res://resources/retratos/boi.png" id="3_nicsm"]
+[ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="4_nicsm"]
+[ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="5_ti3ua"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_eggbe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cmkfn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cmkfn"]
+size = Vector3(40, 0.1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nicsm"]
+size = Vector3(40, 0.1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ti3ua"]
+size = Vector3(9, 12, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nod6w"]
+albedo_color = Color(1, 0.4392157, 0.5411765, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s2skm"]
+material = SubResource("StandardMaterial3D_nod6w")
+size = Vector3(9, 12, 1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_s2skm")
+
+[node name="Iluminacao" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, 0.6526011, 0.75770164, 0, -0.75770164, 0.6526011, 0, 11.561157, 0)
+light_color = Color(1, 1, 0.8392157, 1)
+
+[node name="Player" type="Sprite3D" parent="."]
+transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.0379943, 0.012507323, 0.032727998, -0.0071908818, 0.021844205, -0.5940943, 1.4355521, -2.0630856)
+texture = ExtResource("1_whdps")
+
+[node name="Vela" type="Sprite3D" parent="."]
+transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.0379943, 0.012507323, 0.032727998, -0.0071908818, 0.021844205, 0.1103735, 1.4355521, 1.1003056)
+billboard = 1
+texture = ExtResource("2_cmkfn")
+
+[node name="Taurus" type="Sprite3D" parent="."]
+transform = Transform3D(0.442699, 0.19699469, -0.5984235, -8.46105e-09, 0.7313903, 0.24076594, 0.63001394, -0.13842446, 0.42050096, -1.5909281, 2.2760062, -5.8409786)
+billboard = 1
+texture = ExtResource("3_nicsm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(28.42, 0, 0, 0, 1.355, 0, 0, 0, 24.235, 0, 0, 0)
+mesh = SubResource("BoxMesh_eggbe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(28.42, 0, 0, 0, 1.355, 0, 0, 0, 24.235, 0, 0, 0)
+shape = SubResource("BoxShape3D_cmkfn")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.48633534, 0.6978256, -0.5258493, 0, 0.60181504, 0.79863554, 0.87377226, -0.3884047, 0.29268393, -6.867, 10.126, 1.011)
+projection = 1
+fov = 46.3
+size = 7.451
+near = 0.015
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1454735, 3.6836596, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D"]
+mesh = SubResource("BoxMesh_cmkfn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D"]
+shape = SubResource("BoxShape3D_nicsm")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8801634, 9.571912, -3.5802028)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D2"]
+shape = SubResource("BoxShape3D_ti3ua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D2"]
+mesh = SubResource("BoxMesh_s2skm")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8801634, 9.571912, 2.8424962)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D3"]
+shape = SubResource("BoxShape3D_ti3ua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D3"]
+mesh = SubResource("BoxMesh_s2skm")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.904473, 9.571912, -0.5792382)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D4"]
+shape = SubResource("BoxShape3D_ti3ua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D4"]
+visible = false
+mesh = SubResource("BoxMesh_s2skm")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="CanvasLayer"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.1003714, 9.571912, -0.5792382)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D5"]
+shape = SubResource("BoxShape3D_ti3ua")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D5"]
+mesh = SubResource("BoxMesh_s2skm")
+
+[node name="Dice" parent="." instance=ExtResource("4_nicsm")]
+visible = false
+
+[node name="Tutorial" type="Sprite3D" parent="."]
+transform = Transform3D(0.81, 0, 0, 0, 0.26, 0, 0, 0, 0.365, -1.126831, 4.114258, -1.4403687)
+visible = false
+modulate = Color(0, 0, 0, 1)
+billboard = 1
+texture = ExtResource("5_ti3ua")
+
+[node name="Tutorial Title" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 596.0
+offset_top = 119.0
+offset_right = 902.0
+offset_bottom = 216.0
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={30}]Tutorial[/font_size][/pulse]
+"
+horizontal_alignment = 1
+
+[node name="Tutorial Title3" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 372.0
+offset_top = 192.0
+offset_right = 1164.0
+offset_bottom = 555.0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "EM SITUAÇÕES DE DESAFIO, VOCÊ PODE REALIZAR AÇÕES ARRISCADAS
+
+"
+
+[node name="Tutorial Title4" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 372.0
+offset_top = 192.0
+offset_right = 1128.0
+offset_bottom = 555.0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "ESSAS JOGADAS TEM CHANCE DE SUCESSO  [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](6)[/b][/pulse], SUCESSO PARCIAL [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](4-5)[/b][/pulse] OU FALHA [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](1-3)[/b][/pulse] E INFLUENCIAM DIRETAMENTE A NARRATIVA DO JOGO"

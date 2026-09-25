@@ -27,10 +27,6 @@ func _on_signal(signal_passed_in):
 			Global.resultado_dado = resultado
 			Global.lista_resultado_dado.append(Global.resultado_dado) #enviando o resultado para a variavel global
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("roll"):
-		Dialogic.start("nome_jogador_teste")
-
 func _get_result() -> void:
 	resultado = _get_rolled_value()
 	result_emitted = true

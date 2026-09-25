@@ -18,11 +18,11 @@ size = Vector3(40, 0.1, 40)
 [sub_resource type="BoxShape3D" id="BoxShape3D_uluk1"]
 size = Vector3(9, 12, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nod6w"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obubp"]
 albedo_color = Color(1, 0.4392157, 0.5411765, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4tksx"]
-material = SubResource("StandardMaterial3D_nod6w")
+material = SubResource("StandardMaterial3D_obubp")
 size = Vector3(9, 12, 1)
 
 [node name="Node3D" type="Node3D"]
@@ -229,7 +229,6 @@ mesh = SubResource("BoxMesh_4tksx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.48706347, 0.69708455, -0.52615815, 0, 0.6024482, 0.798158, 0.8733666, -0.38875362, 0.2934305, -6.866728, 10.126004, 1.0106423)
-visible = false
 projection = 1
 fov = 46.3
 size = 7.451

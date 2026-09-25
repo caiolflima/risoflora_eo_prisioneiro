@@ -71,6 +71,7 @@ join Player right
 		join Tenente center
 		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
 [clear time="1.0"]
+[signal arg="limpar_resultado"]
 join Player left
 Player: Não. E o senhor não pode me bater. Só porque estou preso? Eu tinha o direito de fugir. Agora o senhor não tem o direito de bater em mim, como não podia me tirar daqui e levar pra sua casa.
 join Tenente right

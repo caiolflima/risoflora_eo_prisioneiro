@@ -1,0 +1,22 @@
+join Player left
+Player: Vê só que braba! Saio daqui pra trabalhar de graça, e logo no noivado de sua filha, que é uma joia de moça, com aquela advogadazinha que ajudou o promotor a acertar minha tampa, e o senhor me vem com essa história.
+leave Player
+leave Tenente
+join Galego center
+Galego: Fala mermo, {Nome_test}!
+leave Galego
+join Player left
+Player: Fui lá achando que ia ter a chance de ficar com alguém na festa. Lugar assim é cheio de gente bonita, mas vi uma chance de fugir e pulei o muro. Não parecia justo perder a oportunidade, né?
+join Tenente right
+Tenente: [shake rate=20.0 level=5 connected=1]Justo?\
+Só é pra você que enganou meio mundo e foge de tudo. Covarde![/shake]
+- Covarde? O senhor tem coragem de pixar um prédio só com uma corda?
+- Já viu covarde navegar de boa na undernet?
+Tenente: Isso é maloqueragem!
+Player: Maloqueragem? Isso é coisa de quem tem paixão pela vida, isso sim! O senhor não teria a coragem de encarar T4-UR0 de frente e agarrar ele pelos chifres se ele entrasse em pane no meio da rua!
+Tenente: Nem eu nem você
+Player: Pois pergunte aos seus homens o motivo da minha roupa rasgada e suja quando cheguei aqui.
+leave Player
+join Soldado left
+Soldado: Isso é verdade, Tenente. No caminho até aqui...
+jump tutorial_flashback/

@@ -1,0 +1,12 @@
+[signal arg="voltar_cadeia"]
+join Player left
+Player: Eu tive a oportunidade de parar aquela coisa, mas preferi tentar sair inteiro... o problema é que tem porco em toda esquina...
+join Tenente right
+Tenente: Não entendi. Começou querendo cantar de galo pra depois fugir?
+leave Player
+join Galego left
+Galego: Pois eu fazia igual. Na primeira oportunidade já dava no pé!
+Tenente: Que covardes! Tu é um homem ou um rato, Galego?
+Galego: Eu sou ratão com muito orgulho, delegado!
+Tenente: Já chega! Cabo, coloque essa peste junto dos outros.
+jump risoflora_entra/

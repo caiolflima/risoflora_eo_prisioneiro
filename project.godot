@@ -39,12 +39,17 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Intro": "res://timelines test/Intro.dtl",
+"agarrar-lutar": "res://timelines test/agarrar-lutar.dtl",
 "capitulo 1_2": "res://timelines test/capitulo 1_2.dtl",
 "capitulo1": "res://timelines test/capitulo1.dtl",
 "maintest": "res://timelines test/maintest.dtl",
 "morte": "res://timelines test/morte.dtl",
 "nome_jogador_teste": "res://timelines test/nome_jogador_teste.dtl",
-"tutorial_1": "res://timelines test/tutorial_1.dtl"
+"risoflora_entra": "res://timelines test/risoflora_entra.dtl",
+"timeline_enfrentou": "res://timelines test/timeline_enfrentou.dtl",
+"timeline_fugiu": "res://timelines test/timeline_fugiu.dtl",
+"tutorial_1": "res://timelines test/tutorial_1.dtl",
+"tutorial_flashback": "res://timelines test/tutorial_flashback.dtl"
 }
 layout/style_directory={
 "": "res://resources/estilo2.tres",
@@ -96,6 +101,7 @@ variables={
 "socializar": 2
 },
 "Nome_test": "",
+"final": "",
 "pronome1": "",
 "pronome2": "",
 "pronome3": "",

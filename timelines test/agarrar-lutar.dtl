@@ -1,0 +1,69 @@
+[signal arg="limpar_resultado"]
+- AGARRAR [LUTAR] [1]
+	set {Atributos.atributo_escolhido} = {Atributos.lutar}
+	[signal arg="spawn_dices"]
+	[signal arg="ligar_teste"]
+	[wait time="3.0"]
+	[signal arg="coletar_resultado1"]
+	[signal arg="coletar_resultado2"]
+	if {resultado_teste} == "Sucesso Crítico":
+		audio "res://resources/audio/sucesso_total.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		VOCÊ USA TODOS OS SEUS CONHECIMENTOS E DERROTA AQUELA PILHA DE SUCATA COMO SE NÃO FOSSE NADA. QUER DIZER, VOCÊ PROVAVELMENTE VAI PRECISAR DE ROUPAS NOVAS.
+	if {resultado_teste} == "Sucesso Completo":
+		audio "res://resources/audio/sucesso.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		VOCÊ USA TODOS OS SEUS CONHECIMENTOS E DERROTA AQUELA PILHA DE SUCATA COMO SE NÃO FOSSE NADA. QUER DIZER, VOCÊ PROVAVELMENTE VAI PRECISAR DE ROUPAS NOVAS.
+	if {resultado_teste} == "Sucesso Parcial":
+		audio "res://resources/audio/sucesso_parcial.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		MESMO COM DIFICULDADE, VOCÊ DERROTOU AQUELA COISA! SUAS ROUPAS ESTÃO SUJAS E VOCÊ TEM ALGUNS ARRANHÕES, MAS JÁ TE VI EM SITUAÇÕES PIORES. VOCÊ SE SAIU BEM.
+	if {resultado_teste} == "Resultado Ruim":
+		audio "res://resources/audio/resultado_rolagem3.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		[signal arg="fugiu"]
+		VOCÊ É INCAPAZ DE FAZER QUALQUER COISA AGORA E DEIXA O HOMEM DE TERNO BRANCO SE VIRAR POR CONTA PRÓPRIA.
+		TUDO QUE RESTA É SAIR DALI. QUANDO PARECE QUE A LIBERDADE ESTÁ AO SEU ALCANCE, VOCÊ SE VÊ NUM BECO SEM SAÍDA COM AGENTES DA MILITIA COMPANY NA SUA COLA.
+		set {final} = "Marcado_pra_morrer"
+		jump timeline_fugiu/
+
+- HACKEAR [2]
+	set {Atributos.atributo_escolhido} = {Atributos.hackear}
+	[signal arg="spawn_dices"]
+	[signal arg="ligar_teste"]
+	[wait time="3.0"]
+	[signal arg="coletar_resultado1"]
+	[signal arg="coletar_resultado2"]
+	if {resultado_teste} == "Sucesso Crítico":
+		audio "res://resources/audio/sucesso_total.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		VOCÊ USA TODOS OS SEUS CONHECIMENTOS E DERROTA AQUELA PILHA DE SUCATA COMO SE NÃO FOSSE NADA. QUER DIZER, VOCÊ PROVAVELMENTE VAI PRECISAR DE ROUPAS NOVAS.
+	if {resultado_teste} == "Sucesso Completo":
+		audio "res://resources/audio/sucesso.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		VOCÊ USA TODOS OS SEUS CONHECIMENTOS E DERROTA AQUELA PILHA DE SUCATA COMO SE NÃO FOSSE NADA. QUER DIZER, VOCÊ PROVAVELMENTE VAI PRECISAR DE ROUPAS NOVAS.
+	if {resultado_teste} == "Sucesso Parcial":
+		audio "res://resources/audio/sucesso_parcial.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		MESMO COM DIFICULDADE, VOCÊ DERROTOU AQUELA COISA! SUAS ROUPAS ESTÃO SUJAS E VOCÊ TEM ALGUNS ARRANHÕES, MAS JÁ TE VI EM SITUAÇÕES PIORES. VOCÊ SE SAIU BEM.
+	if {resultado_teste} == "Resultado Ruim":
+		audio "res://resources/audio/resultado_rolagem3.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		[signal arg="fugiu"]
+		VOCÊ É INCAPAZ DE FAZER QUALQUER COISA AGORA E DEIXA O HOMEM DE TERNO BRANCO SE VIRAR POR CONTA PRÓPRIA.
+		TUDO QUE RESTA É SAIR DALI. QUANDO PARECE QUE A LIBERDADE ESTÁ AO SEU ALCANCE, VOCÊ SE VÊ NUM BECO SEM SAÍDA COM AGENTES DA MILITIA COMPANY NA SUA COLA.
+		set {final} = "Marcado_pra_morrer"
+		jump timeline_fugiu/
+
+[signal arg="voltar_cadeia"]
+join Player left
+Player: O caba com a peça na mão, delegado, sem saber onde atirava... Com certeza nunca trabalhou com esse tipo de maquinário. Isso coisa de peão, chefe. Sabedoria do proletariado.
+join Tenente right
+Tenente: Você viu se ele tinha porte de arma, Cabo?
+leave Player
+join Cabo left
+Cabo: Não, senhor.
+Tenente: Tás ficando relaxado, rapaz.
+Cabo: Não foi isso, senhor. Tudo correu muito rápido e eu...
+Tenente: Depois nós acertamos isso. Apenas cumpra minhas ordens e coloque essa peste junto dos outros.
+jump risoflora_entra/
