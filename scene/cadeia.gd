@@ -8,11 +8,13 @@ const rua_flashback := "res://scene/rua_flashback.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#Dialogic.start("capitulo1")
 	Dialogic.signal_event.connect(_on_signal)
 	AudioManager.play("Main") #toca a musica ambiente
 	$Alicate.hide()
 	$Galego.hide()
+	$Risoflora.hide()
+	$Noiva.hide()
+	$Iluminacao/SpotLight_risoflora.hide()
 	$Iluminacao/SpotLight_bandidos.hide()
 	
 
@@ -36,7 +38,7 @@ func _on_signal(signal_passed_in):
 				critico = critico + 1
 		
 		if Global.resultado_dado == 6 and critico >= 2:
-			Global.resultado_teste = "Sucesso Crítico"
+			Global.resultado_teste = "Sucesso Completo" #citacao a resultado critico removido
 		elif Global.resultado_dado == 6:
 			Global.resultado_teste = "Sucesso Completo"
 		elif Global.resultado_dado == 4 or Global.resultado_dado == 5:
@@ -83,8 +85,21 @@ func _on_signal(signal_passed_in):
 	if signal_passed_in =="tutorial_fechar":
 		$Tutorial.queue_free()
 		
+	#aqui começa o flashback
 	if signal_passed_in =="flashback":
 		get_tree().change_scene_to_file(rua_flashback)
 		
-	if signal_passed_in =="fechar_jogo":
-		get_tree().quit()
+	if signal_passed_in =="risoflora_chega":
+		$Risoflora.show()
+		$Iluminacao/SpotLight_risoflora.show()
+		$Iluminacao/SpotLight_bandidos.hide()
+		
+	if signal_passed_in =="Noiva_chega":
+		$Noiva.show()
+		
+	if signal_passed_in =="risoflora_sai":
+		$Risoflora.hide()
+		$Noiva.hide()
+		$Iluminacao/SpotLight_risoflora.hide()
+		$Iluminacao/SpotLight_bandidos.hide()
+		

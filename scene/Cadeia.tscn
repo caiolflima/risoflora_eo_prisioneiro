@@ -1,13 +1,17 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqtldloqsa354"]
+[gd_scene load_steps=18 format=3 uid="uid://cqtldloqsa354"]
 
 [ext_resource type="PackedScene" uid="uid://gu1kcasmnatk" path="res://resources/modelos/blocking_prison2.glb" id="1_wdb30"]
 [ext_resource type="Script" uid="uid://cttwtcff2p5of" path="res://scene/cadeia.gd" id="1_x7eou"]
 [ext_resource type="Texture2D" uid="uid://udcwx48s4ldy" path="res://resources/retratos/buckaneiro.png" id="2_h4fw7"]
-[ext_resource type="Texture2D" uid="uid://byvsscf0pjbsy" path="res://resources/retratos/alicate.png" id="3_ucoss"]
-[ext_resource type="Texture2D" uid="uid://cvfnavxk371gy" path="res://resources/retratos/galego.png" id="4_nixei"]
-[ext_resource type="Texture2D" uid="uid://cjjdrxirm4vcs" path="res://resources/in_game/tenente.png" id="5_qsb5b"]
+[ext_resource type="Texture2D" uid="uid://bdoy644lqa1bx" path="res://resources/in_game/alicate_in-game.png" id="4_k7lhr"]
+[ext_resource type="Texture2D" uid="uid://bjp3vrrt0w6j4" path="res://resources/in_game/galego_in-game.png" id="5_uluk1"]
+[ext_resource type="Texture2D" uid="uid://l28kchaogekt" path="res://resources/in_game/soldado_in-game.png" id="6_4tksx"]
+[ext_resource type="Texture2D" uid="uid://h35o81vgmawm" path="res://resources/in_game/cabo_in-game.png" id="7_d6wmt"]
 [ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="7_ntrou"]
 [ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="8_obubp"]
+[ext_resource type="Texture2D" uid="uid://ca2t5eilsxsvs" path="res://resources/in_game/tenente_in-game.png" id="8_yd5gk"]
+[ext_resource type="Texture2D" uid="uid://bpruyvp1xa7uj" path="res://resources/in_game/risoflora_in-game.png" id="9_4tksx"]
+[ext_resource type="Texture2D" uid="uid://dtkmikmy47eai" path="res://resources/in_game/noiva_in-game.png" id="10_d6wmt"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5jpev"]
 size = Vector3(40, 0.1, 40)
@@ -57,7 +61,7 @@ spot_range = 7.8056345
 spot_angle = 18.815884
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, 1.2947745, 5.5796766, 0.7602155)
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, 0.35361242, 5.5796766, -1.829201)
 light_color = Color(1, 1, 0.65882355, 1)
 light_energy = 5.909
 shadow_enabled = true
@@ -65,49 +69,72 @@ spot_range = 6.7255216
 spot_angle = 17.547218
 
 [node name="SpotLight_bandidos" type="SpotLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.517756, 5.5796766, -5.860512)
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.7216134, 5.5796766, -5.860512)
 light_energy = 3.182
 light_indirect_energy = 2.091
 light_specular = 4.318
 shadow_enabled = true
-spot_range = 7.8056345
-spot_angle = 6.460147
+spot_range = 7.251006
+spot_angle = 8.920873
+
+[node name="SpotLight_risoflora" type="SpotLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, 2.2151542, 5.5796766, 1.6864853)
+light_energy = 3.182
+light_indirect_energy = 2.091
+light_specular = 4.318
+shadow_enabled = true
+spot_range = 7.251006
+spot_angle = 11.089096
 
 [node name="blocking_prison2" parent="." instance=ExtResource("1_wdb30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1000266, 0, -3.546163)
 
 [node name="Player" type="Sprite3D" parent="."]
-transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.0379943, 0.012507323, 0.032727998, -0.0071908818, 0.021844205, -0.50901127, 1.4355521, 0.10262489)
+transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.0379943, 0.012507323, 0.032727998, -0.0071908818, 0.021844205, -1.4468775, 1.4355521, -2.320776)
 texture = ExtResource("2_h4fw7")
 
 [node name="Alicate" type="Sprite3D" parent="."]
-transform = Transform3D(0.050755512, 0.006624737, -0.020124387, 0, 0.05224216, 0.01719757, 0.021186743, -0.01587039, 0.0482105, -1.3552637, 1.0410209, -6.1935177)
-texture = ExtResource("3_ucoss")
+transform = Transform3D(0.27684826, 0.03613493, -0.10976939, 0, 0.28495726, 0.09380493, 0.11556406, -0.08656577, 0.2629664, -1.418191, 1.0410209, -6.3526974)
+flip_h = true
+billboard = 1
+texture = ExtResource("4_k7lhr")
 
 [node name="Galego" type="Sprite3D" parent="."]
-transform = Transform3D(0.059877627, 0.0011976188, -0.003638084, 4.12536e-10, 0.056991447, 0.01876099, 0.0038301367, -0.018722724, 0.05687521, -2.5439844, 0.93298864, -5.9623165)
+transform = Transform3D(0.29938814, 0.005988094, -0.018190421, 2.0626798e-09, 0.28495726, 0.09380495, 0.019150686, -0.093613625, 0.28437608, -1.7764673, 0.93298864, -5.454138)
 gi_mode = 2
-texture = ExtResource("4_nixei")
+flip_h = true
+billboard = 1
+texture = ExtResource("5_uluk1")
 
 [node name="Soldado" type="Sprite3D" parent="."]
-transform = Transform3D(0.10121243, 0.09656852, -0.29335222, 3.1545349e-09, 0.30870366, 0.101622015, 0.30883825, -0.031647407, 0.09613737, 2.4799414, 0.93298864, 0.6405277)
+transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, 1.5420752, 0.93298864, -1.7828732)
 gi_mode = 2
-modulate = Color(0.27450982, 1, 1, 1)
 billboard = 1
-texture = ExtResource("5_qsb5b")
+texture = ExtResource("6_4tksx")
 
 [node name="Cabo" type="Sprite3D" parent="."]
-transform = Transform3D(0.10121243, 0.09656852, -0.29335222, 3.1545349e-09, 0.30870366, 0.101622015, 0.30883825, -0.031647407, 0.09613737, 0.9256811, 0.93298864, 2.3088017)
+transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, -0.012185097, 0.93298864, -0.11459923)
 gi_mode = 2
-modulate = Color(0.27450982, 0.5254902, 1, 1)
 billboard = 1
-texture = ExtResource("5_qsb5b")
+texture = ExtResource("7_d6wmt")
 
 [node name="Tenente" type="Sprite3D" parent="."]
-transform = Transform3D(0.10121243, 0.09656852, -0.29335222, 3.1545349e-09, 0.30870366, 0.101622015, 0.30883825, -0.031647407, 0.09613737, 0.7296972, 0.93298864, 0.75234413)
+transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, -0.20816898, 0.93298864, -1.6710567)
 gi_mode = 2
 billboard = 1
-texture = ExtResource("5_qsb5b")
+texture = ExtResource("8_yd5gk")
+
+[node name="Risoflora" type="Sprite3D" parent="."]
+transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, 1.6530371, 0.93298864, 1.5839481)
+gi_mode = 2
+billboard = 1
+texture = ExtResource("9_4tksx")
+
+[node name="Noiva" type="Sprite3D" parent="."]
+transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, 2.5285254, 0.93298864, 2.1266117)
+gi_mode = 2
+billboard = 1
+texture = ExtResource("10_d6wmt")
 
 [node name="Tutorial" type="Sprite3D" parent="."]
 transform = Transform3D(0.81, 0, 0, 0, 0.26, 0, 0, 0, 0.365, -1.126831, 4.114258, -1.4403687)
@@ -152,7 +179,7 @@ offset_right = 1128.0
 offset_bottom = 555.0
 theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
-text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]6[/b][/pulse], a ação é um [b]sucesso completo[/b] – tudo corre bem. Se rolar mais que um dado com resultado [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]6[/b][/pulse], a ação é um [b]sucesso crítico[/b] – você ganha alguma vantagem adicional."
+text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]6[/b][/pulse], a ação é um [b]sucesso completo[/b] – tudo corre bem. "
 
 [node name="Tutorial Title5" type="RichTextLabel" parent="Tutorial"]
 visible = false

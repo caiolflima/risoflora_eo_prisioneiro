@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dtuy2y7og6i0u" path="res://scene/rua_flashback.gd" id="1_s2skm"]
 [ext_resource type="Texture2D" uid="uid://udcwx48s4ldy" path="res://resources/retratos/buckaneiro.png" id="1_whdps"]
-[ext_resource type="Texture2D" uid="uid://ylhwuk7b1qob" path="res://resources/retratos/vela.png" id="2_cmkfn"]
 [ext_resource type="Texture2D" uid="uid://c43bmcdl0igdc" path="res://resources/retratos/boi.png" id="3_nicsm"]
+[ext_resource type="Texture2D" uid="uid://dia13dqbn0rip" path="res://resources/in_game/vela_in-game.png" id="3_s2skm"]
 [ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="4_nicsm"]
 [ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="5_ti3ua"]
 
@@ -41,9 +41,9 @@ transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.
 texture = ExtResource("1_whdps")
 
 [node name="Vela" type="Sprite3D" parent="."]
-transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.0379943, 0.012507323, 0.032727998, -0.0071908818, 0.021844205, 0.1103735, 1.4355521, 1.1003056)
+transform = Transform3D(0.17248014, 0.07675118, -0.23315202, -3.296513e-09, 0.28495726, 0.09380492, 0.24545999, -0.05393161, 0.16383155, 0.1103735, 1.4355521, 1.1003056)
 billboard = 1
-texture = ExtResource("2_cmkfn")
+texture = ExtResource("3_s2skm")
 
 [node name="Taurus" type="Sprite3D" parent="."]
 transform = Transform3D(0.442699, 0.19699469, -0.5984235, -8.46105e-09, 0.7313903, 0.24076594, 0.63001394, -0.13842446, 0.42050096, -1.5909281, 2.2760062, -5.8409786)

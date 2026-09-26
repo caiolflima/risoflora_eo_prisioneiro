@@ -1,15 +1,6 @@
 [clear time="1.0"]
 [signal arg="flashback"]
 [wait time="2.0"]
-[signal arg="tutorial_abrir"]
-[wait time="1.0"]
-[signal arg="tutorial_abrir1"]
-[wait time="2.0"]
-[wait_input]
-[signal arg="tutorial_abrir2"]
-[wait time="2.0"]
-[wait_input]
-[signal arg="tutorial_fechar"]
 VOCÊ VÊ UM HOMEM DE TERNO BRANCO PARALISADO ENQUANTO UM T4-UR0 DESCONTROLADO AVANÇA NA DIREÇÃO DE VOCÊS
 - FUGIR [ESGUEIRAR] [1]
 	set {Atributos.atributo_escolhido} = {Atributos.esgueirar}
@@ -143,6 +134,7 @@ VOCÊ VÊ UM HOMEM DE TERNO BRANCO PARALISADO ENQUANTO UM T4-UR0 DESCONTROLADO A
 		jump timeline_fugiu/
 [signal arg="limpar_resultado"]
 [signal arg="voltar_cadeia"]
+[wait time="1.0"]
 join Player left
 Player: O caba com a peça na mão, delegado, sem saber onde atirava... Com certeza nunca trabalhou com esse tipo de maquinário. Isso coisa de peão, chefe. Sabedoria do proletariado.
 join Tenente right

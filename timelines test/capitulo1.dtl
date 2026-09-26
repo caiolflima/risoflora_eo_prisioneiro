@@ -68,7 +68,7 @@ leave Alicate
 join Player right
 Player: Dale, comparsas, suave? Perdi muita coisa? Aliás, boy.. não inventem de fugir não que esses bichos não brincam.
 leave --All--
-join Tenente left
+join Tenente left [mirrored="true"]
 Tenente: Chega de papo furado. {Nome_test}, ajoelhe.
 join Player right
 Player: …

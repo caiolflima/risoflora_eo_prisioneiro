@@ -1,3 +1,116 @@
-Continua
-[end_timeline]
-[signal arg="fechar_jogo"]
+[signal arg="risoflora_chega"]
+[clear time="1.0"]
+join Risoflora left
+Risoflora: Licença, painho tá por aqui?
+join Tenente right
+Tenente: O que foi dessa vez, menina? Não já disse que não quero tu por aqui?
+Risoflora: Vitória está parecendo uma terra sem dono, painho. Lá fora tá uma loucura.
+Tenente: Pelo menos as ruas tem um problema a menos agora.
+Risoflora: Ah, olha quem tá aqui!
+leave Tenente
+join Risoflora right [mirrored="true"]
+join Player left [mirrored="true"]
+- Visitando os amigos
+- É pra não perder o costume
+Risoflora: Então, te prenderam de novo?
+- Até que valeu a pena. Tô te vendo outra vez!
+- A pior prisão é a que levamos dentro de nós...
+leave Player
+join Tenente left [mirrored="true"]
+Tenente: Pare de falar com {pronome1}, minha filha. Não tem nada de bom pra você aqui.
+Risoflora: Então, não quer que eu fale com {Nome_test}, mas quis que {pronome1} trabalhasse lá em casa?
+Tenente: Aquilo foi um erro. Um erro triste.
+Risoflora: Quero que {pronome1} saiba de uma coisa! Eu fui contra que painho te levasse pra fazer os serviços lá em casa desde o começo!
+leave Tenente
+join Player left [mirrored="true"]
+- Por quê?
+	Risoflora: Não era correto! Isso é abuso de poder
+	- Entendo seu ponto
+	- Ah, com isso eu concordo!
+- Foi contra?
+	Risoflora: Não era correto! Isso é abuso de poder
+	- Entendo seu ponto
+	- Ah, com isso eu concordo!
+Player: Mas confesso que fiquei triste por não ter te visto lá. Não pude ver de novo seus olhos brilhando como no dia que pixei o prédio da Avalon!
+Risoflora: Como é que você se lembra de mim? Tinha várias pessoas olhando pra ti pendurado naquela corda?
+- Claro que lembro
+- Eu só tinha olhos pra tu.
+Player: Era madrugada de uma segunda. O sol nem tinha nascido, mas seus olhos já brilhavam mais que uma supernova naquela parada de ônibus.
+leave Player
+join Tenente left [mirrored="true"]
+Tenente: Soldado, pela última vez! Meta logo essa desgraça numa cela!
+leave Risoflora
+join Tenente right
+join Player left [mirrored="true"]
+- Vou poder dar grau na sua moto?
+- Vou sair pra passear de cavalo?
+Tenente: Eu digo cela com cê-cedilha, insolente!
+leave Player
+join Soldado left
+Soldado: {Nome_test}, deixe de graça e obedeça o tenente!
+Tenente: E você, Risoflora, não apareça nunca mais aqui!
+leave Soldado
+join Tenente left [mirrored="true"]
+join Risoflora right
+Risoflora: Mas, painho...
+Tenente: O que foi? Diga logo por que você veio aqui!
+join Risoflora right [mirrored="true"]
+Risoflora: Achei o T4-UR0 que ganhei de padrinho todo esculhambado
+Tenente: Oxe! Então o auto-mech descontrolado era seu?
+leave Risoflora
+join Cabo right [mirrored="true"]
+Cabo: Aquela aberração com pintura de vaca malhada?
+leave Cabo
+join Risoflora right [mirrored="true"]
+Risoflora: Como vocês sabem?
+leave Tenente
+join Player left [mirrored="true"]
+if {final} == "Marcado_pra_morrer":
+	- Precisei fugir dele
+		Risoflora: [shake rate=20.0 level=5 connected=1]Você viu ele fora de controle e não fez nada?[/shake]
+		- Eu não tive coragem.
+			Risoflora: Tudo bem... Eu também não sou tão corajosa quanto gostaria... Pelo menos você vive a vida que deseja...
+		- Eu só queria fugir daqui.
+			Risoflora: E mesmo assim acabou aqui de novo...
+else:
+	- Enfrentei ele de frente
+		Risoflora: Foi você, então.
+		- Não sabia que era seu.
+		- Fui eu.
+		Player: Juro que teria pego mais leve se soubesse que era seu.
+	- ...
+		Player: Fui eu.
+		Player: Juro que teria pego mais leve se soubesse que era seu.
+leave Player
+join Soldado left
+Soldado: A senhora perdoe minha curiosidade, mas por que a senhora ganhou um daqueles de presente?
+[signal arg="Noiva_chega"]
+leave Soldado
+join Noiva rightmost [z_index="1"]
+Noiva: [shake rate=20.0 level=5 connected=1]Risoflora! Você não tem vergonha? Isso aqui não é lugar pra você![/shake]
+join Risoflora right
+Risoflora: Eu já tava de saída...
+Noiva: Nem deveria ter vindo, pra começo de conversa! Você não me escuta nunca!
+join Tenente left [mirrored="true"]
+Tenente: O que aconteceu, doutora?
+Noiva: Assunto particular. Falaremos mais tarde
+Risoflora: É sobre minha alimentação, painho...
+Tenente: Veja bem, doutora. Não somos ricos, mas lá em casa ninguém passa fome.
+Noiva: Não se trata de quantidade, Tenente, mas de qualidade.
+Risoflora: Eu me recuso comer sintéticos! Não importa se você diz que eles vem com a suplementação necessária ou...
+Tenente: Doutor, eu vou cuidar desse negócio da comida. Tenha um pouco de paciência com Lisbela. A menina é ainda muito nova, não conhece bem a vida.
+Noiva: Risoflora, vamos embora. Você é minha noiva, deve se portar como tal.
+join Player leftmost [mirrored="true"]
+- Ninguém deveria decidir sua vida por você!
+	Noiva: Não escute essa escória, meu bem. Vamos sair daqui logo. Isso não é lugar pra você.
+- ...
+Risoflora: ...
+leave Player
+join Cabo leftmost
+Tenente: Cabo, venha comigo. Vamos ver se o auto-mech da minha menina precisa de reparos.
+Cabo: Sim, senhor.
+leave --All--
+[signal arg="risoflora_sai"]
+[wait time="3.0"]
+join Soldado center
+Soldado: Finalmente um pouco de paz nessa joça... Acho que vou tirar um cochilo...

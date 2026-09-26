@@ -30,7 +30,7 @@ func _on_signal(signal_passed_in):
 				critico = critico + 1
 		
 		if Global.resultado_dado == 6 and critico >= 2:
-			Global.resultado_teste = "Sucesso Crítico"
+			Global.resultado_teste = "Sucesso Completo" #removendo citacao a resultado critico
 		elif Global.resultado_dado == 6:
 			Global.resultado_teste = "Sucesso Completo"
 		elif Global.resultado_dado == 4 or Global.resultado_dado == 5:
