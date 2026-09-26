@@ -1,0 +1,123 @@
+[wait time="1.0"]
+[signal arg="Vela_entra"]
+join Vela right
+Vela: Cadê {pronome1}?
+join Soldado left
+Soldado: Alto! Não pode entrar assim na delegacia. Se identifique!
+Vela: E é delegacia isso aqui? Pensei que era um cabaré. Vamos, quero falar com a pessoa que chegou hoje!
+[signal arg="vela_presos"]
+leave Soldado
+join Alicate left [mirrored="true"]
+Alicate: Agora deu o carai... Quem é esse agora?
+Vela: O meu nome de batismo pouco importa. As ruas me conhecem e me respeitam como Vela de Libra.
+if {final} == "Marcado_pra_morrer":
+	jump marcado_pra_morrer/
+join Alicate leftmost
+join Player left [mirrored="true"]
+- É ele, Alicate. O homem de terno branco!
+	join Vela right
+	Vela de Libra\: Aí está você!
+- Você sobreviveu!
+	join Vela right
+	Vela de Libra\: Aí está você!
+join Alicate leftmost [mirrored="true"]
+Alicate: Vela? Não entendi essa! E depois falam que meu vulgo que é esquisito!
+Vela: Vou explicar, velho. Sou um cidadão de bem, um homem religioso. Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja. Acendo uma vela e rezo um pai nosso pela alma.
+leave Alicate
+join Player leftmost [mirrored="true"]
+join Soldado left
+Soldado: [shake rate=20.0 level=5 connected=1]Ca-camisa de sa-saudade?[/shake]
+leave Player
+join Galego leftmost
+Galego: Mandar um pra série C, Soldado. Matar um!
+Soldado: [shake rate=20.0 level=5 connected=1]O Se-senhor tem co-coragem de...[/shake]
+Vela: Coragem, não tenho, não. Eu tenho é costume. Mato por encomenda. Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
+leave Galego
+join Alicate leftmost [mirrored="true"]
+Alicate: Vôte!
+[clear time="1.0"]
+join Vela center
+Vela: Você aí! Qual seu nome? Vim falar foi contigo!
+join Vela right
+join Player left [mirrored="true"]
+- Pode me chamar de {Nome_test}!
+- {Nome_test}!
+Vela: Pois bem, {Nome_test}!
+Vela: Naquela hora, você me viu com a draga na mão?
+- Vim sim
+- E tinha como não ver?
+Vela: Foi muita coragem da sua parte! De um lado um maquinário desembestado e do outro meio trinta e oito. Você podia morrer das duas mortes.
+- A morte é cobrador muito sério: não há documento, mas só recebe uma vez
+- Fiz o que eu sabia e podia fazer.
+Vela: Você é uma pessoa corajosa e esperta. É bom dever favor a gente coragem, porque quem tem coragem não gosta de viver pedindo ajuda. Mas dever favor a raposa é o mesmo que dormir de porta aberta. O que é que você quer em pagamento?
+leave --All--
+join Galego left [mirrored="true"]
+join Alicate leftmost [mirrored="true"]
+Galego: Bora, {Nome_test}, pede pra ele meter o pipoco nesse soldado e tirar a gente daqui
+Alicate: Odeio admitir, mas Galego tem razão.
+join Vela right
+Vela: Que pedido sem graça o desses dois, {Nome_test}. Não peça covardia. Nem posso perder tempo, vamos falar claro. Você não tem inimigos?
+leave Alicate
+leave Galego
+join Player left [mirrored="true"]
+- Todo mundo tem.
+	Vela: E qual é o maior? Pinte e diga o nome, estabeleça o lugar e deixe comigo.
+- Eu não tenho inimigos.
+	Vela: Bobagem. Sempre existem alguém contra nós. Pinte e diga o nome, estabeleça o lugar e deixe comigo.
+Player: Que diabo de favor é esse que o senhor quer fazer? Quer matar alguém?
+Vela: Diga um nome, {Nome_test}. Pode ser o juiz. O promotor. Você me dá o nome, o jeito, e eu paço o aço. E então? Diz ou não diz? Você tem inimigos?
+leave Vela
+join Player center [animation="Fade In Up"]
+- Tenho, mas quero todos vivos.
+	Player: Por que vou querer eles mortos? Assim, eu também ia matar a morte, a doença, delegados safados, ia matar a velhice e a covardia, chefe. Deixe meus inimigos vivos. Quero meus inimigos vivos.
+	join Player left
+	join Vela right
+	Vela: Esse teu jeito me dá nos nervos, {Nome_test}. Preciso ir, pois tenho assuntos a resolver em Manguetown. Vou lá averiguar umas informações, quero resolver um caso de família. Mas quando vocês menos esperarem, eu volto por aqui. Até qualquer dia.
+	leave Player
+	join Galego left [mirrored="true"]
+	Galego: Chefe! Reze um pai nosso pra nós três.
+	Vela: Eu só rezo pra defunto. Interessa? Liás, cabra safado não serve pra morrer, só serve pra apanhar. E apanhar entre os bicos dos peitos e o caroço do imbigo, que é pra não deixar marcas da surra. Ah!, nós três num deserto\: eu, você e um cacete de quixaba! Porque quixaba é o chá melhor que existe no mundo pra pancada. Assim, pra ganhar tempo, a gente dá logo a pisa com quixaba, porque está dando o castigo e o remédio. Mas já gastei muita cera com você. {Nome_test}, até breve.
+	leave Vela
+	[signal arg="vela_sai"]
+	Galego: É cada amizade que tu arruma, {Nome_test}. Chega me deu calafrio quando ele falou nessa história de rezar.
+	join Player center
+	Player: É, Galego, amigo na praça é melhor que dinheiro no bolso. Eu agora tô é com tudo. Um bicho desses por mim, eu só vou ter aqui do bom e do melhor.
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
+	[wait time="0.5"]
+	[signal arg="final_bom"]
+	[wait time="2.0"]
+	[wait_input]
+	[signal arg="menu"]
+	[end_timeline]
+- O Tenente
+	join Player left [mirrored="true"]
+	join Vela right
+	Vela: Pois bem. Considere feito!
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
+- O Cabo
+	join Player left [mirrored="true"]
+	join Vela right
+	Vela: Pois bem. Considere feito!
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
+- O Soldado
+	join Player left [mirrored="true"]
+	join Vela right
+	Vela: Pois bem. Considere feito!
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
+- A Noiva
+	join Player left [mirrored="true"]
+	join Vela right
+	Vela: Pois bem. Considere feito!
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
+[clear time="1.0"]
+[wait time="0.5"]
+[signal arg="final_ruim"]
+[wait time="2.0"]
+[wait_input]
+[signal arg="menu"]
+[end_timeline]

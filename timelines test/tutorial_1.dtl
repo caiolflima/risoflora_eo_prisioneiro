@@ -29,11 +29,13 @@ join Player right
 		audio "res://resources/audio/sucesso_total.ogg"
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
 		[clear time="1.0"]
+		[signal arg="limpar_resultado"]
 		jump capitulo 1_2/
 	if {resultado_teste} == "Sucesso Completo":
 		audio "res://resources/audio/sucesso.ogg"
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
 		[clear time="1.0"]
+		[signal arg="limpar_resultado"]
 		jump capitulo 1_2/
 	if {resultado_teste} == "Sucesso Parcial":
 		audio "res://resources/audio/sucesso_parcial.ogg"

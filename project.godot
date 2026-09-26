@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Risoflora_e_o_Bucaneiro"
-run/main_scene="uid://37vh023j5dka"
+run/main_scene="uid://1ps2tp5dbxqc"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -43,13 +43,15 @@ directories/dtl_directory={
 "capitulo 1_2": "res://timelines test/capitulo 1_2.dtl",
 "capitulo1": "res://timelines test/capitulo1.dtl",
 "maintest": "res://timelines test/maintest.dtl",
+"marcado_pra_morrer": "res://timelines test/marcado_pra_morrer.dtl",
 "morte": "res://timelines test/morte.dtl",
 "nome_jogador_teste": "res://timelines test/nome_jogador_teste.dtl",
 "risoflora_entra": "res://timelines test/risoflora_entra.dtl",
 "timeline_enfrentou": "res://timelines test/timeline_enfrentou.dtl",
 "timeline_fugiu": "res://timelines test/timeline_fugiu.dtl",
 "tutorial_1": "res://timelines test/tutorial_1.dtl",
-"tutorial_flashback": "res://timelines test/tutorial_flashback.dtl"
+"tutorial_flashback": "res://timelines test/tutorial_flashback.dtl",
+"vela_entra": "res://timelines test/vela_entra.dtl"
 }
 layout/style_directory={
 "": "res://resources/estilo2.tres",

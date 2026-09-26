@@ -1,0 +1,83 @@
+[clear time="1.0"]
+join Player left [mirrored="true"]
+- ...
+	join Vela right
+	Vela de Libra\: Aí está você!
+- Você sobreviveu!
+	join Vela right
+	Vela de Libra\: Não graças a você!
+join Alicate leftmost [mirrored="true"]
+Alicate: Vela? Não entendi essa! E depois falam que meu vulgo que é esquisito!
+Vela: Vou explicar, velho. Sou um cidadão de bem, um homem religioso. Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja. Acendo uma vela e rezo um pai nosso pela alma.
+leave Alicate
+join Player leftmost [mirrored="true"]
+join Soldado left
+Soldado: [shake rate=20.0 level=5 connected=1]Ca-camisa de sa-saudade?[/shake]
+leave Player
+join Galego leftmost
+Galego: Mandar um pra série C, Soldado. Matar um!
+Soldado: [shake rate=20.0 level=5 connected=1]O Se-senhor tem co-coragem de...[/shake]
+Vela: Coragem, não tenho, não. Eu tenho é costume. Mato por encomenda. Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
+leave Galego
+join Alicate leftmost [mirrored="true"]
+Alicate: Vôte!
+[clear time="1.0"]
+join Vela center
+Vela: Você aí! Qual seu nome? Vim falar foi contigo!
+join Vela right
+join Player left [mirrored="true"]
+- Pode me chamar de {Nome_test}!
+- {Nome_test}!
+Vela: Pois bem, {Nome_test}!
+Vela: Eu te vi naquela hora e você também me viu, mas você me deixou pra morrer ali. Vim passar isso a limpo.
+leave Player
+join Soldado left [mirrored="true"]
+Soldado: [shake rate=20.0 level=5 connected=1]O que o se-senhor va-vai fazer?[/shake]
+leave Soldado
+Vela: Por um fim em que me causou tamanha desonra. Vamos, {Nome_test}, sua vela já foi acesa. Quais suas últimas palavras?
+- Implorar para viver [GINGAR] [2]
+	[clear time="1.0"]
+	set {Atributos.atributo_escolhido} = {Atributos.gingar}
+	[signal arg="spawn_dices"]
+	[signal arg="ligar_teste"]
+	[wait time="3.0"]
+	[signal arg="coletar_resultado1"]
+	[signal arg="coletar_resultado2"]
+	if {resultado_teste} == "Sucesso Crítico":
+		audio "res://resources/audio/sucesso_total.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		Vela: Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
+		[signal arg="limpar_resultado"]
+		[clear time="1.0"]
+	if {resultado_teste} == "Sucesso Completo":
+		audio "res://resources/audio/sucesso.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		Vela: Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
+		[signal arg="limpar_resultado"]
+		[clear time="1.0"]
+	if {resultado_teste} == "Sucesso Parcial":
+		audio "res://resources/audio/sucesso_parcial.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		Vela: Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
+		[signal arg="limpar_resultado"]
+	if {resultado_teste} == "Resultado Ruim":
+		audio "res://resources/audio/resultado_rolagem3.ogg"
+		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
+		Vela: Que deprimente! Você deveria ter vergonha de estar numa situação dessas.
+		Vela: Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
+		[signal arg="limpar_resultado"]
+	join Soldado center [mirrored="true"]
+	Soldado: Mas...
+	leave Soldado
+	Vela: Vamos! Qual a diferença se {Nome_test} morrer apodrecendo nessa cela ou nas minhas mãos daqui um tempo? A sentença é a mesma. Faça logo antes que eu atire em você também!
+	Player: Obrigado
+- ...
+Vela: Muito bem! Não gosto de ver ninguém morrendo triste ou implorando pela vida.
+[clear time="1.0"]
+[signal arg="fim_de_jogo"]
+[wait time="0.5"]
+[signal arg="final_marcado"]
+[wait time="2.0"]
+[wait_input]
+[signal arg="menu"]
+[end_timeline]

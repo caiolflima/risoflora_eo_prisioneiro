@@ -1,5 +1,6 @@
 extends Control
 const cadeia := "res://scene/Cadeia.tscn"
+const menu := "res://scene/Menu.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +16,7 @@ func _on_aceitar_pressed() -> void:
 
 
 func _on_recusar_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file(menu)
 
 func _on_signal(signal_passed_in):
 	if signal_passed_in =="citacao1":

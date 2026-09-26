@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cqtldloqsa354"]
+[gd_scene load_steps=19 format=3 uid="uid://cqtldloqsa354"]
 
 [ext_resource type="PackedScene" uid="uid://gu1kcasmnatk" path="res://resources/modelos/blocking_prison2.glb" id="1_wdb30"]
 [ext_resource type="Script" uid="uid://cttwtcff2p5of" path="res://scene/cadeia.gd" id="1_x7eou"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ca2t5eilsxsvs" path="res://resources/in_game/tenente_in-game.png" id="8_yd5gk"]
 [ext_resource type="Texture2D" uid="uid://bpruyvp1xa7uj" path="res://resources/in_game/risoflora_in-game.png" id="9_4tksx"]
 [ext_resource type="Texture2D" uid="uid://dtkmikmy47eai" path="res://resources/in_game/noiva_in-game.png" id="10_d6wmt"]
+[ext_resource type="Texture2D" uid="uid://dia13dqbn0rip" path="res://resources/in_game/vela_in-game.png" id="11_d6wmt"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5jpev"]
 size = Vector3(40, 0.1, 40)
@@ -135,6 +136,12 @@ transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.284
 gi_mode = 2
 billboard = 1
 texture = ExtResource("10_d6wmt")
+
+[node name="Vela" type="Sprite3D" parent="."]
+transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, 2.1785498, 0.93298864, 1.7227421)
+gi_mode = 2
+billboard = 1
+texture = ExtResource("11_d6wmt")
 
 [node name="Tutorial" type="Sprite3D" parent="."]
 transform = Transform3D(0.81, 0, 0, 0, 0.26, 0, 0, 0, 0.365, -1.126831, 4.114258, -1.4403687)

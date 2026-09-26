@@ -5,6 +5,7 @@ extends Node3D
 @export var critico: float
 @export var dices: Array
 const rua_flashback := "res://scene/rua_flashback.tscn"
+const final := "res://scene/Final.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,6 +15,7 @@ func _ready() -> void:
 	$Galego.hide()
 	$Risoflora.hide()
 	$Noiva.hide()
+	$Vela.hide()
 	$Iluminacao/SpotLight_risoflora.hide()
 	$Iluminacao/SpotLight_bandidos.hide()
 	
@@ -91,6 +93,8 @@ func _on_signal(signal_passed_in):
 		
 	if signal_passed_in =="risoflora_chega":
 		$Risoflora.show()
+		$Alicate.show()
+		$Galego.show()
 		$Iluminacao/SpotLight_risoflora.show()
 		$Iluminacao/SpotLight_bandidos.hide()
 		
@@ -102,4 +106,19 @@ func _on_signal(signal_passed_in):
 		$Noiva.hide()
 		$Iluminacao/SpotLight_risoflora.hide()
 		$Iluminacao/SpotLight_bandidos.hide()
+		$Tenente.hide()
+		$Cabo.hide()
 		
+	if signal_passed_in =="Vela_entra":
+		$Iluminacao/SpotLight_risoflora.show()
+		$Vela.show()
+
+	if signal_passed_in =="vela_presos":
+		$Iluminacao/SpotLight_bandidos.show()
+
+	if signal_passed_in =="vela_sai":
+		$Vela.hide()
+		$Iluminacao/SpotLight_risoflora.hide()
+		
+	if signal_passed_in =="fim_de_jogo":
+		get_tree().change_scene_to_file(final)

@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://hfudsmlc85sh"]
+
+[ext_resource type="Script" uid="uid://cd77125qj61bx" path="res://scene/final.gd" id="1_kq7x5"]
+
+[sub_resource type="Theme" id="Theme_8rpc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uk60o"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kq7x5")
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_right = 1934.0
+offset_bottom = 1102.0
+theme = SubResource("Theme_8rpc7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_uk60o")
+
+[node name="Final_Marcado" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 447.485
+offset_top = 308.0
+offset_right = 1428.916
+offset_bottom = 498.77002
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "O homem do terno branco dispara quando você menos espera. A morte vem sem aviso. Você nunca mais verá o brilho de mil estrelas nos olhos de Risoflora.
+
+FIM"
+metadata/_edit_use_anchors_ = true
+
+[node name="Final_Bom" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 447.485
+offset_top = 308.0
+offset_right = 1428.916
+offset_bottom = 498.77002
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "O homem do terno branco se vai. Você fez um aliado importante, mas esse é só o fim do primeiro capítulo. Sua história está apenas começando."
+metadata/_edit_use_anchors_ = true
+
+[node name="Final_Ruim" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 447.485
+offset_top = 308.0
+offset_right = 1428.916
+offset_bottom = 583.73
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "O homem do terno branco se vai, ignorando qualquer pedido para que te tirem dali. Ele prometeu exterminar o alvo que você deu e assim o fez. Contudo, não demorou muito para que as investigações conectassem o fato a você. A acusação de mandante de um homicídio premeditado estendeu sua pena por tempo indeterminado. Você nunca mais viu o brilho nos olhos de Risoflora.
+
+FIM"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(969, 545)

@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://1ps2tp5dbxqc"]
+
+[ext_resource type="Script" uid="uid://by6fstq342j5o" path="res://scene/menu.gd" id="1_jn1v7"]
+
+[sub_resource type="Theme" id="Theme_8rpc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uk60o"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rpc7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwgaq"]
+bg_color = Color(1, 1, 1, 0.4509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lc4ft"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_873w0"]
+bg_color = Color(1, 1, 1, 0.3647059)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jn1v7")
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_right = 1934.0
+offset_bottom = 1102.0
+theme = SubResource("Theme_8rpc7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_uk60o")
+
+[node name="Aviso1" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 447.485
+offset_top = 308.0
+offset_right = 1428.916
+offset_bottom = 498.77002
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "Risoflora e o Bucaneiro
+v.0.2"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Aceitar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 891.0
+offset_top = 505.0
+offset_right = 981.0
+offset_bottom = 547.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_8rpc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jwgaq")
+text = "Iniciar
+"
+
+[node name="Recusar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 555.0
+offset_right = 980.0
+offset_bottom = 597.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_lc4ft")
+theme_override_styles/hover = SubResource("StyleBoxFlat_873w0")
+text = "Fechar"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(969, 545)
+
+[connection signal="pressed" from="Aceitar" to="." method="_on_aceitar_pressed"]
+[connection signal="pressed" from="Recusar" to="." method="_on_recusar_pressed"]
