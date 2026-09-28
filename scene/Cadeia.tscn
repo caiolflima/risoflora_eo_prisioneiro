@@ -218,55 +218,6 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0)
 }
 
-[sub_resource type="Animation" id="Animation_soguo"]
-resource_name = "player_preso"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.81, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.4468775, 1.4355521, -2.320776), Vector3(-2.7047992, 1.4355521, -3.346487), Vector3(-2.1742945, 1.4355521, -4.801855)]
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Player:rotation:x")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(-0.31801638, -0.25, 0, 0.25, 0, -0.31801635, -0.25491184, 0.31801635, 0, 0),
-"times": PackedFloat32Array(0, 0.82)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Player:rotation:y")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(-0.9582732, -0.25, 0, 0.25, 0, -0.95827323, -0.13666667, 9.934108e-09, 0, 0),
-"times": PackedFloat32Array(0, 0.82)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Player:rotation:z")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(-1.1568447e-08, -0.25, 0, 0.25, 0, -1.1568447e-08, -0.13666667, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.82)
-}
-
 [sub_resource type="Animation" id="Animation_ut6y8"]
 resource_name = "grade_abrir"
 tracks/0/type = "bezier"
@@ -337,6 +288,55 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0.04250264, -0.16666667, 0, 0, 0, 0.04250264, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_soguo"]
+resource_name = "player_preso"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.81, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.4468775, 1.4355521, -2.320776), Vector3(-2.7047992, 1.4355521, -3.346487), Vector3(-2.1742945, 1.4355521, -4.801855)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:rotation:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-0.31801638, -0.25, 0, 0.25, 0, -0.31801635, -0.25491184, 0.31801635, 0, 0),
+"times": PackedFloat32Array(0, 0.82)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player:rotation:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-0.9582732, -0.25, 0, 0.25, 0, -0.95827323, -0.13666667, 9.934108e-09, 0, 0),
+"times": PackedFloat32Array(0, 0.82)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player:rotation:z")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-1.1568447e-08, -0.25, 0, 0.25, 0, -1.1568447e-08, -0.13666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.82)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qk67p"]
@@ -482,23 +482,23 @@ texture = ExtResource("7_ntrou")
 
 [node name="Tutorial Title" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 596.0
-offset_top = 119.0
-offset_right = 902.0
-offset_bottom = 216.0
+offset_left = 916.0
+offset_top = 181.0
+offset_right = 1222.0
+offset_bottom = 278.0
 theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
-text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={30}]Tutorial[/font_size][/pulse]
+text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={36}]Tutorial[/font_size][/pulse]
 "
 horizontal_alignment = 1
 
 [node name="Tutorial Title3" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 372.0
-offset_top = 192.0
-offset_right = 1164.0
-offset_bottom = 555.0
-theme_override_font_sizes/normal_font_size = 18
+offset_left = 692.0
+offset_top = 254.0
+offset_right = 1484.0
+offset_bottom = 694.0
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "EM DETERMINADOS MOMENTOS, SUAS ESCOLHAS PODEM TER RESULTADOS VARIADOS.
 
@@ -510,33 +510,33 @@ Você joga dados igual ao valor da habilidade testada e usa o melhor resultado.
 
 [node name="Tutorial Title4" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 372.0
-offset_top = 192.0
-offset_right = 1128.0
-offset_bottom = 555.0
-theme_override_font_sizes/normal_font_size = 18
+offset_left = 692.0
+offset_top = 254.0
+offset_right = 1448.0
+offset_bottom = 617.0
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]6[/b][/pulse], a ação é um [b]sucesso completo[/b] – tudo corre bem. "
+text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=-2.0][b][font_size={30}]6[/font_size][/b][/pulse], a ação é um [b][font_size={30}]sucesso completo[/font_size][/b] – tudo corre bem. "
 
 [node name="Tutorial Title5" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 372.0
-offset_top = 192.0
-offset_right = 1128.0
-offset_bottom = 555.0
-theme_override_font_sizes/normal_font_size = 18
+offset_left = 692.0
+offset_top = 254.0
+offset_right = 1448.0
+offset_bottom = 617.0
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]4[/b][/pulse] ou [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]5[/b][/pulse], a ação é um [b]sucesso parcial[/b] – você alcança o que estava procurando fazer, mas surgem consequências: perigo, dano, efeito reduzido, etc."
+text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=-2.0][b][font_size={30}]4[/font_size][/b][/pulse] ou [pulse freq=1.0 color=#ffffff40 ease=-2.0][b][font_size={30}]5[/font_size][/b][/pulse], a ação é um [b][font_size={30}]sucesso parcial[/font_size][/b] – você alcança o que estava procurando fazer, mas surgem consequências: perigo, dano, efeito reduzido, etc."
 
 [node name="Tutorial Title6" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 372.0
-offset_top = 192.0
-offset_right = 1128.0
-offset_bottom = 555.0
-theme_override_font_sizes/normal_font_size = 18
+offset_left = 692.0
+offset_top = 254.0
+offset_right = 1448.0
+offset_bottom = 617.0
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Se o valor no dado mais alto é entre [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]1[/b][/pulse] e [pulse freq=1.0 color=#ffffff40 ease=-2.0][b]3[/b][/pulse], a ação tem um [b]resultado ruim[/b]. As coisas dão errado. Você provavelmente não alcança o seu objetivo e ainda por cima sofre complicações."
+text = "Se o valor no dado mais alto é entre [pulse freq=1.0 color=#ffffff40 ease=-2.0][b][font_size={30}]1[/font_size][/b][/pulse] e [pulse freq=1.0 color=#ffffff40 ease=-2.0][b][font_size={30}]3[/font_size][/b][/pulse], a ação tem um [b][font_size={30}]resultado ruim[/font_size][/b]. As coisas dão errado. Você provavelmente não alcança o seu objetivo e ainda por cima sofre complicações."
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

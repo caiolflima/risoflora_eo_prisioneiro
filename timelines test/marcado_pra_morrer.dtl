@@ -9,7 +9,8 @@ join Player left [mirrored="true"]
 join Alicate leftmost [mirrored="true"]
 Alicate: Vela? Não entendi essa! E depois falam que meu vulgo que é esquisito!
 Vela: Vou explicar, velho. Sou um cidadão de bem, um homem religioso.
-Vela: Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja. Acendo uma vela e rezo um pai nosso pela alma.
+Vela: Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja.
+Vela: Acendo uma vela e rezo um pai nosso pela alma.
 leave Alicate
 join Player leftmost [mirrored="true"]
 join Soldado left
@@ -18,7 +19,8 @@ leave Player
 join Galego leftmost
 Galego: Mandar um pra série C, Soldado. Matar um!
 Soldado: [shake rate=20.0 level=5 connected=1]O Se-senhor tem co-coragem de...[/shake]
-Vela: Coragem, não tenho, não. Eu tenho é costume. Mato por encomenda. Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
+Vela: Coragem, não tenho, não. Eu tenho é costume. Mato por encomenda.
+Vela:  Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
 leave Galego
 join Alicate leftmost [mirrored="true"]
 Alicate: Vôte!
@@ -30,7 +32,8 @@ join Player left [mirrored="true"]
 - Pode me chamar de {Nome_test}!
 - {Nome_test}!
 Vela: Pois bem, {Nome_test}!
-Vela: Eu te vi naquela hora e você também me viu, mas você me deixou pra morrer ali. Vim passar isso a limpo.
+Vela: Eu te vi naquela hora e você também me viu, mas você me deixou pra morrer ali.
+Vela: Vim passar isso a limpo.
 leave Player
 join Soldado left [mirrored="true"]
 Soldado: [shake rate=20.0 level=5 connected=1]O que o se-senhor va-vai fazer?[/shake]

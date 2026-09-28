@@ -1,11 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://37vh023j5dka"]
+[gd_scene load_steps=11 format=3 uid="uid://37vh023j5dka"]
 
 [ext_resource type="Script" uid="uid://dhfjvffwqdngx" path="res://scene/intro.gd" id="1_uk60o"]
+[ext_resource type="FontFile" uid="uid://ocrpye70jjox" path="res://resources/DMSerifDisplay-Regular.ttf" id="2_jwgaq"]
 
 [sub_resource type="Theme" id="Theme_8rpc7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uk60o"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontFile" id="FontFile_lc4ft"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+
+[sub_resource type="SystemFont" id="SystemFont_uk60o"]
+font_weight = 750
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rpc7"]
 bg_color = Color(0, 0, 0, 1)
@@ -33,66 +49,113 @@ theme = SubResource("Theme_8rpc7")
 theme_override_styles/panel = SubResource("StyleBoxFlat_uk60o")
 
 [node name="Aviso1" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 447.485
-offset_top = 308.0
-offset_right = 1428.916
-offset_bottom = 498.77002
-theme_override_font_sizes/normal_font_size = 24
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 294.0
+offset_top = 283.0
+offset_right = 1698.74
+offset_bottom = 716.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
-text = "Esta é uma obra de ficção. Semelhanças entre personagens ou eventos com pessoas vivas ou mortas em seu mundo são uma coincidência entre as múltiplas possibilidades calculadas pelo [bgcolor={white}][color=black]algoritmo[/color][/bgcolor]. Apenas quem está de acordo com esses termos têm os [bgcolor={white}][color=black]privilégios de acesso[/color][/bgcolor] ao JOGO."
-metadata/_edit_use_anchors_ = true
+text = "Esta é uma obra de ficção. Semelhanças entre personagens ou eventos com pessoas vivas ou mortas em seu mundo são uma coincidência entre as múltiplas possibilidades calculadas pelo [b][font_size={48}]ALGORITMO[/font_size][/b]. Apenas quem está de acordo com esses termos têm os [b][font_size={48}]PRIVILÉGIOS DE ACESSO[/font_size][/b] ao [b][font_size={48}]JOGO[/font_size][/b]."
 
 [node name="Aviso2" type="RichTextLabel" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 447.485
-offset_top = 308.0
-offset_right = 1428.916
-offset_bottom = 498.77002
-theme_override_font_sizes/normal_font_size = 24
+offset_left = 258.95
+offset_top = 376.895
+offset_right = 1663.69
+offset_bottom = 735.7058
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
-text = "“Tudo foi, é ou será caranguejo. Inclusive nós e a lama.”
+text = "No mangue, tudo é, foi ou será caranguejo, 
+inclusive o homem e a lama.
+
 
 [right]- Josué de Castro"
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Aviso3" type="RichTextLabel" parent="."]
-visible = false
+[node name="Aviso3_1" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 447.485
-offset_top = 308.0
-offset_right = 1428.916
-offset_bottom = 585.02
-theme_override_font_sizes/normal_font_size = 24
+offset_left = 68.58
+offset_top = 96.29
+offset_right = 1868.5769
+offset_bottom = 1023.44
+theme_override_fonts/normal_font = SubResource("FontFile_lc4ft")
+theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
-text = "CAPÍTULO I
-[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={80}]CARANGUEJOS NA GAIOLA[/font_size][/pulse]
+text = "[right]CAPÍTULO UM[/right]
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Aviso3_2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 68.58
+offset_top = 96.29
+offset_right = 1868.5769
+offset_bottom = 1023.44
+theme_override_fonts/normal_font = ExtResource("2_jwgaq")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = " 
+
+
+
+
+
+[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={128}][font {res://resources/DMSerifDisplay-Regular.ttf}]CARANGUEJOS[/font][/font_size][/pulse]
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Aviso3_3" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 68.58
+offset_top = 181.085
+offset_right = 1868.5769
+offset_bottom = 1108.2363
+theme_override_fonts/normal_font = ExtResource("2_jwgaq")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = " 
+
+
+
+
+
+[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={180}][font {res://resources/DMSerifDisplay-Regular.ttf}]NA GAIOLA[/font][/font_size][/pulse]
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Aceitar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 589.0
-offset_top = 505.0
-offset_right = 679.0
-offset_bottom = 547.0
-theme_override_font_sizes/font_size = 24
+offset_left = 566.0
+offset_top = 703.0
+offset_right = 759.0
+offset_bottom = 770.0
+theme_override_fonts/font = SubResource("SystemFont_uk60o")
+theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_8rpc7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jwgaq")
-text = "Aceitar
+text = "ACEITAR
 "
 
 [node name="Recusar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 802.0
-offset_top = 505.0
-offset_right = 892.0
-offset_bottom = 547.0
-theme_override_font_sizes/font_size = 24
+offset_left = 1158.0
+offset_top = 703.0
+offset_right = 1370.0
+offset_bottom = 770.0
+theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_lc4ft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_873w0")
-text = "Recusar"
+text = "RECUSAR"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(969, 545)

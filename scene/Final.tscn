@@ -23,11 +23,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_uk60o")
 [node name="Final_Marcado" type="RichTextLabel" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 447.485
-offset_top = 308.0
-offset_right = 1428.916
-offset_bottom = 498.77002
-theme_override_font_sizes/normal_font_size = 24
+offset_left = 294.0
+offset_top = 283.0
+offset_right = 1698.74
+offset_bottom = 716.0
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "O homem do terno branco dispara quando você menos espera. A morte vem sem aviso. Você nunca mais verá o brilho de mil estrelas nos olhos de Risoflora.
 
@@ -37,11 +37,11 @@ metadata/_edit_use_anchors_ = true
 [node name="Final_Bom" type="RichTextLabel" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 447.485
-offset_top = 308.0
-offset_right = 1428.916
-offset_bottom = 498.77002
-theme_override_font_sizes/normal_font_size = 24
+offset_left = 294.0
+offset_top = 283.0
+offset_right = 1698.74
+offset_bottom = 716.0
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "O homem do terno branco se vai. Você fez um aliado importante, mas esse é só o fim do primeiro capítulo. Sua história está apenas começando."
 metadata/_edit_use_anchors_ = true
@@ -49,11 +49,11 @@ metadata/_edit_use_anchors_ = true
 [node name="Final_Ruim" type="RichTextLabel" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 447.485
-offset_top = 308.0
-offset_right = 1428.916
-offset_bottom = 583.73
-theme_override_font_sizes/normal_font_size = 24
+offset_left = 294.0
+offset_top = 283.0
+offset_right = 1698.74
+offset_bottom = 945.315
+theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
 text = "O homem do terno branco se vai, ignorando qualquer pedido para que te tirem dali. Ele prometeu exterminar o alvo que você deu e assim o fez. Contudo, não demorou muito para que as investigações conectassem o fato a você. A acusação de mandante de um homicídio premeditado estendeu sua pena por tempo indeterminado. Você nunca mais viu o brilho nos olhos de Risoflora.
 

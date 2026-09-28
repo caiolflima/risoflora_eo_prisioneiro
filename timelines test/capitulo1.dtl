@@ -11,15 +11,21 @@ leave Cabo
 join Soldado left
 Soldado: Agora deu pra defender bandido, foi?
 join Tenente right
-Tenente: Mais respeito, soldado! E não é nada disso, visse? A gente ainda tem que fichar essa peça boa aí e gente desse tipo só abre a boca quando tá de bom humor.
+Tenente: Mais respeito, soldado! E não é nada disso, visse?
+Tenente: A gente ainda tem que fichar essa peça boa aí e gente desse tipo só abre a boca quando tá de bom humor.
 leave Soldado
 leave Tenente
+[style name="player_style"]
 Player: ... desse tipo?  …
 join Tenente left [mirrored="true"]
+[style name="estilo2"]
 Tenente: Piratas do ciberespaço, meliantes e marginais! Tu não pode negar que não é.
 Tenente: Enfim, vê se me ajuda e me dá um nome decente dessa vez pra eu pôr na tua ficha…
+[style name="player_style"]
 [text_input text="Inserir Nome:" var="Nome_test" placeholder="Nome"]
+[style name="estilo2"]
 Tenente: Até que gostei desse, visse? E fala aí, a gente te chama como?
+[style name="player_style"]
 - Ele/Dele
 	set {pronome1} = "ele"
 	set {pronome2} = "dele"
@@ -40,6 +46,7 @@ Tenente: Até que gostei desse, visse? E fala aí, a gente te chama como?
 	set {pronome2} = "delu"
 	set {pronome3} = "u"
 	set {pronome4} = "u"
+[style name="estilo2"]
 Tenente: Tá certo, {Nome_test}. Agora preencha essa ficha que teus pariceiro tão te esperando na cela.
 [clear time="1.0"]
 [signal arg="mostrar_ficha"]
@@ -53,9 +60,14 @@ Soldado: Acorda, bando de fi do cão. Tem comparsa de vocês entrando pelo cano.
 [signal arg="acordar_presos"]
 leave Soldado
 join Galego left
-Galego: Vê só que tiração, meu rato. Nem vou te contar onde eu queria que meu cano tivesse entrando
+[style name="presos_style"]
+Galego: Vê só que tiração, meu rato.
+Galego: Nem vou te contar onde eu queria que meu cano tivesse entrando
 join Tenente right
-Tenente: Respeita a autoridade, rapaz. Quer aumentar a pena por desacato?
+[style name="estilo2"]
+Tenente: Respeita a autoridade, rapaz.
+Tenente: Quer aumentar a pena por desacato?
+[style name="presos_style"]
 Galego: Com todo respeito, mas desde quando soldado raso é autoridade, delegado?
 Galego: Eu já abro uma exceção pra porco como o senhor que captura nós com vida e trouxe {Nome_test} inteir{pronome4}.
 Galego: Agora querer que eu trate isso aí que nem gente é pedir demais de mim.
@@ -68,12 +80,17 @@ Galego: E isso importa?
 Alicate: Tás bem, criança? O que fizeram contigo?
 leave Alicate
 join Player right
-Player: Dale, comparsas, suave? Perdi muita coisa? Aliás, boy.. não inventem de fugir não que esses bichos não brincam.
+[style name="player_style"]
+Player: Dale, comparsas, suave? Perdi muita coisa?
+Player: Aliás, boy.. não inventem de fugir não que esses bichos não brincam.
 leave --All--
 join Tenente left [mirrored="true"]
+[style name="estilo2"]
 Tenente: Chega de papo furado. {Nome_test}, ajoelhe.
 join Player right
+[style name="player_style"]
 Player: …
 Player: Por quê? E aqui agora é igreja, é?
+[style name="estilo2"]
 Tenente: Ajoelhe-se e peça perdão pelo que fez.
 jump tutorial_1/

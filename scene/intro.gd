@@ -5,7 +5,9 @@ const menu := "res://scene/Menu.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Aviso2.hide()
-	$Aviso3.hide()
+	$Aviso3_1.hide()
+	$Aviso3_2.hide()
+	$Aviso3_3.hide()
 	Dialogic.signal_event.connect(_on_signal)
 	Global.camera_move = "camera_intro"
 
@@ -24,8 +26,12 @@ func _on_signal(signal_passed_in):
 		$Aviso2.show()
 	if signal_passed_in =="titulo":
 		$Aviso2.hide()
-		$Aviso3.show()
+		$Aviso3_1.show()
+		$Aviso3_2.show()
+		$Aviso3_3.show()
 	if signal_passed_in =="iniciar":
-		$Aviso3.hide()
+		$Aviso3_1.hide()
+		$Aviso3_2.hide()
+		$Aviso3_3.hide()
 	if signal_passed_in =="iniciar2":
 		get_tree().change_scene_to_file(cadeia)

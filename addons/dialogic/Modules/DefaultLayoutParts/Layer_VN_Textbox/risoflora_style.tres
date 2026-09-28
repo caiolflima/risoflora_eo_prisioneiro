@@ -1,0 +1,87 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=21 format=3 uid="uid://b4brvmdvrhgev"]
+
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_bqfao"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_25miw"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="3_l2req"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="4_qe1mm"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="5_h875e"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="6_ueu3p"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="7_jwtu1"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="8_y567g"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="9_t77ev"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="10_5ew3l"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="11_fbf1q"]
+
+[sub_resource type="Resource" id="Resource_15c1q"]
+script = ExtResource("2_25miw")
+scene = ExtResource("1_bqfao")
+overrides = {
+"global_font_size": "36.0"
+}
+
+[sub_resource type="Resource" id="Resource_3m27h"]
+script = ExtResource("2_25miw")
+scene = ExtResource("3_l2req")
+
+[sub_resource type="Resource" id="Resource_6e0m4"]
+script = ExtResource("2_25miw")
+scene = ExtResource("4_qe1mm")
+
+[sub_resource type="Resource" id="Resource_hhp54"]
+script = ExtResource("2_25miw")
+scene = ExtResource("5_h875e")
+
+[sub_resource type="Resource" id="Resource_cl8in"]
+script = ExtResource("2_25miw")
+scene = ExtResource("6_ueu3p")
+overrides = {
+"box_margin_bottom": "50.0",
+"box_size": "Vector2(700, 250)",
+"name_label_box_offset": "Vector2(10, 0)",
+"name_label_box_use_global_color": "false",
+"name_label_custom_color": "Color(0.45422792, 0.8509804, 0.12549017, 1)",
+"name_label_custom_font_size": "24.0",
+"name_label_use_character_color": "false",
+"name_label_use_global_color": "false",
+"name_label_use_global_font_size": "false",
+"text_size": "36.0",
+"text_use_global_color": "false",
+"text_use_global_size": "false"
+}
+
+[sub_resource type="Resource" id="Resource_cyw2f"]
+script = ExtResource("2_25miw")
+scene = ExtResource("7_jwtu1")
+
+[sub_resource type="Resource" id="Resource_sovu6"]
+script = ExtResource("2_25miw")
+scene = ExtResource("8_y567g")
+overrides = {
+"font_size_custom": "30.0",
+"font_size_use_global": "false"
+}
+
+[sub_resource type="Resource" id="Resource_vs361"]
+script = ExtResource("2_25miw")
+scene = ExtResource("9_t77ev")
+
+[sub_resource type="Resource" id="Resource_2dwya"]
+script = ExtResource("2_25miw")
+scene = ExtResource("10_5ew3l")
+
+[resource]
+script = ExtResource("11_fbf1q")
+name = "risoflora_style"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_info = {
+"": SubResource("Resource_15c1q"),
+"10": SubResource("Resource_3m27h"),
+"11": SubResource("Resource_6e0m4"),
+"12": SubResource("Resource_hhp54"),
+"13": SubResource("Resource_cl8in"),
+"14": SubResource("Resource_cyw2f"),
+"15": SubResource("Resource_sovu6"),
+"16": SubResource("Resource_vs361"),
+"17": SubResource("Resource_2dwya")
+}
+metadata/_latest_layer = ""

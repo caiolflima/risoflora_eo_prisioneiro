@@ -55,9 +55,14 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://resources/estilo2.tres",
-"estilo2": "res://resources/estilo2.tres"
+"estilo2": "res://resources/estilo2.tres",
+"noiva_style": "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/noiva_style.tres",
+"player_style": "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/player_style.tres",
+"presos_style": "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/presos_style.tres",
+"risoflora_style": "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/risoflora_style.tres",
+"vela_style": "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vela_style.tres"
 }
-layout/style_list=["res://resources/estilo2.tres"]
+layout/style_list=["res://resources/estilo2.tres", "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/presos_style.tres", "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/noiva_style.tres", "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/risoflora_style.tres", "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vela_style.tres", "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/player_style.tres"]
 layout/default_style="res://resources/estilo2.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
