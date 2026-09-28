@@ -7,6 +7,7 @@ func _ready() -> void:
 	$Aviso2.hide()
 	$Aviso3.hide()
 	Dialogic.signal_event.connect(_on_signal)
+	Global.camera_move = "camera_intro"
 
 func _on_aceitar_pressed() -> void:
 	$Aceitar.hide()

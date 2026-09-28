@@ -46,8 +46,12 @@ join Player left [mirrored="true"]
 - Vou sair pra passear de cavalo?
 Tenente: Eu digo cela com cê-cedilha, insolente!
 leave Player
+[signal arg="abrir_cela"]
 join Soldado left
 Soldado: {Nome_test}, deixe de graça e obedeça o tenente!
+[signal arg="player_preso"]
+[wait time="2.0"]
+[signal arg="fechar_cela"]
 Tenente: E você, Risoflora, não apareça nunca mais aqui!
 leave Soldado
 join Tenente left [mirrored="true"]

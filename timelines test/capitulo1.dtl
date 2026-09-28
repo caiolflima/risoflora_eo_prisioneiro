@@ -56,7 +56,9 @@ join Galego left
 Galego: Vê só que tiração, meu rato. Nem vou te contar onde eu queria que meu cano tivesse entrando
 join Tenente right
 Tenente: Respeita a autoridade, rapaz. Quer aumentar a pena por desacato?
-Galego: Com todo respeito, mas desde quando soldado raso é autoridade, delegado? Eu já abro uma exceção pra porco como o senhor que captura nós com vida e trouxe {Nome_test} inteir{pronome4}. Agora querer que eu trate isso aí que nem gente é pedir demais de mim.
+Galego: Com todo respeito, mas desde quando soldado raso é autoridade, delegado?
+Galego: Eu já abro uma exceção pra porco como o senhor que captura nós com vida e trouxe {Nome_test} inteir{pronome4}.
+Galego: Agora querer que eu trate isso aí que nem gente é pedir demais de mim.
 leave Tenente
 join Alicate right
 Alicate: Tá de amizade com porco, Galego?

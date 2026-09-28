@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd3xs5yith5on"]
+
+[ext_resource type="PackedScene" uid="uid://gu1kcasmnatk" path="res://resources/modelos/blocking_prison2.glb" id="1_q1wsi"]
+
+[node name="blocking_prison2" instance=ExtResource("1_q1wsi")]
+
+[node name="security_gate_01" parent="." index="13"]
+visible = false

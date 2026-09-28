@@ -10,6 +10,9 @@ extends Node
 @export var pronome1: String
 @export var pronome2: String
 
+#variaveis de anaimacao
+@export var camera_move: String
+
 #variaveis globais de ficha de personagem
 @export var hackear: int = 2
 @export var detonar: int = 1

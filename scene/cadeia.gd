@@ -18,7 +18,7 @@ func _ready() -> void:
 	$Vela.hide()
 	$Iluminacao/SpotLight_risoflora.hide()
 	$Iluminacao/SpotLight_bandidos.hide()
-	
+	$AnimationPlayer.play(Global.camera_move)
 
 func spawn():
 	for i in Dialogic.VAR.Atributos.atributo_escolhido: #multiplica pelo atributo
@@ -67,6 +67,7 @@ func _on_signal(signal_passed_in):
 		$Iluminacao/SpotLight_bandidos.show()
 		$Alicate.show()
 		$Galego.show()
+		Global.camera_move = "camera_stop"
 	
 	#aqui comeca o tutorial
 	if signal_passed_in =="tutorial_abrir":
@@ -108,6 +109,15 @@ func _on_signal(signal_passed_in):
 		$Iluminacao/SpotLight_bandidos.hide()
 		$Tenente.hide()
 		$Cabo.hide()
+		
+	if signal_passed_in =="abrir_cela":
+		$AnimationPlayer.play("grade_abrir")
+		
+	if signal_passed_in =="player_preso":
+		$AnimationPlayer.play("player_preso")
+		
+	if signal_passed_in =="fechar_cela":
+		$AnimationPlayer.play("grade_fechar")
 		
 	if signal_passed_in =="Vela_entra":
 		$Iluminacao/SpotLight_risoflora.show()
