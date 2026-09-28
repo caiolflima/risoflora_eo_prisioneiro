@@ -49,7 +49,8 @@ Vela: Naquela hora, você me viu com a draga na mão?
 Vela: Foi muita coragem da sua parte! De um lado um maquinário desembestado e do outro meio trinta e oito. Você podia morrer das duas mortes.
 - A morte é cobrador muito sério: não há documento, mas só recebe uma vez
 - Fiz o que eu sabia e podia fazer.
-Vela: Você é uma pessoa corajosa e esperta. É bom dever favor a gente coragem, porque quem tem coragem não gosta de viver pedindo ajuda. Mas dever favor a raposa é o mesmo que dormir de porta aberta. O que é que você quer em pagamento?
+Vela: Você é uma pessoa corajosa e esperta. É bom dever favor a gente coragem, porque quem tem coragem não gosta de viver pedindo ajuda.
+Vela: Mas dever favor a raposa é o mesmo que dormir de porta aberta. O que é que você quer em pagamento?
 leave --All--
 join Galego left [mirrored="true"]
 join Alicate leftmost [mirrored="true"]
@@ -76,7 +77,9 @@ join Player center [animation="Fade In Up"]
 	leave Player
 	join Galego left [mirrored="true"]
 	Galego: Chefe! Reze um pai nosso pra nós três.
-	Vela: Eu só rezo pra defunto. Interessa? Liás, cabra safado não serve pra morrer, só serve pra apanhar. E apanhar entre os bicos dos peitos e o caroço do imbigo, que é pra não deixar marcas da surra. Ah!, nós três num deserto\: eu, você e um cacete de quixaba! Porque quixaba é o chá melhor que existe no mundo pra pancada. Assim, pra ganhar tempo, a gente dá logo a pisa com quixaba, porque está dando o castigo e o remédio. Mas já gastei muita cera com você. {Nome_test}, até breve.
+	Vela: Eu só rezo pra defunto. Interessa? Liás, cabra safado não serve pra morrer, só serve pra apanhar. E apanhar entre os bicos dos peitos e o caroço do imbigo, que é pra não deixar marcas da surra.
+	Vela: Ah!, nós três num deserto\: eu, você e um cacete de quixaba!
+	Vela: Porque quixaba é o chá melhor que existe no mundo pra pancada. Assim, pra ganhar tempo, a gente dá logo a pisa com quixaba, porque está dando o castigo e o remédio. Mas já gastei muita cera com você. {Nome_test}, até breve.
 	leave Vela
 	[signal arg="vela_sai"]
 	Galego: É cada amizade que tu arruma, {Nome_test}. Chega me deu calafrio quando ele falou nessa história de rezar.

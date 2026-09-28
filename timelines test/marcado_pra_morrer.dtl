@@ -8,7 +8,8 @@ join Player left [mirrored="true"]
 	Vela de Libra\: Não graças a você!
 join Alicate leftmost [mirrored="true"]
 Alicate: Vela? Não entendi essa! E depois falam que meu vulgo que é esquisito!
-Vela: Vou explicar, velho. Sou um cidadão de bem, um homem religioso. Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja. Acendo uma vela e rezo um pai nosso pela alma.
+Vela: Vou explicar, velho. Sou um cidadão de bem, um homem religioso.
+Vela: Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja. Acendo uma vela e rezo um pai nosso pela alma.
 leave Alicate
 join Player leftmost [mirrored="true"]
 join Soldado left
@@ -69,7 +70,8 @@ Vela: Por um fim em que me causou tamanha desonra. Vamos, {Nome_test}, sua vela 
 	join Soldado center [mirrored="true"]
 	Soldado: Mas...
 	leave Soldado
-	Vela: Vamos! Qual a diferença se {Nome_test} morrer apodrecendo nessa cela ou nas minhas mãos daqui um tempo? A sentença é a mesma. Faça logo antes que eu atire em você também!
+	Vela: Vamos! Qual a diferença se {Nome_test} morrer apodrecendo nessa cela ou nas minhas mãos daqui um tempo? A sentença é a mesma.
+	Vela: Faça logo antes que eu atire em você também!
 	Player: Obrigado
 - ...
 Vela: Muito bem! Não gosto de ver ninguém morrendo triste ou implorando pela vida.

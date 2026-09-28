@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://c2ukoixmuor3q"]
 
 [ext_resource type="Script" uid="uid://dtuy2y7og6i0u" path="res://scene/rua_flashback.gd" id="1_s2skm"]
-[ext_resource type="Texture2D" uid="uid://udcwx48s4ldy" path="res://resources/retratos/buckaneiro.png" id="1_whdps"]
-[ext_resource type="Texture2D" uid="uid://c43bmcdl0igdc" path="res://resources/retratos/boi.png" id="3_nicsm"]
+[ext_resource type="Texture2D" uid="uid://ga52mmtf811h" path="res://resources/in_game/buckaneiro2.png" id="2_s2skm"]
 [ext_resource type="Texture2D" uid="uid://dia13dqbn0rip" path="res://resources/in_game/vela_in-game.png" id="3_s2skm"]
+[ext_resource type="Texture2D" uid="uid://diuifj2ws3dmk" path="res://resources/in_game/T4AURO.png" id="4_mommx"]
 [ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="4_nicsm"]
 [ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="5_ti3ua"]
 
@@ -37,8 +37,8 @@ transform = Transform3D(1, 0, 0, 0, 0.6526011, 0.75770164, 0, -0.75770164, 0.652
 light_color = Color(1, 1, 0.8392157, 1)
 
 [node name="Player" type="Sprite3D" parent="."]
-transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.0379943, 0.012507323, 0.032727998, -0.0071908818, 0.021844205, -0.5940943, 1.4355521, -2.0630856)
-texture = ExtResource("1_whdps")
+transform = Transform3D(0.05174404, 0.023025354, -0.0699456, -9.889539e-10, 0.08548718, 0.028141474, 0.073638, -0.016179482, 0.049149465, -0.5940943, 1.4355521, -2.0630856)
+texture = ExtResource("2_s2skm")
 
 [node name="Vela" type="Sprite3D" parent="."]
 transform = Transform3D(0.17248014, 0.07675118, -0.23315202, -3.296513e-09, 0.28495726, 0.09380492, 0.24545999, -0.05393161, 0.16383155, 0.1103735, 1.4355521, 1.1003056)
@@ -46,9 +46,9 @@ billboard = 1
 texture = ExtResource("3_s2skm")
 
 [node name="Taurus" type="Sprite3D" parent="."]
-transform = Transform3D(0.442699, 0.19699469, -0.5984235, -8.46105e-09, 0.7313903, 0.24076594, 0.63001394, -0.13842446, 0.42050096, -1.5909281, 2.2760062, -5.8409786)
+transform = Transform3D(0.4024536, 0.17908607, -0.54402137, -7.691864e-09, 0.66490024, 0.21887814, 0.57273996, -0.1258404, 0.38227355, -1.5743265, 2.2760062, -5.454687)
 billboard = 1
-texture = ExtResource("3_nicsm")
+texture = ExtResource("4_mommx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 

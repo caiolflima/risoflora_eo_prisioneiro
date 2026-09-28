@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://gu1kcasmnatk" path="res://resources/modelos/blocking_prison2.glb" id="1_wdb30"]
 [ext_resource type="Script" uid="uid://cttwtcff2p5of" path="res://scene/cadeia.gd" id="1_x7eou"]
-[ext_resource type="Texture2D" uid="uid://udcwx48s4ldy" path="res://resources/retratos/buckaneiro.png" id="2_h4fw7"]
+[ext_resource type="Texture2D" uid="uid://ga52mmtf811h" path="res://resources/in_game/buckaneiro2.png" id="3_d6wmt"]
 [ext_resource type="Texture2D" uid="uid://bdoy644lqa1bx" path="res://resources/in_game/alicate_in-game.png" id="4_k7lhr"]
 [ext_resource type="Texture2D" uid="uid://bjp3vrrt0w6j4" path="res://resources/in_game/galego_in-game.png" id="5_uluk1"]
 [ext_resource type="Texture2D" uid="uid://l28kchaogekt" path="res://resources/in_game/soldado_in-game.png" id="6_4tksx"]
@@ -91,8 +91,8 @@ spot_angle = 11.089096
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1000266, 0, -3.546163)
 
 [node name="Player" type="Sprite3D" parent="."]
-transform = Transform3D(0.02299735, 0.01023349, -0.031086933, -4.3953502e-10, 0.0379943, 0.012507323, 0.032727998, -0.0071908818, 0.021844205, -1.4468775, 1.4355521, -2.320776)
-texture = ExtResource("2_h4fw7")
+transform = Transform3D(0.05174404, 0.023025354, -0.0699456, -9.889539e-10, 0.08548718, 0.028141474, 0.073638, -0.016179482, 0.049149465, -1.4468775, 1.4355521, -2.320776)
+texture = ExtResource("3_d6wmt")
 
 [node name="Alicate" type="Sprite3D" parent="."]
 transform = Transform3D(0.27684826, 0.03613493, -0.10976939, 0, 0.28495726, 0.09380493, 0.11556406, -0.08656577, 0.2629664, -1.418191, 1.0410209, -6.3526974)

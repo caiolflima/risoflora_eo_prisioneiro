@@ -55,10 +55,9 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://resources/estilo2.tres",
-"estilo1": "res://resources/estilo1.tres",
 "estilo2": "res://resources/estilo2.tres"
 }
-layout/style_list=["res://resources/estilo1.tres", "res://resources/estilo2.tres"]
+layout/style_list=["res://resources/estilo2.tres"]
 layout/default_style="res://resources/estilo2.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
