@@ -2,23 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dhfjvffwqdngx" path="res://scene/intro.gd" id="1_uk60o"]
 [ext_resource type="FontFile" uid="uid://ocrpye70jjox" path="res://resources/DMSerifDisplay-Regular.ttf" id="2_jwgaq"]
+[ext_resource type="FontFile" uid="uid://lblo22ya3cxr" path="res://resources/DMSans-VariableFont_opsz,wght.ttf" id="2_lc4ft"]
 
 [sub_resource type="Theme" id="Theme_8rpc7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uk60o"]
 bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="FontFile" id="FontFile_lc4ft"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/64/0/ascent = 0.0
-cache/0/64/0/descent = 0.0
-cache/0/64/0/underline_position = 0.0
-cache/0/64/0/underline_thickness = 0.0
-cache/0/64/0/scale = 1.0
 
 [sub_resource type="SystemFont" id="SystemFont_uk60o"]
 font_weight = 750
@@ -88,7 +77,7 @@ offset_left = 68.58
 offset_top = 96.29
 offset_right = 1868.5769
 offset_bottom = 1023.44
-theme_override_fonts/normal_font = SubResource("FontFile_lc4ft")
+theme_override_fonts/normal_font = ExtResource("2_lc4ft")
 theme_override_font_sizes/normal_font_size = 64
 bbcode_enabled = true
 text = "[right]CAPÍTULO UM[/right]

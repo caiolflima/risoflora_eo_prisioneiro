@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://1ps2tp5dbxqc"]
+[gd_scene load_steps=10 format=3 uid="uid://1ps2tp5dbxqc"]
 
 [ext_resource type="Script" uid="uid://by6fstq342j5o" path="res://scene/menu.gd" id="1_jn1v7"]
 [ext_resource type="Texture2D" uid="uid://chru8n4sr4dy8" path="res://resources/menu_mockup.png" id="2_3cqhr"]
+[ext_resource type="FontFile" uid="uid://lblo22ya3cxr" path="res://resources/DMSans-VariableFont_opsz,wght.ttf" id="3_rgvae"]
 
 [sub_resource type="Theme" id="Theme_8rpc7"]
 
@@ -54,6 +55,7 @@ offset_top = 770.0
 offset_right = 1051.0
 offset_bottom = 812.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rgvae")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_8rpc7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jwgaq")
@@ -67,6 +69,7 @@ offset_top = 838.0
 offset_right = 1050.0
 offset_bottom = 880.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rgvae")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_lc4ft")
 theme_override_styles/hover = SubResource("StyleBoxFlat_873w0")

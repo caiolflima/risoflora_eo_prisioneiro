@@ -1,49 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://dxtav1qm5uqeg"]
+[gd_scene load_steps=9 format=3 uid="uid://dxtav1qm5uqeg"]
 
 [ext_resource type="Script" uid="uid://dw41iaf7gt4a7" path="res://scene/ui_test.gd" id="1_jxegp"]
 [ext_resource type="Texture2D" uid="uid://cbieeo75d23jf" path="res://resources/ficha.png" id="2_17tdo"]
 [ext_resource type="Texture2D" uid="uid://uc3b8x0malma" path="res://resources/button.png" id="4_17tdo"]
 [ext_resource type="Script" uid="uid://cft5tpm8pmqby" path="res://scene/button.gd" id="4_yqy6f"]
+[ext_resource type="FontFile" uid="uid://lblo22ya3cxr" path="res://resources/DMSans-VariableFont_opsz,wght.ttf" id="5_17tdo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sl8db"]
 texture = ExtResource("2_17tdo")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r6aqq"]
 texture = ExtResource("4_17tdo")
-
-[sub_resource type="FontFile" id="FontFile_yqy6f"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/24/0/ascent = 0.0
-cache/0/24/0/descent = 0.0
-cache/0/24/0/underline_position = 0.0
-cache/0/24/0/underline_thickness = 0.0
-cache/0/24/0/scale = 1.0
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-
-[sub_resource type="FontFile" id="FontFile_17tdo"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/24/0/ascent = 0.0
-cache/0/24/0/descent = 0.0
-cache/0/24/0/underline_position = 0.0
-cache/0/24/0/underline_thickness = 0.0
-cache/0/24/0/scale = 1.0
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17tdo"]
 bg_color = Color(0, 0, 0, 1)
@@ -100,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.8509804, 0.42745098, 0.1254902, 1)
-theme_override_fonts/normal_font = SubResource("FontFile_yqy6f")
+theme_override_fonts/normal_font = ExtResource("5_17tdo")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "in"
@@ -124,7 +91,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.8509804, 0.42745098, 0.1254902, 1)
-theme_override_fonts/normal_font = SubResource("FontFile_17tdo")
+theme_override_fonts/normal_font = ExtResource("5_17tdo")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "in"
