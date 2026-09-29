@@ -9,11 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://l28kchaogekt" path="res://resources/in_game/soldado_in-game.png" id="6_4tksx"]
 [ext_resource type="Texture2D" uid="uid://h35o81vgmawm" path="res://resources/in_game/cabo_in-game.png" id="7_d6wmt"]
 [ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="7_ntrou"]
-[ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="8_obubp"]
 [ext_resource type="Texture2D" uid="uid://ca2t5eilsxsvs" path="res://resources/in_game/tenente_in-game.png" id="8_yd5gk"]
 [ext_resource type="Texture2D" uid="uid://bpruyvp1xa7uj" path="res://resources/in_game/risoflora_in-game.png" id="9_4tksx"]
 [ext_resource type="Texture2D" uid="uid://dtkmikmy47eai" path="res://resources/in_game/noiva_in-game.png" id="10_d6wmt"]
 [ext_resource type="Texture2D" uid="uid://dia13dqbn0rip" path="res://resources/in_game/vela_in-game.png" id="11_d6wmt"]
+[ext_resource type="Script" uid="uid://cjkufycirrqj" path="res://scene/spawner.gd" id="14_yd5gk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5jpev"]
 size = Vector3(40, 0.1, 40)
@@ -591,15 +591,16 @@ shape = SubResource("BoxShape3D_uluk1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D5"]
 mesh = SubResource("BoxMesh_4tksx")
 
+[node name="Spawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 14, 0)
+script = ExtResource("14_yd5gk")
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.48706347, 0.69708455, -0.52615815, 0, 0.6024482, 0.798158, 0.8733666, -0.38875362, 0.2934305, -6.866728, 10.126004, 1.0106423)
 projection = 1
 fov = 46.3
 size = 7.451
 near = 0.015
-
-[node name="Dice" parent="." instance=ExtResource("8_obubp")]
-visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

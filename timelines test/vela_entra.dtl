@@ -108,6 +108,7 @@ join Player center [animation="Fade In Up"]
 	Player: É, Galego, amigo na praça é melhor que dinheiro no bolso.
 	Player: Eu agora tô é com tudo. Um bicho desses por mim, eu só vou ter aqui do bom e do melhor.
 	[clear time="1.0"]
+	leave --All--
 	[signal arg="fim_de_jogo"]
 	[wait time="0.5"]
 	[signal arg="final_bom"]
@@ -140,6 +141,7 @@ join Player center [animation="Fade In Up"]
 	[clear time="1.0"]
 	[signal arg="fim_de_jogo"]
 [clear time="1.0"]
+leave --All--
 [wait time="0.5"]
 [signal arg="final_ruim"]
 [wait time="2.0"]

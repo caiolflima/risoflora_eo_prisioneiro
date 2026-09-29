@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://ga52mmtf811h" path="res://resources/in_game/buckaneiro2.png" id="2_s2skm"]
 [ext_resource type="Texture2D" uid="uid://dia13dqbn0rip" path="res://resources/in_game/vela_in-game.png" id="3_s2skm"]
 [ext_resource type="Texture2D" uid="uid://diuifj2ws3dmk" path="res://resources/in_game/T4AURO.png" id="4_mommx"]
-[ext_resource type="PackedScene" uid="uid://c847skon4v3yd" path="res://scene/dice.tscn" id="4_nicsm"]
 [ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="5_ti3ua"]
+[ext_resource type="Script" uid="uid://cjkufycirrqj" path="res://scene/spawner.gd" id="7_mommx"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_eggbe"]
 
@@ -123,9 +123,6 @@ shape = SubResource("BoxShape3D_ti3ua")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D5"]
 mesh = SubResource("BoxMesh_s2skm")
 
-[node name="Dice" parent="." instance=ExtResource("4_nicsm")]
-visible = false
-
 [node name="Tutorial" type="Sprite3D" parent="."]
 transform = Transform3D(0.81, 0, 0, 0, 0.26, 0, 0, 0, 0.365, -1.126831, 4.114258, -1.4403687)
 visible = false
@@ -166,3 +163,7 @@ offset_bottom = 555.0
 theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
 text = "ESSAS JOGADAS TEM CHANCE DE SUCESSO  [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](6)[/b][/pulse], SUCESSO PARCIAL [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](4-5)[/b][/pulse] OU FALHA [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](1-3)[/b][/pulse] E INFLUENCIAM DIRETAMENTE A NARRATIVA DO JOGO"
+
+[node name="Spawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 14, 0)
+script = ExtResource("7_mommx")

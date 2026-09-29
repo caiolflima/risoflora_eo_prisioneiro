@@ -20,18 +20,8 @@ func _ready() -> void:
 	$Iluminacao/SpotLight_bandidos.hide()
 	$AnimationPlayer.play(Global.camera_move)
 
-func spawn():
-	for i in Dialogic.VAR.Atributos.atributo_escolhido: #multiplica pelo atributo
-		var dado = spawn_dado.instantiate()
-		dado.global_position = Vector3(-3,14,0)
-		add_child(dado)
-		dices.append(dado) #coleta os resultados dos dados para a lista
 	
 func _on_signal(signal_passed_in):
-	if signal_passed_in =="spawn_dices": #spawn ganhou sinal proprio
-		spawn()
-		AudioManager.play("Roll")
-		
 	if signal_passed_in =="coletar_resultado2":
 		for i in Global.lista_resultado_dado: #verifica qual foi o maior resultado da lista de dados
 			if i > Global.resultado_dado:
@@ -50,18 +40,11 @@ func _on_signal(signal_passed_in):
 				
 		Dialogic.VAR.resultado_teste = Global.resultado_teste #as variaveis globais retornam valor para as variaveis dialogicc
 		Dialogic.VAR.resultado = Global.resultado_dado
-	if signal_passed_in =="limpar_resultado": #faz a limpeza das variaveis globais
-		Global.lista_resultado_dado = []
-		Global.resultado_dado = 0
-		critico = 0
-		for dado in dices: #faz a limpeza dos dados instanciados 
-			if is_instance_valid(dado):
-				dado.queue_free()
-				
+
 	if signal_passed_in =="mostrar_ficha":
 		var ficha_tutorial = ficha.instantiate()
-		ficha_tutorial.global_position = Vector3(2,10,0)
 		add_child(ficha_tutorial)
+		ficha_tutorial.global_position = Vector3(2,10,0)
 
 	if signal_passed_in =="acordar_presos":
 		$Iluminacao/SpotLight_bandidos.show()
