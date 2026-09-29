@@ -39,7 +39,7 @@ overrides = {
 "box_size": "Vector2(700, 250)",
 "name_label_box_offset": "Vector2(10, 0)",
 "name_label_box_use_global_color": "false",
-"name_label_custom_color": "Color(0.45422792, 0.8509804, 0.12549017, 1)",
+"name_label_custom_color": "Color(0.8509804, 0.12549017, 0.12549017, 1)",
 "name_label_custom_font_size": "24.0",
 "name_label_use_character_color": "false",
 "name_label_use_global_color": "false",
@@ -84,4 +84,4 @@ layer_info = {
 "16": SubResource("Resource_xnhem"),
 "17": SubResource("Resource_nu2nr")
 }
-metadata/_latest_layer = ""
+metadata/_latest_layer = "13"

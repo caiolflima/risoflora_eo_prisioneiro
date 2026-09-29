@@ -1,8 +1,10 @@
 join Soldado left
 Soldado: Vamos, meliante. Dessa vez tu não foge.
 join Tenente right
-Tenente: Pra quê isso, omi? Por causa de soldado assim que os protestos acabaram com a polícia militar.
-Soldado: Privatizar foi melhor mesmo, Tenente. Pelo menos a MiliCo. tem GYMPASS, né?
+Tenente: Pra quê isso, omi?
+Tenente: Por causa de soldado assim que os protestos acabaram com a polícia militar.
+Soldado: Privatizar foi melhor mesmo, Tenente.
+Soldado: Pelo menos a MiliCo. tem GYMPASS, né?
 leave Tenente
 leave Soldado
 join Cabo left

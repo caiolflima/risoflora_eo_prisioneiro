@@ -474,7 +474,7 @@ billboard = 1
 texture = ExtResource("11_d6wmt")
 
 [node name="Tutorial" type="Sprite3D" parent="."]
-transform = Transform3D(0.81, 0, 0, 0, 0.26, 0, 0, 0, 0.365, -1.126831, 4.114258, -1.4403687)
+transform = Transform3D(0.81, 0, 0, 0, 0.46, 0, 0, 0, 0.365, -3.8057861, 7.015259, -0.6932373)
 visible = false
 modulate = Color(0, 0, 0, 1)
 billboard = 1
@@ -482,9 +482,9 @@ texture = ExtResource("7_ntrou")
 
 [node name="Tutorial Title" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 916.0
+offset_left = 821.0
 offset_top = 181.0
-offset_right = 1222.0
+offset_right = 1127.0
 offset_bottom = 278.0
 theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
@@ -494,9 +494,9 @@ horizontal_alignment = 1
 
 [node name="Tutorial Title3" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 692.0
+offset_left = 597.0
 offset_top = 254.0
-offset_right = 1484.0
+offset_right = 1389.0
 offset_bottom = 694.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
@@ -510,9 +510,9 @@ Você joga dados igual ao valor da habilidade testada e usa o melhor resultado.
 
 [node name="Tutorial Title4" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 692.0
+offset_left = 597.0
 offset_top = 254.0
-offset_right = 1448.0
+offset_right = 1353.0
 offset_bottom = 617.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
@@ -520,9 +520,9 @@ text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=
 
 [node name="Tutorial Title5" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 692.0
+offset_left = 597.0
 offset_top = 254.0
-offset_right = 1448.0
+offset_right = 1353.0
 offset_bottom = 617.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
@@ -530,9 +530,9 @@ text = "Se o valor no dado mais alto é um [pulse freq=1.0 color=#ffffff40 ease=
 
 [node name="Tutorial Title6" type="RichTextLabel" parent="Tutorial"]
 visible = false
-offset_left = 692.0
+offset_left = 597.0
 offset_top = 254.0
-offset_right = 1448.0
+offset_right = 1353.0
 offset_bottom = 617.0
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true

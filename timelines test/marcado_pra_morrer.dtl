@@ -2,10 +2,10 @@
 join Player left [mirrored="true"]
 - ...
 	join Vela right
-	Vela de Libra\: Aí está você!
+	Vela: Vela de Libra\: Aí está você!
 - Você sobreviveu!
 	join Vela right
-	Vela de Libra\: Não graças a você!
+	Vela: Vela de Libra\: Não graças a você!
 join Alicate leftmost [mirrored="true"]
 Alicate: Vela? Não entendi essa! E depois falam que meu vulgo que é esquisito!
 Vela: Vou explicar, velho. Sou um cidadão de bem, um homem religioso.
@@ -20,7 +20,7 @@ join Galego leftmost
 Galego: Mandar um pra série C, Soldado. Matar um!
 Soldado: [shake rate=20.0 level=5 connected=1]O Se-senhor tem co-coragem de...[/shake]
 Vela: Coragem, não tenho, não. Eu tenho é costume. Mato por encomenda.
-Vela:  Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
+Vela: Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
 leave Galego
 join Alicate leftmost [mirrored="true"]
 Alicate: Vôte!

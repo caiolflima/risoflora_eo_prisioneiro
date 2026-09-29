@@ -31,11 +31,13 @@ join Player left [mirrored="true"]
 	Risoflora: Não era correto! Isso é abuso de poder
 	- Entendo seu ponto
 	- Ah, com isso eu concordo!
-Player: Mas confesso que fiquei triste por não ter te visto lá. Não pude ver de novo seus olhos brilhando como no dia que pixei o prédio da Avalon!
+Player: Mas confesso que fiquei triste por não ter te visto lá.
+Player: Não pude ver de novo seus olhos brilhando como no dia que pixei o prédio da Avalon!
 Risoflora: Como é que você se lembra de mim? Tinha várias pessoas olhando pra ti pendurado naquela corda?
 - Claro que lembro
 - Eu só tinha olhos pra tu.
-Player: Era madrugada de uma segunda. O sol nem tinha nascido, mas seus olhos já brilhavam mais que uma supernova naquela parada de ônibus.
+Player: Era madrugada de uma segunda.
+Player: O sol nem tinha nascido, mas seus olhos já brilhavam mais que uma supernova naquela parada de ônibus.
 leave Player
 join Tenente left [mirrored="true"]
 Tenente: Soldado, pela última vez! Meta logo essa desgraça numa cela!
@@ -101,21 +103,27 @@ Noiva: Assunto particular. Falaremos mais tarde
 Risoflora: É sobre minha alimentação, painho...
 Tenente: Veja bem, doutora. Não somos ricos, mas lá em casa ninguém passa fome.
 Noiva: Não se trata de quantidade, Tenente, mas de qualidade.
-Risoflora: Eu me recuso comer sintéticos! Não importa se você diz que eles vem com a suplementação necessária ou...
-Tenente: Doutora, eu vou cuidar desse negócio da comida. Tenha um pouco de paciência com Lisbela. A menina é ainda muito nova, não conhece bem a vida.
-Noiva: Risoflora, vamos embora. Você é minha noiva, deve se portar como tal.
+Risoflora: Eu me recuso comer sintéticos!
+Risoflora: Não importa se você diz que eles vem com a suplementação necessária ou...
+Tenente: Doutora, eu vou cuidar desse negócio da comida.
+Tenente: Tenha um pouco de paciência com Risoflora. A menina é ainda muito nova, não conhece bem a vida.
+Noiva: Risoflora, vamos embora.
+Noiva: Você é minha noiva, deve se portar como tal.
 join Player leftmost [mirrored="true"]
 - Ninguém deveria decidir sua vida por você!
-	Noiva: Não escute essa escória, meu bem. Vamos sair daqui logo. Isso não é lugar pra você.
+	Noiva: Não escute essa escória, meu bem.
+	Noiva: Vamos sair daqui logo. Isso não é lugar pra você.
 - ...
 Risoflora: ...
 leave Player
 join Cabo leftmost
-Tenente: Cabo, venha comigo. Vamos ver se o auto-mech da minha menina precisa de reparos.
+Tenente: Cabo, venha comigo.
+Tenente: Vamos ver se o auto-mech da minha menina precisa de reparos.
 Cabo: Sim, senhor.
 leave --All--
 [signal arg="risoflora_sai"]
 [wait time="3.0"]
 join Soldado center
-Soldado: Finalmente um pouco de paz nessa joça... Acho que vou tirar um cochilo...
+Soldado: Finalmente um pouco de paz nessa joça...
+Soldado: Acho que vou tirar um cochilo...
 jump vela_entra/

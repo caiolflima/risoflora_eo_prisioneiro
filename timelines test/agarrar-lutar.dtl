@@ -57,7 +57,9 @@
 
 [signal arg="voltar_cadeia"]
 join Player left
-Player: O caba com a peça na mão, delegado, sem saber onde atirava... Com certeza nunca trabalhou com esse tipo de maquinário. Isso coisa de peão, chefe. Sabedoria do proletariado.
+Player: O caba com a peça na mão, delegado, sem saber onde atirava...
+Player: Com certeza nunca trabalhou com esse tipo de maquinário. Isso coisa de peão, chefe.
+Player: Sabedoria do proletariado.
 join Tenente right
 Tenente: Você viu se ele tinha porte de arma, Cabo?
 leave Player
@@ -65,5 +67,6 @@ join Cabo left
 Cabo: Não, senhor.
 Tenente: Tás ficando relaxado, rapaz.
 Cabo: Não foi isso, senhor. Tudo correu muito rápido e eu...
-Tenente: Depois nós acertamos isso. Apenas cumpra minhas ordens e coloque essa peste junto dos outros.
+Tenente: Depois nós acertamos isso.
+Tenente: Apenas cumpra minhas ordens e coloque essa peste junto dos outros.
 jump risoflora_entra/
