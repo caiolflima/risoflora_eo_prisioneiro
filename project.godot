@@ -13,7 +13,10 @@ config_version=5
 config/name="Risoflora_e_o_Bucaneiro"
 run/main_scene="uid://dl2iong2rc2ai"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/bg_color=Color(0.105882354, 0.047058824, 0.38431373, 1)
+boot_splash/image="uid://b3muap14v081x"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=3000
 
 [autoload]
 
