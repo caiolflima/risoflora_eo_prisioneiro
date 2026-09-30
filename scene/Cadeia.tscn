@@ -475,7 +475,6 @@ texture = ExtResource("11_d6wmt")
 
 [node name="Tutorial" type="Sprite3D" parent="."]
 transform = Transform3D(0.81, 0, 0, 0, 0.46, 0, 0, 0, 0.365, -3.8057861, 7.015259, -0.6932373)
-visible = false
 modulate = Color(0, 0, 0, 1)
 billboard = 1
 texture = ExtResource("7_ntrou")

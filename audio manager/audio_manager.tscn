@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://kccniox87bme"]
+[gd_scene load_steps=7 format=3 uid="uid://kccniox87bme"]
 
 [ext_resource type="Script" uid="uid://cehafjxak5bt" path="res://audio manager/audio_manager.gd" id="1_61kre"]
 [ext_resource type="AudioStream" uid="uid://ddjwyiim2rws1" path="res://resources/audio/teste_loop3.ogg" id="2_qqitq"]
 [ext_resource type="AudioStream" uid="uid://5xvyijcj4p7r" path="res://resources/audio/roll.ogg" id="3_qqitq"]
+[ext_resource type="AudioStream" uid="uid://b3r84dyy8n4c6" path="res://resources/audio/menu_risoflora.ogg" id="4_x2klm"]
+[ext_resource type="AudioStream" uid="uid://d1v5jch0871o7" path="res://resources/audio/bad_ending.ogg" id="5_f2bdx"]
+[ext_resource type="AudioStream" uid="uid://bn2neck20mbko" path="res://resources/audio/flashback.ogg" id="6_qvb1r"]
 
 [node name="Audio_Manager" type="Node" node_paths=PackedStringArray("clips")]
 script = ExtResource("1_61kre")
@@ -20,3 +23,18 @@ playback_type = 1
 process_mode = 3
 stream = ExtResource("3_qqitq")
 volume_db = -13.0
+
+[node name="Menu_Riso" type="AudioStreamPlayer" parent="Clips"]
+stream = ExtResource("4_x2klm")
+volume_db = -12.0
+playback_type = 1
+
+[node name="Bad_Ending" type="AudioStreamPlayer" parent="Clips"]
+stream = ExtResource("5_f2bdx")
+volume_db = -15.0
+playback_type = 1
+
+[node name="Flashback" type="AudioStreamPlayer" parent="Clips"]
+stream = ExtResource("6_qvb1r")
+volume_db = -15.0
+playback_type = 1

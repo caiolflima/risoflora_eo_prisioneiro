@@ -1,3 +1,4 @@
+audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
 join Player left
 Player: Vê só que braba!
 Player: Saio daqui pra trabalhar de graça, e logo no noivado de sua filha, que é uma joia de moça, com aquela advogadazinha...

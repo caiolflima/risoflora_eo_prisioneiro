@@ -1,5 +1,6 @@
 [signal arg="risoflora_chega"]
 [clear time="1.0"]
+audio music "res://resources/audio/menu_risoflora.ogg" [volume="-13.0" loop="true"]
 join Risoflora left
 Risoflora: Licença, painho tá por aqui?
 join Tenente right
@@ -90,6 +91,7 @@ else:
 leave Player
 join Soldado left
 Soldado: A senhora perdoe minha curiosidade, mas por que a senhora ganhou um daqueles de presente?
+audio music -
 [signal arg="Noiva_chega"]
 leave Soldado
 join Noiva rightmost [z_index="1"]

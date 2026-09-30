@@ -4,8 +4,7 @@ const creditos := "res://scene/Credits.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	AudioManager.play("Menu_Riso") #toca a musica de menu
 
 func _on_aceitar_pressed() -> void:
 	get_tree().change_scene_to_file(intro)

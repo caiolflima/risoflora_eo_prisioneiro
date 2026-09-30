@@ -1,5 +1,4 @@
-[clear time="1.0"]
-[signal arg="tutorial_abrir"]
+[signal arg="Tutorial_abrir"]
 [wait time="1.0"]
 [signal arg="tutorial_abrir1"]
 [wait time="2.0"]
@@ -18,7 +17,6 @@ join Tenente left
 Tenente: Ajoelhe-se e peça perdão pelo que fez.
 join Player right
 - Eu não fiz nada. [GINGAR] [2]
-	[clear time="1.0"]
 	set {Atributos.atributo_escolhido} = {Atributos.gingar}
 	[signal arg="spawn_dices"]
 	[signal arg="ligar_teste"]
@@ -49,7 +47,6 @@ join Player right
 		join Tenente center
 		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
 - Me obrigue! [DETONAR] [1]
-	[clear time="1.0"]
 	set {Atributos.atributo_escolhido} = {Atributos.detonar}
 	[signal arg="spawn_dices"]
 	[signal arg="ligar_teste"]
@@ -72,9 +69,9 @@ join Player right
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
 		join Tenente center
 		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
-[clear time="1.0"]
 [signal arg="limpar_resultado"]
 join Player left
+audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
 Player: Não. E o senhor não pode me bater. Só porque estou preso?
 Player: Eu tinha o direito de fugir. Agora o senhor não tem o direito de bater em mim, como não podia me tirar daqui e levar pra sua casa.
 join Tenente right

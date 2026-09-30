@@ -10,7 +10,8 @@ const final := "res://scene/Final.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_signal)
-	AudioManager.play("Main") #toca a musica ambiente
+	AudioManager.stop_music()
+	$Tutorial.hide()
 	$Alicate.hide()
 	$Galego.hide()
 	$Risoflora.hide()
@@ -47,13 +48,14 @@ func _on_signal(signal_passed_in):
 		ficha_tutorial.global_position = Vector3(2,10,0)
 
 	if signal_passed_in =="acordar_presos":
+		#AudioManager.play("Main") #toca a musica ambiente
 		$Iluminacao/SpotLight_bandidos.show()
 		$Alicate.show()
 		$Galego.show()
 		Global.camera_move = "camera_stop"
 	
 	#aqui comeca o tutorial
-	if signal_passed_in =="tutorial_abrir":
+	if signal_passed_in =="Tutorial_abrir":
 		$Tutorial.show()
 		$"Tutorial/Tutorial Title".show()
 		
@@ -73,9 +75,13 @@ func _on_signal(signal_passed_in):
 		
 	#aqui começa o flashback
 	if signal_passed_in =="flashback":
+		#AudioManager.stop_music()
+		#AudioManager.play("Flashback") #toca a musica de flashback
 		get_tree().change_scene_to_file(rua_flashback)
 		
 	if signal_passed_in =="risoflora_chega":
+		#AudioManager.stop_music()
+		#AudioManager.play("Menu_Riso") #toca a musica de riso
 		$Risoflora.show()
 		$Alicate.show()
 		$Galego.show()
@@ -86,6 +92,8 @@ func _on_signal(signal_passed_in):
 		$Noiva.show()
 		
 	if signal_passed_in =="risoflora_sai":
+		#AudioManager.stop_music()
+		#AudioManager.play("Main") #volta a tocar a musica do loop principal
 		$Risoflora.hide()
 		$Noiva.hide()
 		$Iluminacao/SpotLight_risoflora.hide()

@@ -5,6 +5,7 @@ Vela: Cadê {pronome1}?
 join Soldado left
 Soldado: Alto! Não pode entrar assim na delegacia. Se identifique!
 Vela: E é delegacia isso aqui?
+audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
 Vela: Pensei que era um cabaré.
 Vela: Vamos, quero falar com a pessoa que chegou hoje!
 [signal arg="vela_presos"]

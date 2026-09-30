@@ -8,8 +8,9 @@ const cadeia := "res://scene/Cadeia.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_signal)
-	AudioManager.play("Main") #toca a musica ambiente
-		
+	#AudioManager.stop_music()
+	#AudioManager.play("Flashback") #Volta para musica do loop principal
+	
 func _on_signal(signal_passed_in):
 	if signal_passed_in =="coletar_resultado2":
 		for i in Global.lista_resultado_dado: #verifica qual foi o maior resultado da lista de dados
@@ -31,5 +32,7 @@ func _on_signal(signal_passed_in):
 		Dialogic.VAR.resultado = Global.resultado_dado
 		
 	if signal_passed_in =="voltar_cadeia":
+		#AudioManager.stop_music()
+		#AudioManager.play("Main") #Volta para musica do loop principal
 		get_tree().change_scene_to_file(cadeia)
 		

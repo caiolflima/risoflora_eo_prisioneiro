@@ -54,6 +54,7 @@ Tenente: Tá certo, {Nome_test}. Agora preencha essa ficha que teus pariceiro t�
 [signal arg="fechar_ficha"]
 join Soldado left
 Soldado: Acorda, bando de fi do cão. Tem comparsa de vocês entrando pelo cano.
+audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
 [signal arg="acordar_presos"]
 leave Soldado
 join Galego left
@@ -83,4 +84,5 @@ join Player right
 Player: …
 Player: Por quê? E aqui agora é igreja, é?
 Tenente: Ajoelhe-se e peça perdão pelo que fez.
+leave --All--
 jump tutorial_1/
