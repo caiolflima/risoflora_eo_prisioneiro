@@ -16,6 +16,7 @@
 join Tenente left
 Tenente: Ajoelhe-se e peça perdão pelo que fez.
 join Player right
+leave --All--
 - Eu não fiz nada. [GINGAR] [2]
 	set {Atributos.atributo_escolhido} = {Atributos.gingar}
 	[signal arg="spawn_dices"]
