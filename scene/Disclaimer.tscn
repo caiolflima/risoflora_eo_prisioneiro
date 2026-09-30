@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl2iong2rc2ai"]
+
+[ext_resource type="Script" uid="uid://cpij3nfwq5u4w" path="res://scene/disclaimer.gd" id="1_64x1j"]
+
+[sub_resource type="Theme" id="Theme_8rpc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uk60o"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_64x1j")
+
+[node name="Panel" type="Panel" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_right = 1934.0
+offset_bottom = 1102.0
+theme = SubResource("Theme_8rpc7")
+theme_override_styles/panel = SubResource("StyleBoxFlat_uk60o")
+
+[node name="Aviso1" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 143.0
+offset_top = 164.0
+offset_right = 1813.74
+offset_bottom = 896.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[center]AVISO[/center]
+
+Este jogo é um projeto não comercial feito para a Game Jam Literária, organizada pelo JOGO COLETIVO em Recife/PE, livremente adaptado da peça \"Lisbela e o Prisoneiro\" de Osman Lins. Embora a ambientação e os nomes tenham sido contextualizados no universo de Manguetown Cyberfunk, alguns elementos do texto original e da caracterização de personagens foram mantidos como homenagem. Todos os direitos da obra original pertencem aos seus respectivos autores e detentores legais. O projeto não possui qualquer vínculo oficial com os mesmos."
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(969, 545)

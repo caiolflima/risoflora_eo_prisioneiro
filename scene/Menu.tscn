@@ -62,12 +62,26 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_jwgaq")
 text = "Iniciar
 "
 
+[node name="Creditos" type="Button" parent="."]
+layout_mode = 0
+offset_left = 949.0
+offset_top = 835.0
+offset_right = 1069.0
+offset_bottom = 877.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rgvae")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_8rpc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jwgaq")
+text = "Créditos
+"
+
 [node name="Recusar" type="Button" parent="."]
 layout_mode = 0
 offset_left = 960.0
-offset_top = 838.0
-offset_right = 1050.0
-offset_bottom = 880.0
+offset_top = 900.0
+offset_right = 1056.0
+offset_bottom = 942.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_rgvae")
 theme_override_font_sizes/font_size = 30
@@ -83,4 +97,5 @@ limit_right = 1920
 limit_bottom = 1080
 
 [connection signal="pressed" from="Aceitar" to="." method="_on_aceitar_pressed"]
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="Recusar" to="." method="_on_recusar_pressed"]
