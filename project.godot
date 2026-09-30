@@ -129,12 +129,6 @@ window/stretch/aspect="keep_width"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
-[importer_defaults]
-
-animation_library={
-&"animation/fps": 15.0
-}
-
 [input]
 
 move_forward={
@@ -184,4 +178,3 @@ dialogic_default_action={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)

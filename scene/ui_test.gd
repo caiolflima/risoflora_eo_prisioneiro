@@ -10,6 +10,7 @@ func _ready() -> void:
 	$Nome.text = Global.Nome
 	$Pronomes.text = pronomes
 	Dialogic.signal_event.connect(_on_signal)
+	print(pronomes, Global.Nome)
 
 func _on_signal(signal_passed_in):
 	if signal_passed_in =="mostrar_button":
