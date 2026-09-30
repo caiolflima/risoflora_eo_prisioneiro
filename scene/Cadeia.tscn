@@ -1,9 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://cqtldloqsa354"]
+[gd_scene load_steps=28 format=3 uid="uid://cqtldloqsa354"]
 
 [ext_resource type="PackedScene" uid="uid://gu1kcasmnatk" path="res://resources/modelos/blocking_prison2.glb" id="1_wdb30"]
 [ext_resource type="Script" uid="uid://cttwtcff2p5of" path="res://scene/cadeia.gd" id="1_x7eou"]
+[ext_resource type="PackedScene" uid="uid://dwuvyq0e5th7h" path="res://resources/modelos/PRISON_BG.glb" id="2_qk67p"]
 [ext_resource type="Texture2D" uid="uid://ga52mmtf811h" path="res://resources/in_game/buckaneiro2.png" id="3_d6wmt"]
-[ext_resource type="PackedScene" uid="uid://coyva03w8rden" path="res://scene/portao.tscn" id="3_yd5gk"]
+[ext_resource type="PackedScene" uid="uid://j7l5t81vc2hm" path="res://resources/modelos/PRISON_DOOR.glb" id="3_soguo"]
 [ext_resource type="Texture2D" uid="uid://bdoy644lqa1bx" path="res://resources/in_game/alicate_in-game.png" id="4_k7lhr"]
 [ext_resource type="Texture2D" uid="uid://bjp3vrrt0w6j4" path="res://resources/in_game/galego_in-game.png" id="5_uluk1"]
 [ext_resource type="Texture2D" uid="uid://l28kchaogekt" path="res://resources/in_game/soldado_in-game.png" id="6_4tksx"]
@@ -114,34 +115,34 @@ tracks/6/keys = {
 tracks/7/type = "bezier"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("blocking_prison2/portao:position:x")
+tracks/7/path = NodePath("PRISON_BG/PRISON_DOOR:position:x")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-0.6361046, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/8/type = "bezier"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("blocking_prison2/portao:position:y")
+tracks/8/path = NodePath("PRISON_BG/PRISON_DOOR:position:y")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1.9240723, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/9/type = "bezier"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("blocking_prison2/portao:position:z")
+tracks/9/path = NodePath("PRISON_BG/PRISON_DOOR:position:z")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0.04250264, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -223,35 +224,35 @@ resource_name = "grade_abrir"
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blocking_prison2/portao:position:x")
+tracks/0/path = NodePath("PRISON_BG/PRISON_DOOR:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(-0.6361046, -0.25, 0, 0.5824982, 0.6361046, 0.5709877, -0.21750182, 0.4290123, 0, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.07269376, 0, 5.2203736e-06, 0, 0, -0.07269898, 0, 0, 0, 0, -3.402432e-06, 0, 0, 0, 2.2122803, -0.09396429, -0.3687134, 0, 0),
+"times": PackedFloat32Array(0, 0.23333333, 0.23336466, 0.23338507, 1)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("blocking_prison2/portao:position:y")
+tracks/1/path = NodePath("PRISON_BG/PRISON_DOOR:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(1.9240723, -0.25, 0, 0.25, 0, 1.9240723, -0.16666667, 0, 0, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.07269376, 0, 5.2203736e-06, 0, 0, -0.07269898, 0, 0, 0, 0, -3.402432e-06, 0, 0, 0, 0, -0.09396429, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.23333333, 0.23336466, 0.23338507, 1)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("blocking_prison2/portao:position:z")
+tracks/2/path = NodePath("PRISON_BG/PRISON_DOOR:position:z")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(0.04250264, -0.25, 0, 0.25, 0, 0.04250264, -0.16666667, 0, 0, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.28811622, -0.07269376, -0.071049996, 5.2203736e-06, 5.10233e-06, 0.42633057, -0.07269898, -0.0710551, 0, 0, 0.2861328, -3.402432e-06, 0.023366293, 0, 0, 0.2861328, -0.09396429, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.23333333, 0.23336466, 0.23338507, 1)
 }
 
 [sub_resource type="Animation" id="Animation_y6lo3"]
@@ -259,35 +260,35 @@ resource_name = "grade_abrir"
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("blocking_prison2/portao:position:x")
+tracks/0/path = NodePath("PRISON_BG/PRISON_DOOR:position:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.5709877, -0.21750182, 0.4290123, 0, 0, -0.6361046, -0.25, 0, 0.5824982, 0.6361046),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(2.2122803, -0.25, 0, 0.25, 0, 0, -0.13799343, 0.36871338, 0, 0, 0, -0.028673243, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.82796055, 1)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("blocking_prison2/portao:position:y")
+tracks/1/path = NodePath("PRISON_BG/PRISON_DOOR:position:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1.9240723, -0.16666667, 0, 0, 0, 1.9240723, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.13799343, 0, 0, 0, 0, -0.028673243, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.82796055, 1)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("blocking_prison2/portao:position:z")
+tracks/2/path = NodePath("PRISON_BG/PRISON_DOOR:position:z")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.04250264, -0.16666667, 0, 0, 0, 0.04250264, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 2, 2),
+"points": PackedFloat32Array(0.2861328, -0.25, 0, 0.25, 0, 0.286, -0.13799343, 2.2133192e-05, 0, 0, 0, -0.028673243, 0.047666673, 0, 0),
+"times": PackedFloat32Array(0, 0.82796055, 1)
 }
 
 [sub_resource type="Animation" id="Animation_soguo"]
@@ -355,7 +356,13 @@ script = ExtResource("1_x7eou")
 [node name="Iluminacao" type="Node" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.060627878, 3.6766229, -2.5516107)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2453203, 5.1519647, -2.2562006)
+light_color = Color(1, 0, 0.23921569, 1)
+shadow_enabled = true
+omni_range = 5.4819937
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Iluminacao"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7859697, 2.7725701, -8.233068)
 light_color = Color(1, 0, 0.23921569, 1)
 shadow_enabled = true
 omni_range = 5.4819937
@@ -383,7 +390,7 @@ spot_range = 28.919804
 spot_angle = 63.436363
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.8366952, 5.5796766, -3.7724383)
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.8366952, 5.5796766, -4.1242447)
 shadow_enabled = true
 spot_range = 7.8056345
 spot_angle = 18.815884
@@ -397,7 +404,7 @@ spot_range = 6.7255216
 spot_angle = 17.547218
 
 [node name="SpotLight_bandidos" type="SpotLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.7216134, 5.5796766, -5.860512)
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.1050363, 5.5796766, -6.8794327)
 light_energy = 3.182
 light_indirect_energy = 2.091
 light_specular = 4.318
@@ -414,24 +421,27 @@ shadow_enabled = true
 spot_range = 7.251006
 spot_angle = 11.089096
 
+[node name="PRISON_BG" parent="." instance=ExtResource("2_qk67p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3504376, -0.08057308, -3.6095612)
+
+[node name="PRISON_DOOR" parent="PRISON_BG" instance=ExtResource("3_soguo")]
+
 [node name="blocking_prison2" parent="." instance=ExtResource("1_wdb30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1000266, 0, -3.546163)
-
-[node name="portao" parent="blocking_prison2" instance=ExtResource("3_yd5gk")]
-transform = Transform3D(0, -27.565388, 0.015574654, -0.6666667, 6.9974604e-08, 9.6986184e-08, 8.381903e-08, 0.556553, 0.7713935, -0.6361046, 1.9240723, 0.04250264)
+visible = false
 
 [node name="Player" type="Sprite3D" parent="."]
 transform = Transform3D(0.051744036, 0.023025353, -0.06994561, -9.889539e-10, 0.08548718, 0.028141472, 0.073638, -0.01617948, 0.04914946, -1.4468775, 1.4355521, -2.320776)
 texture = ExtResource("3_d6wmt")
 
 [node name="Alicate" type="Sprite3D" parent="."]
-transform = Transform3D(0.27684826, 0.03613493, -0.10976939, 0, 0.28495726, 0.09380493, 0.11556406, -0.08656577, 0.2629664, -1.4957056, 1.0410209, -6.487524)
+transform = Transform3D(0.27684826, 0.03613493, -0.10976939, 0, 0.28495726, 0.09380493, 0.11556406, -0.08656577, 0.2629664, -0.918313, 1.0410209, -6.7801266)
 flip_h = true
 billboard = 1
 texture = ExtResource("4_k7lhr")
 
 [node name="Galego" type="Sprite3D" parent="."]
-transform = Transform3D(0.29938814, 0.005988094, -0.018190421, 2.0626798e-09, 0.28495726, 0.09380495, 0.019150686, -0.093613625, 0.28437608, -1.9245386, 0.93298864, -5.8304195)
+transform = Transform3D(0.29938814, 0.005988094, -0.018190421, 2.0626798e-09, 0.28495726, 0.09380495, 0.019150686, -0.093613625, 0.28437608, -1.5084009, 0.93298864, -6.9432125)
 gi_mode = 2
 flip_h = true
 billboard = 1
@@ -475,6 +485,7 @@ texture = ExtResource("11_d6wmt")
 
 [node name="Tutorial" type="Sprite3D" parent="."]
 transform = Transform3D(0.81, 0, 0, 0, 0.46, 0, 0, 0, 0.365, -3.8057861, 7.015259, -0.6932373)
+visible = false
 modulate = Color(0, 0, 0, 1)
 billboard = 1
 texture = ExtResource("7_ntrou")
