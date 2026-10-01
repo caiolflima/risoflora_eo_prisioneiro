@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cxcr8t733bbv7"]
+[gd_scene load_steps=15 format=3 uid="uid://cxcr8t733bbv7"]
 
 [ext_resource type="Script" uid="uid://c7nmqm3dya6n1" path="res://scene/credits.gd" id="1_pt2rv"]
 [ext_resource type="Texture2D" uid="uid://chru8n4sr4dy8" path="res://resources/menu_mockup.png" id="2_6vquc"]
+[ext_resource type="Texture2D" uid="uid://dfpio11j1rj54" path="res://resources/logo_credits.png" id="3_1f8ek"]
 [ext_resource type="Texture2D" uid="uid://dy1n2kdlw8pqg" path="res://resources/retratos/caio.png" id="3_ihyv7"]
 [ext_resource type="FontFile" uid="uid://lblo22ya3cxr" path="res://resources/DMSans-VariableFont_opsz,wght.ttf" id="3_kg8ch"]
 [ext_resource type="Texture2D" uid="uid://ctdivuytxer7k" path="res://resources/retratos/danilo.png" id="4_1f8ek"]
@@ -28,8 +29,19 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f8ek"]
+bg_color = Color(1, 0.3019608, 0.3019608, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_873w0"]
-bg_color = Color(1, 1, 1, 0)
+bg_color = Color(1, 0.59607846, 0.3019608, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -47,25 +59,30 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_rgvae")
 [node name="Panel2" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 493.0
-offset_top = 624.0
+offset_top = 120.0
 offset_right = 1460.0
 offset_bottom = 1050.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pt2rv")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel2"]
+[node name="Caio3" type="Sprite2D" parent="."]
+position = Vector2(975, 244.99995)
+scale = Vector2(0.855, 0.855)
+texture = ExtResource("3_1f8ek")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.425
 anchor_right = 0.5
 anchor_bottom = 0.425
-offset_left = -309.5
-offset_top = -139.05
-offset_right = -114.5
-offset_bottom = 234.95
+offset_left = 667.0
+offset_top = 354.0
+offset_right = 862.0
+offset_bottom = 612.6345
 scale = Vector2(1.245, 1.245)
 theme_override_font_sizes/normal_font_size = 24
-text = "Equipe
+text = " 
 
 Caio Lima  
 Programação
@@ -74,17 +91,17 @@ Danilo Borges
 Ilustração 2d
 "
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Panel2"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.425
 anchor_right = 0.5
 anchor_bottom = 0.425
-offset_left = 76.50012
-offset_top = -139.05
-offset_right = 432.50012
-offset_bottom = 153.95
+offset_left = 1053.0001
+offset_top = 354.0
+offset_right = 1409.0001
+offset_bottom = 647.0
 scale = Vector2(1.245, 1.245)
 theme_override_font_sizes/normal_font_size = 24
 text = " 
@@ -95,55 +112,117 @@ Roteirista/Game Designer
 Luiz Felipe Alves  
 Modelador 3D"
 
-[node name="Aviso1" type="RichTextLabel" parent="Panel2"]
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.425
+anchor_right = 0.5
+anchor_bottom = 0.425
+offset_left = 561.0
+offset_top = 745.0
+offset_right = 820.43774
+offset_bottom = 962.67065
+scale = Vector2(1.245, 1.245)
+theme_override_font_sizes/normal_font_size = 24
+text = "Risoflora Tema
+Toth
+
+The Story Continues
+Tim Beek"
+horizontal_alignment = 1
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.425
+anchor_right = 0.5
+anchor_bottom = 0.425
+offset_left = 947.00024
+offset_top = 745.0
+offset_right = 1277.1205
+offset_bottom = 923.31323
+scale = Vector2(1.245, 1.245)
+theme_override_font_sizes/normal_font_size = 24
+text = "Loneliness Loop
+Toth
+
+The Protagonist
+Tim Beek"
+horizontal_alignment = 1
+
+[node name="Aviso1" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -308.5
-offset_top = -203.0
-offset_right = 426.5
-offset_bottom = -116.0
+offset_left = 668.0
+offset_top = 368.0
+offset_right = 1403.0
+offset_bottom = 455.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 30
+theme_override_colors/default_color = Color(1, 0.81960785, 0.3019608, 1)
+theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "Risoflora e o Bucaneiro - v.0.7"
+text = "Risoflora e o Bucaneiro - v.0.8"
 
-[node name="Caio" type="Sprite2D" parent="Panel2"]
-position = Vector2(104.67999, 148)
+[node name="Aviso2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 666.0
+offset_top = 694.0
+offset_right = 818.0
+offset_bottom = 781.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 0.81960785, 0.3019608, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Músicas"
+
+[node name="Caio" type="Sprite2D" parent="."]
+position = Vector2(597.68, 460)
 scale = Vector2(1.09, 1.09)
 texture = ExtResource("3_ihyv7")
 
-[node name="Danilo" type="Sprite2D" parent="Panel2"]
-position = Vector2(103.67999, 270)
+[node name="Danilo" type="Sprite2D" parent="."]
+position = Vector2(596.68, 582)
 scale = Vector2(1.09, 1.09)
 texture = ExtResource("4_1f8ek")
 
-[node name="David" type="Sprite2D" parent="Panel2"]
-position = Vector2(504.67996, 142)
+[node name="David" type="Sprite2D" parent="."]
+position = Vector2(997.67993, 454)
 scale = Vector2(1.09, 1.09)
 texture = ExtResource("5_iln35")
 
-[node name="Caio2" type="Sprite2D" parent="Panel2"]
+[node name="Caio2" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.20784314)
 material = SubResource("CanvasItemMaterial_ihyv7")
-position = Vector2(507.67996, 284)
+position = Vector2(1000.67993, 596)
 scale = Vector2(1.09, 1.09)
 texture = ExtResource("3_ihyv7")
 
 [node name="Voltar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 884.0
-offset_top = 984.0
-offset_right = 1071.0
-offset_bottom = 1033.0
+offset_left = 883.0
+offset_top = 978.0
+offset_right = 1070.0
+offset_bottom = 1027.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_kg8ch")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_lc4ft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1f8ek")
 theme_override_styles/hover = SubResource("StyleBoxFlat_873w0")
 text = "Voltar
 "
