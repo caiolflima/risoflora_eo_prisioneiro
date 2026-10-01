@@ -15,7 +15,7 @@
 [signal arg="tutorial_fechar"]
 join Tenente left
 Tenente: Ajoelhe-se e peça perdão pelo que fez.
-join Player right
+join Player (virado) right
 leave --All--
 - Eu não fiz nada. [GINGAR] [2]
 	set {Atributos.atributo_escolhido} = {Atributos.gingar}
@@ -45,7 +45,7 @@ leave --All--
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
 		[shake rate=20.0 level=5 connected=1]OS LACAIOS DA MILITIA COMPANY TE FORÇAM CONTRA O CHÃO,[/shake] \
 		FERINDO SEUS OMBROS, SEUS JOELHOS E SEU ORGULHO.
-		join Tenente center
+		join Tenente (zangado) center
 		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
 - Me obrigue! [DETONAR] [1]
 	set {Atributos.atributo_escolhido} = {Atributos.detonar}
@@ -63,24 +63,24 @@ leave --All--
 	if {resultado_teste} == "Sucesso Parcial":
 		audio "res://resources/audio/sucesso_parcial.ogg"
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
-		join Tenente center
+		join Tenente (zangado) center
 		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
 	if {resultado_teste} == "Resultado Ruim":
 		audio "res://resources/audio/resultado_rolagem3.ogg"
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
-		join Tenente center
+		join Tenente (zangado) center
 		Tenente: [shake rate=20.0 level=5 connected=1]Ajoelhe-se, peça perdão por ter traído a minha confiança, fugindo de minha casa, procurando me desmoralizar...[/shake]
 [signal arg="limpar_resultado"]
 join Player left
 audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
-Player: Não. E o senhor não pode me bater. Só porque estou preso?
-Player: Eu tinha o direito de fugir. Agora o senhor não tem o direito de bater em mim, como não podia me tirar daqui e levar pra sua casa.
-join Tenente right
+Player (virado): Não. E o senhor não pode me bater. Só porque estou preso?
+Player (Neutro): Eu tinha o direito de fugir. Agora o senhor não tem o direito de bater em mim, como não podia me tirar daqui e levar pra sua casa.
+join Tenente (zangado) right
 Tenente: [shake rate=20.0 level=5 connected=1]NÃO SÓ PODIA COMO FIZ![/shake]
 - Não podia e agora tem juiz querendo pôr o senhor do nosso lado das grades que eu sei.
 	Tenente: Tá vendo?  Quando quiserem levar uma dentada, façam favor a um cachorro!
 - Posso ser marginal, mas conheço as leis. Só assim pra ser profissional em quebrar elas.
 	Tenente: E ainda se gaba depois de eu ter te feito um favor. É igual cachorro que morde a mão de quem alimenta.
-Player: Quem é cachorro? Eu?
-Player: Nem sou cachorro nem o senhor me faz favor. Favor fiz eu, e não foi ao senhor, fique sabendo.
+Player (virado): Quem é cachorro? Eu?
+Player (Neutro): Nem sou cachorro nem o senhor me faz favor. Favor fiz eu, e não foi ao senhor, fique sabendo.
 jump capitulo 1_2/

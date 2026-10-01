@@ -1,9 +1,9 @@
-join Soldado left
+join Soldado (zangado) left
 Soldado: Vamos, meliante. Dessa vez tu não foge.
 join Tenente right
 Tenente: Pra quê isso, omi?
 Tenente: Por causa de soldado assim que os protestos acabaram com a polícia militar.
-Soldado: Privatizar foi melhor mesmo, Tenente.
+Soldado (Neutro): Privatizar foi melhor mesmo, Tenente.
 Soldado: Pelo menos a MiliCo. tem GYMPASS, né?
 leave Tenente
 leave Soldado
@@ -53,7 +53,7 @@ Tenente: Tá certo, {Nome_test}. Agora preencha essa ficha que teus pariceiro t�
 [wait time="0.5"]
 [signal arg="fechar_ficha"]
 join Soldado left
-Soldado: Acorda, bando de fi do cão. Tem comparsa de vocês entrando pelo cano.
+Soldado (zangado): Acorda, bando de fi do cão. Tem comparsa de vocês entrando pelo cano.
 audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
 [signal arg="acordar_presos"]
 leave Soldado
@@ -74,13 +74,13 @@ Alicate: Voltou ou trouxeram?
 Galego: E isso importa?
 Alicate: Tás bem, criança? O que fizeram contigo?
 leave Alicate
-join Player right
+join Player (virado) right
 Player: Dale, comparsas, suave? Perdi muita coisa?
-Player: Aliás, boy.. não inventem de fugir não que esses bichos não brincam.
+Player (Neutro): Aliás, boy.. não inventem de fugir não que esses bichos não brincam.
 leave --All--
 join Tenente left [mirrored="true"]
 Tenente: Chega de papo furado. {Nome_test}, ajoelhe.
-join Player right
+join Player (virado) right
 Player: …
 Player: Por quê? E aqui agora é igreja, é?
 Tenente: Ajoelhe-se e peça perdão pelo que fez.

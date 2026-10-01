@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dtuy2y7og6i0u" path="res://scene/rua_flashback.gd" id="1_s2skm"]
 [ext_resource type="Texture2D" uid="uid://ga52mmtf811h" path="res://resources/in_game/buckaneiro2.png" id="2_s2skm"]
-[ext_resource type="Texture2D" uid="uid://dia13dqbn0rip" path="res://resources/in_game/vela_in-game.png" id="3_s2skm"]
+[ext_resource type="Texture2D" uid="uid://cl07xy5xnop43" path="res://resources/in_game/vela.tres" id="3_s2skm"]
 [ext_resource type="Texture2D" uid="uid://diuifj2ws3dmk" path="res://resources/in_game/T4AURO.png" id="4_mommx"]
 [ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="5_ti3ua"]
 [ext_resource type="Script" uid="uid://cjkufycirrqj" path="res://scene/spawner.gd" id="7_mommx"]

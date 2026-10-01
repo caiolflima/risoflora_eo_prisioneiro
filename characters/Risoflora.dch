@@ -19,7 +19,34 @@
 &"portraits": {
 "Neutro": {
 "export_overrides": {
-"image": "\"res://resources/retratos/risoflora_retrato.png\""
+"image": "\"res://resources/retratos/risoflora.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"espantada": {
+"export_overrides": {
+"image": "\"res://resources/retratos/expressoes/risoflora_espantada.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"triste": {
+"export_overrides": {
+"image": "\"res://resources/retratos/expressoes/risoflora_triste.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"zangada": {
+"export_overrides": {
+"image": "\"res://resources/retratos/expressoes/risoflora_zangada.tres\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

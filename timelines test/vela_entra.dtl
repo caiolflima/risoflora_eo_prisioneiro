@@ -3,7 +3,7 @@
 join Vela right
 Vela: Cadê {pronome1}?
 join Soldado left
-Soldado: Alto! Não pode entrar assim na delegacia. Se identifique!
+Soldado (zangado): Alto! Não pode entrar assim na delegacia. Se identifique!
 Vela: E é delegacia isso aqui?
 audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
 Vela: Pensei que era um cabaré.
@@ -14,7 +14,7 @@ join Alicate left [mirrored="true"]
 Alicate: Agora deu o carai...
 Alicate: Quem é esse agora?
 Vela: O meu nome de batismo pouco importa.
-Vela: As ruas me conhecem e me respeitam como Vela de Libra.
+Vela (zangado): As ruas me conhecem e me respeitam como Vela de Libra.
 if {final} == "Marcado_pra_morrer":
 	jump marcado_pra_morrer/
 join Alicate leftmost
@@ -27,20 +27,20 @@ join Player left [mirrored="true"]
 	Vela de Libra\: Aí está você!
 join Alicate leftmost [mirrored="true"]
 Alicate: Vela? Não entendi essa! E depois falam que meu vulgo que é esquisito!
-Vela: Vou explicar, velho.
+Vela (Neutro): Vou explicar, velho.
 Vela: Sou um cidadão de bem, um homem religioso.
 Vela: Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja.
 Vela: Acendo uma vela e rezo um pai nosso pela alma.
 leave Alicate
 join Player leftmost [mirrored="true"]
 join Soldado left
-Soldado: [shake rate=20.0 level=5 connected=1]Ca-camisa de sa-saudade?[/shake]
+Soldado (medo): [shake rate=20.0 level=5 connected=1]Ca-camisa de sa-saudade?[/shake]
 leave Player
 join Galego leftmost
 Galego: Mandar um pra série C, Soldado. Matar um!
-Soldado: [shake rate=20.0 level=5 connected=1]O Se-senhor tem co-coragem de...[/shake]
-Vela: Coragem, não tenho, não. Eu tenho é costume.
-Vela: Mato por encomenda. Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
+Soldado (medo): [shake rate=20.0 level=5 connected=1]O Se-senhor tem co-coragem de...[/shake]
+Vela (zangado): Coragem, não tenho, não. Eu tenho é costume.
+Vela (Neutro): Mato por encomenda. Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
 leave Galego
 join Alicate leftmost [mirrored="true"]
 Alicate: Vôte!
@@ -80,34 +80,34 @@ join Player left [mirrored="true"]
 	Vela: Bobagem. Sempre existem alguém contra nós. Pinte e diga o nome, estabeleça o lugar e deixe comigo.
 Player: Que diabo de favor é esse que o senhor quer fazer? Quer matar alguém?
 Vela: Diga um nome, {Nome_test}. Pode ser o juiz. O promotor. Você me dá o nome, o jeito, e eu paço o aço.
-Vela: E então? Diz ou não diz? Você tem inimigos?
+Vela (zangado): E então? Diz ou não diz? Você tem inimigos?
 leave Vela
 join Player center [animation="Fade In Up"]
 - Tenho, mas quero todos vivos.
 	Player: Por que vou querer eles mortos?
-	Player: Assim, eu também ia matar a morte, a doença, delegados safados, ia matar a velhice e a covardia, chefe.
-	Player: Deixe meus inimigos vivos. Quero meus inimigos vivos.
+	Player (virado): Assim, eu também ia matar a morte, a doença, delegados safados, ia matar a velhice e a covardia, chefe.
+	Player (Neutro): Deixe meus inimigos vivos. Quero meus inimigos vivos.
 	join Player left
 	join Vela right
-	Vela: Esse teu jeito me dá nos nervos, {Nome_test}.
+	Vela (zangado): Esse teu jeito me dá nos nervos, {Nome_test}.
 	Vela: Preciso ir, pois tenho assuntos a resolver em Manguetown. Vou lá averiguar umas informações, quero resolver um caso de família.
 	Vela: Mas quando vocês menos esperarem, eu volto por aqui. Até qualquer dia.
 	leave Player
 	join Galego left [mirrored="true"]
 	Galego: Chefe! Reze um pai nosso pra nós três.
-	Vela: Eu só rezo pra defunto. Interessa?
+	Vela (Neutro): Eu só rezo pra defunto. Interessa?
 	Vela: Liás, cabra safado não serve pra morrer, só serve pra apanhar.
 	Vela: E apanhar entre os bicos dos peitos e o caroço do imbigo, que é pra não deixar marcas da surra.
-	Vela: Ah!, nós três num deserto\: eu, você e um cacete de quixaba!
+	Vela (zangado): Ah!, nós três num deserto\: eu, você e um cacete de quixaba!
 	Vela: Porque quixaba é o chá melhor que existe no mundo pra pancada.
 	Vela: Assim, pra ganhar tempo, a gente dá logo a pisa com quixaba, porque está dando o castigo e o remédio.
-	Vela: Mas já gastei muita cera com você. {Nome_test}, até breve.
+	Vela (Neutro): Mas já gastei muita cera com você. {Nome_test}, até breve.
 	leave Vela
 	[signal arg="vela_sai"]
 	Galego: É cada amizade que tu arruma, {Nome_test}. Chega me deu calafrio quando ele falou nessa história de rezar.
-	join Player center
+	join Player (virado) center
 	Player: É, Galego, amigo na praça é melhor que dinheiro no bolso.
-	Player: Eu agora tô é com tudo. Um bicho desses por mim, eu só vou ter aqui do bom e do melhor.
+	Player (Neutro): Eu agora tô é com tudo. Um bicho desses por mim, eu só vou ter aqui do bom e do melhor.
 	[clear time="1.0"]
 	leave --All--
 	[signal arg="fim_de_jogo"]

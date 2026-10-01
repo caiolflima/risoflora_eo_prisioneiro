@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dq2kfaylsnur"]
+
+[ext_resource type="Texture2D" uid="uid://bn0t2gc8bm7v7" path="res://resources/retratos/expressoes/expressoes.png" id="1_ckmix"]
+
+[resource]
+atlas = ExtResource("1_ckmix")
+region = Rect2(1289, 1635, 315, 463)

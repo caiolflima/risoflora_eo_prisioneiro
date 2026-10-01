@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://co6fxcj6ybnu2"]
+
+[ext_resource type="Texture2D" uid="uid://umsscvinglev" path="res://resources/retratos/portrait sheet.png" id="1_gmfbc"]
+
+[resource]
+atlas = ExtResource("1_gmfbc")
+region = Rect2(1298, 611, 291, 459)

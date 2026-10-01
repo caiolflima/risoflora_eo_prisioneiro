@@ -5,15 +5,15 @@ join Risoflora left
 Risoflora: Licença, painho tá por aqui?
 join Tenente right
 Tenente: O que foi dessa vez, menina? Não já disse que não quero tu por aqui?
-Risoflora: Vitória está parecendo uma terra sem dono, painho. Lá fora tá uma loucura.
+Risoflora (Neutro): Vitória está parecendo uma terra sem dono, painho. Lá fora tá uma loucura.
 Tenente: Pelo menos as ruas tem um problema a menos agora.
-Risoflora: Ah, olha quem tá aqui!
+Risoflora (espantada): Ah, olha quem tá aqui!
 leave Tenente
-join Risoflora right [mirrored="true"]
-join Player left [mirrored="true"]
+join Risoflora (espantada) right [mirrored="true"]
+join Player (virado) left [mirrored="true"]
 - Visitando os amigos
 - É pra não perder o costume
-Risoflora: Então, te prenderam de novo?
+Risoflora (Neutro): Então, te prenderam de novo?
 - Até que valeu a pena. Tô te vendo outra vez!
 - A pior prisão é a que levamos dentro de nós...
 leave Player
@@ -32,7 +32,7 @@ join Player left [mirrored="true"]
 	Risoflora: Não era correto! Isso é abuso de poder
 	- Entendo seu ponto
 	- Ah, com isso eu concordo!
-Player: Mas confesso que fiquei triste por não ter te visto lá.
+Player (Neutro): Mas confesso que fiquei triste por não ter te visto lá.
 Player: Não pude ver de novo seus olhos brilhando como no dia que pixei o prédio da Avalon!
 Risoflora: Como é que você se lembra de mim? Tinha várias pessoas olhando pra ti pendurado naquela corda?
 - Claro que lembro
@@ -41,10 +41,10 @@ Player: Era madrugada de uma segunda.
 Player: O sol nem tinha nascido, mas seus olhos já brilhavam mais que uma supernova naquela parada de ônibus.
 leave Player
 join Tenente left [mirrored="true"]
-Tenente: Soldado, pela última vez! Meta logo essa desgraça numa cela!
+Tenente (zangado): Soldado, pela última vez! Meta logo essa desgraça numa cela!
 leave Risoflora
 join Tenente right
-join Player left [mirrored="true"]
+join Player (virado) left [mirrored="true"]
 - Vou poder dar grau na sua moto?
 - Vou sair pra passear de cavalo?
 Tenente: Eu digo cela com cê-cedilha, insolente!
@@ -56,29 +56,29 @@ leave Soldado
 [signal arg="player_preso"]
 [wait time="2.0"]
 [signal arg="fechar_cela"]
-Tenente: E você, Risoflora, não apareça nunca mais aqui!
+Tenente (zangado): E você, Risoflora, não apareça nunca mais aqui!
 join Tenente left [mirrored="true"]
 join Risoflora right
-Risoflora: Mas, painho...
-Tenente: O que foi? Diga logo por que você veio aqui!
+Risoflora (triste): Mas, painho...
+Tenente (Neutro): O que foi? Diga logo por que você veio aqui!
 join Risoflora right [mirrored="true"]
-Risoflora: Achei o T4-UR0 que ganhei de padrinho todo esculhambado
-Tenente: Oxe! Então o auto-mech descontrolado era seu?
+Risoflora (triste): Achei o T4-UR0 que ganhei de padrinho todo esculhambado
+Tenente (Neutro): Oxe! Então o auto-mech descontrolado era seu?
 leave Risoflora
 join Cabo right [mirrored="true"]
 Cabo: Aquela aberração com pintura de vaca malhada?
 leave Cabo
 join Risoflora right [mirrored="true"]
-Risoflora: Como vocês sabem?
+Risoflora (espantada): Como vocês sabem?
 leave Tenente
 join Player left [mirrored="true"]
 if {final} == "Marcado_pra_morrer":
 	- Precisei fugir dele
-		Risoflora: [shake rate=20.0 level=5 connected=1]Você viu ele fora de controle e não fez nada?[/shake]
+		Risoflora (zangada): [shake rate=20.0 level=5 connected=1]Você viu ele fora de controle e não fez nada?[/shake]
 		- Eu não tive coragem.
-			Risoflora: Tudo bem... Eu também não sou tão corajosa quanto gostaria... Pelo menos você vive a vida que deseja...
+			Risoflora (Neutro): Tudo bem... Eu também não sou tão corajosa quanto gostaria... Pelo menos você vive a vida que deseja...
 		- Eu só queria fugir daqui.
-			Risoflora: E mesmo assim acabou aqui de novo...
+			Risoflora (Neutro): E mesmo assim acabou aqui de novo...
 else:
 	- Enfrentei ele de frente
 		Risoflora: Foi você, então.
@@ -95,17 +95,17 @@ audio music -
 [signal arg="Noiva_chega"]
 leave Soldado
 join Noiva rightmost [z_index="1"]
-Noiva: [shake rate=20.0 level=5 connected=1]Risoflora! Você não tem vergonha? Isso aqui não é lugar pra você![/shake]
+Noiva (zangada): [shake rate=20.0 level=5 connected=1]Risoflora! Você não tem vergonha? Isso aqui não é lugar pra você![/shake]
 join Risoflora right
-Risoflora: Eu já tava de saída...
-Noiva: Nem deveria ter vindo, pra começo de conversa! Você não me escuta nunca!
+Risoflora (triste): Eu já tava de saída...
+Noiva (Neutro): Nem deveria ter vindo, pra começo de conversa! Você não me escuta nunca!
 join Tenente left [mirrored="true"]
 Tenente: O que aconteceu, doutora?
 Noiva: Assunto particular. Falaremos mais tarde
-Risoflora: É sobre minha alimentação, painho...
+Risoflora (triste): É sobre minha alimentação, painho...
 Tenente: Veja bem, doutora. Não somos ricos, mas lá em casa ninguém passa fome.
 Noiva: Não se trata de quantidade, Tenente, mas de qualidade.
-Risoflora: Eu me recuso comer sintéticos!
+Risoflora (Neutro): Eu me recuso comer sintéticos!
 Risoflora: Não importa se você diz que eles vem com a suplementação necessária ou...
 Tenente: Doutora, eu vou cuidar desse negócio da comida.
 Tenente: Tenha um pouco de paciência com Risoflora. A menina é ainda muito nova, não conhece bem a vida.

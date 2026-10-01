@@ -19,7 +19,16 @@
 &"portraits": {
 "Neutro": {
 "export_overrides": {
-"image": "\"res://resources/retratos/buckaneiro.png\""
+"image": "\"res://resources/retratos/buca.tres\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"virado": {
+"export_overrides": {
+"image": "\"res://resources/retratos/expressoes/buca_virado.tres\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

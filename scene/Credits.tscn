@@ -110,7 +110,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "Risoflora e o Bucaneiro - v.0.6"
+text = "Risoflora e o Bucaneiro - v.0.7"
 
 [node name="Caio" type="Sprite2D" parent="Panel2"]
 position = Vector2(104.67999, 148)

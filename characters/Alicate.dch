@@ -19,7 +19,7 @@
 &"portraits": {
 "Neutro": {
 "export_overrides": {
-"image": "\"res://resources/retratos/alicate.png\""
+"image": "\"res://resources/retratos/alicate.tres\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

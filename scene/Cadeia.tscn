@@ -5,15 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://dwuvyq0e5th7h" path="res://resources/modelos/PRISON_BG.glb" id="2_qk67p"]
 [ext_resource type="Texture2D" uid="uid://ga52mmtf811h" path="res://resources/in_game/buckaneiro2.png" id="3_d6wmt"]
 [ext_resource type="PackedScene" uid="uid://j7l5t81vc2hm" path="res://resources/modelos/PRISON_DOOR.glb" id="3_soguo"]
-[ext_resource type="Texture2D" uid="uid://bdoy644lqa1bx" path="res://resources/in_game/alicate_in-game.png" id="4_k7lhr"]
-[ext_resource type="Texture2D" uid="uid://bjp3vrrt0w6j4" path="res://resources/in_game/galego_in-game.png" id="5_uluk1"]
-[ext_resource type="Texture2D" uid="uid://l28kchaogekt" path="res://resources/in_game/soldado_in-game.png" id="6_4tksx"]
-[ext_resource type="Texture2D" uid="uid://h35o81vgmawm" path="res://resources/in_game/cabo_in-game.png" id="7_d6wmt"]
+[ext_resource type="Texture2D" uid="uid://derdhvjyvk7dc" path="res://resources/in_game/alicate.tres" id="6_qk67p"]
 [ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="7_ntrou"]
-[ext_resource type="Texture2D" uid="uid://ca2t5eilsxsvs" path="res://resources/in_game/tenente_in-game.png" id="8_yd5gk"]
-[ext_resource type="Texture2D" uid="uid://bpruyvp1xa7uj" path="res://resources/in_game/risoflora_in-game.png" id="9_4tksx"]
-[ext_resource type="Texture2D" uid="uid://dtkmikmy47eai" path="res://resources/in_game/noiva_in-game.png" id="10_d6wmt"]
-[ext_resource type="Texture2D" uid="uid://dia13dqbn0rip" path="res://resources/in_game/vela_in-game.png" id="11_d6wmt"]
+[ext_resource type="Texture2D" uid="uid://cio0pgke3oiae" path="res://resources/in_game/galego.tres" id="7_soguo"]
+[ext_resource type="Texture2D" uid="uid://byv0l1c4th303" path="res://resources/in_game/soldado.tres" id="8_qk67p"]
+[ext_resource type="Texture2D" uid="uid://dsn8tmvj4bov4" path="res://resources/in_game/cabo.tres" id="9_soguo"]
+[ext_resource type="Texture2D" uid="uid://cmer83f1yw55l" path="res://resources/in_game/tenente_texture.tres" id="10_ut6y8"]
+[ext_resource type="Texture2D" uid="uid://jjoq5mdu14yp" path="res://resources/in_game/risoflora.tres" id="11_y6lo3"]
+[ext_resource type="Texture2D" uid="uid://cp5dutwefpmi1" path="res://resources/in_game/noiva.tres" id="12_6rtx8"]
+[ext_resource type="Texture2D" uid="uid://cl07xy5xnop43" path="res://resources/in_game/vela.tres" id="13_1pa5l"]
 [ext_resource type="Script" uid="uid://cjkufycirrqj" path="res://scene/spawner.gd" id="14_yd5gk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5jpev"]
@@ -362,13 +362,14 @@ shadow_enabled = true
 omni_range = 5.4819937
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7859697, 2.7725701, -8.233068)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6623125, 2.8723016, -8.233068)
 light_color = Color(1, 0, 0.23921569, 1)
+light_energy = 0.2
 shadow_enabled = true
 omni_range = 5.4819937
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6884756, 3.6766229, -5.88962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9576406, 3.6766229, -6.03409)
 light_color = Color(0, 0.3529412, 0.9137255, 1)
 omni_range = 8.362467
 
@@ -404,7 +405,7 @@ spot_range = 6.7255216
 spot_angle = 17.547218
 
 [node name="SpotLight_bandidos" type="SpotLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.1050363, 5.5796766, -6.8794327)
+transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.3639474, 5.5796766, -6.7087173)
 light_energy = 3.182
 light_indirect_energy = 2.091
 light_specular = 4.318
@@ -438,50 +439,50 @@ texture = ExtResource("3_d6wmt")
 transform = Transform3D(0.27684826, 0.03613493, -0.10976939, 0, 0.28495726, 0.09380493, 0.11556406, -0.08656577, 0.2629664, -0.918313, 1.0410209, -6.7801266)
 flip_h = true
 billboard = 1
-texture = ExtResource("4_k7lhr")
+texture = ExtResource("6_qk67p")
 
 [node name="Galego" type="Sprite3D" parent="."]
 transform = Transform3D(0.29938814, 0.005988094, -0.018190421, 2.0626798e-09, 0.28495726, 0.09380495, 0.019150686, -0.093613625, 0.28437608, -1.5084009, 0.93298864, -6.9432125)
 gi_mode = 2
 flip_h = true
 billboard = 1
-texture = ExtResource("5_uluk1")
+texture = ExtResource("7_soguo")
 
 [node name="Soldado" type="Sprite3D" parent="."]
 transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, 1.5420752, 0.93298864, -1.7828732)
 gi_mode = 2
 billboard = 1
-texture = ExtResource("6_4tksx")
+texture = ExtResource("8_qk67p")
 
 [node name="Cabo" type="Sprite3D" parent="."]
 transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, -0.012185097, 0.93298864, -0.11459923)
 gi_mode = 2
 billboard = 1
-texture = ExtResource("7_d6wmt")
+texture = ExtResource("9_soguo")
 
 [node name="Tenente" type="Sprite3D" parent="."]
 transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, -0.20816898, 0.93298864, -1.6710567)
 gi_mode = 2
 billboard = 1
-texture = ExtResource("8_yd5gk")
+texture = ExtResource("10_ut6y8")
 
 [node name="Risoflora" type="Sprite3D" parent="."]
 transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, 1.6530371, 0.93298864, 1.5839481)
 gi_mode = 2
 billboard = 1
-texture = ExtResource("9_4tksx")
+texture = ExtResource("11_y6lo3")
 
 [node name="Noiva" type="Sprite3D" parent="."]
 transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, 2.5285254, 0.93298864, 2.1266117)
 gi_mode = 2
 billboard = 1
-texture = ExtResource("10_d6wmt")
+texture = ExtResource("12_6rtx8")
 
 [node name="Vela" type="Sprite3D" parent="."]
 transform = Transform3D(0.09342684, 0.08914017, -0.27078673, 2.911878e-09, 0.28495726, 0.09380496, 0.28508145, -0.029213006, 0.08874218, 2.1785498, 0.93298864, 1.7227421)
 gi_mode = 2
 billboard = 1
-texture = ExtResource("11_d6wmt")
+texture = ExtResource("13_1pa5l")
 
 [node name="Tutorial" type="Sprite3D" parent="."]
 transform = Transform3D(0.81, 0, 0, 0, 0.46, 0, 0, 0, 0.365, -3.8057861, 7.015259, -0.6932373)

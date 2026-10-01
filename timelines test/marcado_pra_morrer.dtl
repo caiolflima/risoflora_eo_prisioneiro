@@ -14,11 +14,11 @@ Vela: Acendo uma vela e rezo um pai nosso pela alma.
 leave Alicate
 join Player leftmost [mirrored="true"]
 join Soldado left
-Soldado: [shake rate=20.0 level=5 connected=1]Ca-camisa de sa-saudade?[/shake]
+Soldado (medo): [shake rate=20.0 level=5 connected=1]Ca-camisa de sa-saudade?[/shake]
 leave Player
 join Galego leftmost
 Galego: Mandar um pra série C, Soldado. Matar um!
-Soldado: [shake rate=20.0 level=5 connected=1]O Se-senhor tem co-coragem de...[/shake]
+Soldado (medo): [shake rate=20.0 level=5 connected=1]O Se-senhor tem co-coragem de...[/shake]
 Vela: Coragem, não tenho, não. Eu tenho é costume. Mato por encomenda.
 Vela: Já viu trampo mais fácil que esse? Trabalho pouco e ganho muito!
 leave Galego
@@ -33,13 +33,13 @@ join Player left [mirrored="true"]
 - {Nome_test}!
 Vela: Pois bem, {Nome_test}!
 Vela: Eu te vi naquela hora e você também me viu, mas você me deixou pra morrer ali.
-Vela: Vim passar isso a limpo.
+Vela (zangado): Vim passar isso a limpo.
 leave Player
 audio music "res://resources/audio/bad_ending.ogg" [volume="-15.0" loop="true"]
 join Soldado left [mirrored="true"]
-Soldado: [shake rate=20.0 level=5 connected=1]O que o se-senhor va-vai fazer?[/shake]
+Soldado (medo): [shake rate=20.0 level=5 connected=1]O que o se-senhor va-vai fazer?[/shake]
 leave Soldado
-Vela: Por um fim em que me causou tamanha desonra. Vamos, {Nome_test}, sua vela já foi acesa. Quais suas últimas palavras?
+Vela (Neutro): Por um fim em que me causou tamanha desonra. Vamos, {Nome_test}, sua vela já foi acesa. Quais suas últimas palavras?
 - Implorar para viver [GINGAR] [2]
 	[clear time="1.0"]
 	set {Atributos.atributo_escolhido} = {Atributos.gingar}
@@ -68,15 +68,15 @@ Vela: Por um fim em que me causou tamanha desonra. Vamos, {Nome_test}, sua vela 
 	if {resultado_teste} == "Resultado Ruim":
 		audio "res://resources/audio/resultado_rolagem3.ogg"
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
-		Vela: Que deprimente! Você deveria ter vergonha de estar numa situação dessas.
-		Vela: Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
+		Vela (zangado): Que deprimente! Você deveria ter vergonha de estar numa situação dessas.
+		Vela (Neutro): Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
 		[signal arg="limpar_resultado"]
 	join Soldado center [mirrored="true"]
-	Soldado: Mas...
+	Soldado (medo): Mas...
 	leave Soldado
 	Vela: Vamos! Qual a diferença se {Nome_test} morrer apodrecendo nessa cela ou nas minhas mãos daqui um tempo? A sentença é a mesma.
 	Vela: Faça logo antes que eu atire em você também!
-	Player: Obrigado
+	Player (virado): Obrigado
 - ...
 Vela: Muito bem! Não gosto de ver ninguém morrendo triste ou implorando pela vida.
 [clear time="1.0"]
