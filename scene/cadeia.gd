@@ -58,6 +58,7 @@ func _on_signal(signal_passed_in):
 	if signal_passed_in =="Tutorial_abrir":
 		$Tutorial.show()
 		$"Tutorial/Tutorial Title".show()
+		$"Tutorial/Tutorial Title2".show()
 		
 	if signal_passed_in =="tutorial_abrir1":
 		$"Tutorial/Tutorial Title3".show()

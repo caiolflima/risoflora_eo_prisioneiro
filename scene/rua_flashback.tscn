@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c2ukoixmuor3q"]
+[gd_scene load_steps=15 format=3 uid="uid://c2ukoixmuor3q"]
 
 [ext_resource type="Script" uid="uid://dtuy2y7og6i0u" path="res://scene/rua_flashback.gd" id="1_s2skm"]
 [ext_resource type="PackedScene" uid="uid://cacwgjj83gw7a" path="res://resources/modelos/littlechurch.glb" id="2_mommx"]
@@ -6,16 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://cl07xy5xnop43" path="res://resources/in_game/vela.tres" id="3_s2skm"]
 [ext_resource type="Texture2D" uid="uid://diuifj2ws3dmk" path="res://resources/in_game/T4AURO.png" id="4_mommx"]
 [ext_resource type="Texture2D" uid="uid://dob5n73xylebw" path="res://resources/in_game/miniaturas.png" id="5_01r4u"]
-[ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="5_ti3ua"]
 [ext_resource type="Script" uid="uid://cjkufycirrqj" path="res://scene/spawner.gd" id="7_mommx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yehda"]
 atlas = ExtResource("5_01r4u")
 region = Rect2(1410, 594, 205, 464)
 
-[sub_resource type="BoxMesh" id="BoxMesh_eggbe"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_cmkfn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mommx"]
+atlas = ExtResource("5_01r4u")
+region = Rect2(988, 558, 208, 500)
 
 [sub_resource type="BoxMesh" id="BoxMesh_cmkfn"]
 size = Vector3(12.776, 0.1, 15.469)
@@ -47,15 +46,15 @@ light_energy = 0.8
 transform = Transform3D(-0.04477021, 0, -0.99899733, 0, 1, 0, 0.99899733, 0, -0.04477021, 1.1256962, 0.77146626, 2.981964)
 
 [node name="Player" type="Sprite3D" parent="."]
-transform = Transform3D(0.03737069, 0.01662942, -0.05051627, -7.1424444e-10, 0.061740737, 0.020324396, 0.053182997, -0.011685179, 0.03549683, -3.013589, 1.7869925, -1.0032711)
+transform = Transform3D(0.03737069, 0.01662942, -0.05051627, -7.1424444e-10, 0.061740737, 0.020324396, 0.053182997, -0.011685179, 0.03549683, -2.6276636, 1.7869925, -1.2458248)
 texture = ExtResource("2_s2skm")
 
 [node name="Vela" type="Sprite3D" parent="."]
-transform = Transform3D(0.11498677, 0.051167455, -0.15543467, -2.1976752e-09, 0.1899715, 0.06253661, 0.16363999, -0.035954412, 0.10922104, -2.890298, 1.4355521, 1.0158939)
+transform = Transform3D(0.11498677, 0.051167455, -0.15543467, -2.1976752e-09, 0.1899715, 0.06253661, 0.16363999, -0.035954412, 0.10922104, -2.32438, 1.4355521, 0.20327187)
 billboard = 1
 texture = ExtResource("3_s2skm")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="soldado" type="Sprite3D" parent="."]
 transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, -0.8460083, 2.965454, 6.004822)
 billboard = 1
 texture = SubResource("AtlasTexture_yehda")
@@ -66,16 +65,10 @@ modulate = Color(1, 0.49019608, 1, 1)
 billboard = 1
 texture = ExtResource("4_mommx")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-visible = false
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
-transform = Transform3D(28.42, 0, 0, 0, 1.355, 0, 0, 0, 24.235, 0, 0, 0)
-mesh = SubResource("BoxMesh_eggbe")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(28.42, 0, 0, 0, 1.355, 0, 0, 0, 24.235, 0, 0, 0)
-shape = SubResource("BoxShape3D_cmkfn")
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, -1.5730591, 4.746582, 7.110962)
+billboard = 1
+texture = SubResource("AtlasTexture_mommx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.48633534, 0.6978256, -0.5258492, 0, 0.601815, 0.79863554, 0.87377226, -0.3884047, 0.2926839, -7.14825, 10.126, 1.6779922)
@@ -138,47 +131,6 @@ shape = SubResource("BoxShape3D_ti3ua")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, -2.534546)
 mesh = SubResource("BoxMesh_s2skm")
-
-[node name="Tutorial" type="Sprite3D" parent="."]
-transform = Transform3D(0.81, 0, 0, 0, 0.26, 0, 0, 0, 0.365, -1.126831, 4.114258, -1.4403687)
-visible = false
-modulate = Color(0, 0, 0, 1)
-billboard = 1
-texture = ExtResource("5_ti3ua")
-
-[node name="Tutorial Title" type="RichTextLabel" parent="Tutorial"]
-visible = false
-offset_left = 596.0
-offset_top = 119.0
-offset_right = 902.0
-offset_bottom = 216.0
-theme_override_font_sizes/normal_font_size = 36
-bbcode_enabled = true
-text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={30}]Tutorial[/font_size][/pulse]
-"
-horizontal_alignment = 1
-
-[node name="Tutorial Title3" type="RichTextLabel" parent="Tutorial"]
-visible = false
-offset_left = 372.0
-offset_top = 192.0
-offset_right = 1164.0
-offset_bottom = 555.0
-theme_override_font_sizes/normal_font_size = 18
-bbcode_enabled = true
-text = "EM SITUAÇÕES DE DESAFIO, VOCÊ PODE REALIZAR AÇÕES ARRISCADAS
-
-"
-
-[node name="Tutorial Title4" type="RichTextLabel" parent="Tutorial"]
-visible = false
-offset_left = 372.0
-offset_top = 192.0
-offset_right = 1128.0
-offset_bottom = 555.0
-theme_override_font_sizes/normal_font_size = 18
-bbcode_enabled = true
-text = "ESSAS JOGADAS TEM CHANCE DE SUCESSO  [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](6)[/b][/pulse], SUCESSO PARCIAL [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](4-5)[/b][/pulse] OU FALHA [pulse freq=1.0 color=#ffffff40 ease=-2.0][b](1-3)[/b][/pulse] E INFLUENCIAM DIRETAMENTE A NARRATIVA DO JOGO"
 
 [node name="Spawner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 14, 0)

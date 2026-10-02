@@ -73,7 +73,7 @@ leave --All--
 [signal arg="limpar_resultado"]
 join Player (virado) left [mirrored="true"]
 audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
-Player (virado): Não. E o senhor não pode me bater. Só porque estou preso?
+Player (virado): Não. E o senhor não pode me bater. Só porque estou pres{pronome4}?
 Player (virado): Eu tinha o direito de fugir. Agora o senhor não tem o direito de bater em mim, como não podia me tirar daqui e levar pra sua casa.
 join Tenente (zangado) right
 Tenente: [shake rate=20.0 level=5 connected=1]NÃO SÓ PODIA COMO FIZ![/shake]

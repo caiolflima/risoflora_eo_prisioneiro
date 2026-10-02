@@ -170,7 +170,7 @@ grow_vertical = 2
 theme_override_colors/default_color = Color(1, 0.81960785, 0.3019608, 1)
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "Risoflora e o Bucaneiro - v.0.8"
+text = "Risoflora e o Bucaneiro - v.0.92"
 
 [node name="Aviso2" type="RichTextLabel" parent="."]
 layout_mode = 1

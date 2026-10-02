@@ -361,13 +361,6 @@ light_color = Color(1, 0, 0.23921569, 1)
 shadow_enabled = true
 omni_range = 5.4819937
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6623125, 2.8723016, -8.233068)
-light_color = Color(1, 0, 0.23921569, 1)
-light_energy = 0.2
-shadow_enabled = true
-omni_range = 5.4819937
-
 [node name="OmniLight3D2" type="OmniLight3D" parent="Iluminacao"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9576406, 3.6766229, -6.03409)
 light_color = Color(0, 0.3529412, 0.9137255, 1)
@@ -378,23 +371,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2423306, 3.6766229, 2.33090
 light_color = Color(0.08627451, 0.29411766, 1, 1)
 omni_range = 8.362467
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -4.5303955, 16.40337, 0)
-light_color = Color(0.30019987, 0.3391972, 0.99995214, 1)
-spot_range = 28.919804
-
 [node name="SpotLight3D3" type="SpotLight3D" parent="Iluminacao"]
 transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -4.5303955, 16.40337, 0)
 light_color = Color(0.593729, 0.6723478, 1, 1)
 light_energy = 3.001
 spot_range = 28.919804
 spot_angle = 63.436363
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, -1.8366952, 5.5796766, -4.1242447)
-shadow_enabled = true
-spot_range = 7.8056345
-spot_angle = 18.815884
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="Iluminacao"]
 transform = Transform3D(1, 0, 0, 0, -0.011937736, 0.9999288, 0, -0.9999288, -0.011937736, 0.35361242, 5.5796766, -1.829201)
@@ -485,7 +467,7 @@ billboard = 1
 texture = ExtResource("13_1pa5l")
 
 [node name="Tutorial" type="Sprite3D" parent="."]
-transform = Transform3D(0.81, 0, 0, 0, 0.46, 0, 0, 0, 0.365, -3.8057861, 7.015259, -0.6932373)
+transform = Transform3D(1.325, 0, 0, 0, 0.75, 0, 0, 0, 0.42, -4.810425, 7.015259, -0.13867188)
 visible = false
 modulate = Color(0, 0, 0, 1)
 billboard = 1
@@ -500,6 +482,18 @@ offset_bottom = 278.0
 theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
 text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={36}]Tutorial[/font_size][/pulse]
+"
+horizontal_alignment = 1
+
+[node name="Tutorial Title2" type="RichTextLabel" parent="Tutorial"]
+visible = false
+offset_left = 821.0
+offset_top = 650.0
+offset_right = 1127.0
+offset_bottom = 747.0
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[pulse freq=1.0 color=#ffffff40 ease=-2.0][font_size={36}]>[/font_size][/pulse]
 "
 horizontal_alignment = 1
 
