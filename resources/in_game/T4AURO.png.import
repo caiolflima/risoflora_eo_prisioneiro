@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://diuifj2ws3dmk"
 path.s3tc="res://.godot/imported/T4AURO.png-22168ec33c941a1ad688f4e75cdd517f.s3tc.ctex"
+path.etc2="res://.godot/imported/T4AURO.png-22168ec33c941a1ad688f4e75cdd517f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/in_game/T4AURO.png"
-dest_files=["res://.godot/imported/T4AURO.png-22168ec33c941a1ad688f4e75cdd517f.s3tc.ctex"]
+dest_files=["res://.godot/imported/T4AURO.png-22168ec33c941a1ad688f4e75cdd517f.s3tc.ctex", "res://.godot/imported/T4AURO.png-22168ec33c941a1ad688f4e75cdd517f.etc2.ctex"]
 
 [params]
 

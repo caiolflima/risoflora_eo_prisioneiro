@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ga52mmtf811h"
 path.s3tc="res://.godot/imported/buckaneiro2.png-7723550c7aafd5dd93dbed45e5a3ce0d.s3tc.ctex"
+path.etc2="res://.godot/imported/buckaneiro2.png-7723550c7aafd5dd93dbed45e5a3ce0d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/in_game/buckaneiro2.png"
-dest_files=["res://.godot/imported/buckaneiro2.png-7723550c7aafd5dd93dbed45e5a3ce0d.s3tc.ctex"]
+dest_files=["res://.godot/imported/buckaneiro2.png-7723550c7aafd5dd93dbed45e5a3ce0d.s3tc.ctex", "res://.godot/imported/buckaneiro2.png-7723550c7aafd5dd93dbed45e5a3ce0d.etc2.ctex"]
 
 [params]
 

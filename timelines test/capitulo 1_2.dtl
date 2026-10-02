@@ -1,5 +1,5 @@
 audio music "res://resources/audio/teste_loop3.ogg" [volume="-15.0" loop="true"]
-join Player left
+join Player (virado) left [mirrored="true"]
 Player: Vê só que braba!
 Player: Saio daqui pra trabalhar de graça, e logo no noivado de sua filha, que é uma joia de moça, com aquela advogadazinha...
 Player: que ajudou o promotor a acertar minha tampa, e o senhor me vem com essa história.
@@ -8,7 +8,7 @@ leave Tenente
 join Galego center
 Galego: Fala mermo, {Nome_test}!
 leave Galego
-join Player left
+join Player (virado) left [mirrored="true"]
 Player: Fui lá achando que ia ter a chance de ficar com alguém na festa.
 Player: Lugar assim é cheio de gente bonita, mas vi uma chance de fugir e pulei o muro.
 Player: Não parecia justo perder a oportunidade, né?

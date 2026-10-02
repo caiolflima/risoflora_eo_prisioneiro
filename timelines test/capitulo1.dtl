@@ -1,6 +1,6 @@
 join Soldado (zangado) left
 Soldado: Vamos, meliante. Dessa vez tu não foge.
-join Tenente right
+join Tenente (Neutro) right
 Tenente: Pra quê isso, omi?
 Tenente: Por causa de soldado assim que os protestos acabaram com a polícia militar.
 Soldado (Neutro): Privatizar foi melhor mesmo, Tenente.
@@ -12,14 +12,16 @@ Cabo: …
 leave Cabo
 join Soldado left
 Soldado: Agora deu pra defender bandido, foi?
-join Tenente right
+join Tenente (zangado) right
 Tenente: Mais respeito, soldado! E não é nada disso, visse?
-Tenente: A gente ainda tem que fichar essa peça boa aí e gente desse tipo só abre a boca quando tá de bom humor.
+Tenente (Neutro): A gente ainda tem que fichar essa peça boa aí e gente desse tipo só abre a boca quando tá de bom humor.
 leave Soldado
 leave Tenente
-Player: ... desse tipo?  …
+- ... desse tipo?  …
+	join Tenente left [mirrored="true"]
+	Tenente: Piratas do ciberespaço, meliantes e marginais! Tu não pode negar que não é.
+- ...
 join Tenente left [mirrored="true"]
-Tenente: Piratas do ciberespaço, meliantes e marginais! Tu não pode negar que não é.
 Tenente: Enfim, vê se me ajuda e me dá um nome decente dessa vez pra eu pôr na tua ficha…
 [style name="player_style"]
 [text_input text="Inserir Nome:" var="Nome_test" placeholder="Buca" default="Buca"]
@@ -60,7 +62,7 @@ leave Soldado
 join Galego left
 Galego: Vê só que tiração, meu rato.
 Galego: Nem vou te contar onde eu queria que meu cano tivesse entrando
-join Tenente right
+join Tenente (zangado) right
 Tenente: Respeita a autoridade, rapaz.
 Tenente: Quer aumentar a pena por desacato?
 Galego: Com todo respeito, mas desde quando soldado raso é autoridade, delegado?
@@ -76,7 +78,7 @@ Alicate: Tás bem, criança? O que fizeram contigo?
 leave Alicate
 join Player (virado) right
 Player: Dale, comparsas, suave? Perdi muita coisa?
-Player (Neutro): Aliás, boy.. não inventem de fugir não que esses bichos não brincam.
+Player (virado): Aliás, boy.. não inventem de fugir não que esses bichos não brincam.
 leave --All--
 join Tenente left [mirrored="true"]
 Tenente: Chega de papo furado. {Nome_test}, ajoelhe.

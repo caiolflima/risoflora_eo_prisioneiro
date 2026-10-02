@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dia13dqbn0rip"
 path.s3tc="res://.godot/imported/vela_in-game.png-b523877c9a36cad0a5f77f5e2c54f4b4.s3tc.ctex"
+path.etc2="res://.godot/imported/vela_in-game.png-b523877c9a36cad0a5f77f5e2c54f4b4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/in_game/vela_in-game.png"
-dest_files=["res://.godot/imported/vela_in-game.png-b523877c9a36cad0a5f77f5e2c54f4b4.s3tc.ctex"]
+dest_files=["res://.godot/imported/vela_in-game.png-b523877c9a36cad0a5f77f5e2c54f4b4.s3tc.ctex", "res://.godot/imported/vela_in-game.png-b523877c9a36cad0a5f77f5e2c54f4b4.etc2.ctex"]
 
 [params]
 

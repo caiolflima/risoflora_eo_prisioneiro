@@ -18,9 +18,9 @@ Risoflora (Neutro): Então, te prenderam de novo?
 - A pior prisão é a que levamos dentro de nós...
 leave Player
 join Tenente left [mirrored="true"]
-Tenente: Pare de falar com {pronome1}, minha filha. Não tem nada de bom pra você aqui.
+Tenente (zangado): Pare de falar com {pronome1}, minha filha. Não tem nada de bom pra você aqui.
 Risoflora: Então, não quer que eu fale com {Nome_test}, mas quis que {pronome1} trabalhasse lá em casa?
-Tenente: Aquilo foi um erro. Um erro triste.
+Tenente (Neutro): Aquilo foi um erro. Um erro triste.
 Risoflora: Quero que {pronome1} saiba de uma coisa! Eu fui contra que painho te levasse pra fazer os serviços lá em casa desde o começo!
 leave Tenente
 join Player left [mirrored="true"]
@@ -32,11 +32,14 @@ join Player left [mirrored="true"]
 	Risoflora: Não era correto! Isso é abuso de poder
 	- Entendo seu ponto
 	- Ah, com isso eu concordo!
-Player (Neutro): Mas confesso que fiquei triste por não ter te visto lá.
+Player (virado): Mas confesso que fiquei triste por não ter te visto lá.
 Player: Não pude ver de novo seus olhos brilhando como no dia que pixei o prédio da Avalon!
 Risoflora: Como é que você se lembra de mim? Tinha várias pessoas olhando pra ti pendurado naquela corda?
 - Claro que lembro
+	update Risoflora (espantada)
 - Eu só tinha olhos pra tu.
+	update Risoflora (espantada)
+update Risoflora (Neutro)
 Player: Era madrugada de uma segunda.
 Player: O sol nem tinha nascido, mas seus olhos já brilhavam mais que uma supernova naquela parada de ônibus.
 leave Player
@@ -111,20 +114,22 @@ Tenente: Doutora, eu vou cuidar desse negócio da comida.
 Tenente: Tenha um pouco de paciência com Risoflora. A menina é ainda muito nova, não conhece bem a vida.
 Noiva: Risoflora, vamos embora.
 Noiva: Você é minha noiva, deve se portar como tal.
-join Player leftmost [mirrored="true"]
+join Player (Neutro) leftmost [mirrored="true"]
 - Ninguém deveria decidir sua vida por você!
 	Noiva: Não escute essa escória, meu bem.
 	Noiva: Vamos sair daqui logo. Isso não é lugar pra você.
 - ...
-Risoflora: ...
+Risoflora (triste): ...
 leave Player
 join Cabo leftmost
 Tenente: Cabo, venha comigo.
 Tenente: Vamos ver se o auto-mech da minha menina precisa de reparos.
 Cabo: Sim, senhor.
 leave --All--
+[background arg="#000000ff" fade="1.0" wait="true"]
 [signal arg="risoflora_sai"]
 [wait time="3.0"]
+[background arg="#00000000" fade="0.0"]
 join Soldado center
 Soldado: Finalmente um pouco de paz nessa joça...
 Soldado: Acho que vou tirar um cochilo...

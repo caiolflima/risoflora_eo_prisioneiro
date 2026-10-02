@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://umsscvinglev"
 path.s3tc="res://.godot/imported/portrait sheet.png-5112a111efd470f94c613979675eed50.s3tc.ctex"
+path.etc2="res://.godot/imported/portrait sheet.png-5112a111efd470f94c613979675eed50.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://resources/retratos/portrait sheet.png"
-dest_files=["res://.godot/imported/portrait sheet.png-5112a111efd470f94c613979675eed50.s3tc.ctex"]
+dest_files=["res://.godot/imported/portrait sheet.png-5112a111efd470f94c613979675eed50.s3tc.ctex", "res://.godot/imported/portrait sheet.png-5112a111efd470f94c613979675eed50.etc2.ctex"]
 
 [params]
 

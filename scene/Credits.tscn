@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c7nmqm3dya6n1" path="res://scene/credits.gd" id="1_pt2rv"]
 [ext_resource type="Texture2D" uid="uid://chru8n4sr4dy8" path="res://resources/menu_mockup.png" id="2_6vquc"]
-[ext_resource type="Texture2D" uid="uid://dfpio11j1rj54" path="res://resources/logo_credits.png" id="3_1f8ek"]
+[ext_resource type="Texture2D" uid="uid://lqixw0kt7w3m" path="res://resources/logo_credits2.png" id="3_1f8ek"]
 [ext_resource type="Texture2D" uid="uid://dy1n2kdlw8pqg" path="res://resources/retratos/caio.png" id="3_ihyv7"]
 [ext_resource type="FontFile" uid="uid://lblo22ya3cxr" path="res://resources/DMSans-VariableFont_opsz,wght.ttf" id="3_kg8ch"]
 [ext_resource type="Texture2D" uid="uid://ctdivuytxer7k" path="res://resources/retratos/danilo.png" id="4_1f8ek"]
@@ -66,7 +66,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_pt2rv")
 
 [node name="Caio3" type="Sprite2D" parent="."]
 position = Vector2(975, 244.99995)
-scale = Vector2(0.855, 0.855)
+scale = Vector2(1.12, 1.12)
 texture = ExtResource("3_1f8ek")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

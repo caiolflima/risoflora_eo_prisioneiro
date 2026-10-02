@@ -1,6 +1,8 @@
 [clear time="1.0"]
 [signal arg="flashback"]
 audio music "res://resources/audio/flashback.ogg" [volume="0.0" loop="true"]
+[background arg="#000000ff" fade="1.0"]
+[background arg="#00000000" fade="1.0"]
 [wait time="2.0"]
 VOCÊ VÊ UM HOMEM DE TERNO BRANCO PARALISADO ENQUANTO UM T4-UR0 DESCONTROLADO AVANÇA NA DIREÇÃO DE VOCÊS
 - FUGIR [ESGUEIRAR] [1]
@@ -150,7 +152,7 @@ VOCÊ VÊ UM HOMEM DE TERNO BRANCO PARALISADO ENQUANTO UM T4-UR0 DESCONTROLADO A
 [signal arg="limpar_resultado"]
 [signal arg="voltar_cadeia"]
 [wait time="1.0"]
-join Player left
+join Player (virado) left [mirrored="true"]
 audio music -
 Player: O caba com a peça na mão, delegado, sem saber onde atirava...
 Player: Com certeza nunca trabalhou com esse tipo de maquinário. Isso coisa de peão, chefe.

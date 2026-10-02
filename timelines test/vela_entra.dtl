@@ -18,7 +18,7 @@ Vela (zangado): As ruas me conhecem e me respeitam como Vela de Libra.
 if {final} == "Marcado_pra_morrer":
 	jump marcado_pra_morrer/
 join Alicate leftmost
-join Player left [mirrored="true"]
+join Player (virado) left [mirrored="true"]
 - É ele, Alicate. O homem de terno branco!
 	join Vela right
 	Vela de Libra\: Aí está você!
@@ -32,7 +32,7 @@ Vela: Sou um cidadão de bem, um homem religioso.
 Vela: Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja.
 Vela: Acendo uma vela e rezo um pai nosso pela alma.
 leave Alicate
-join Player leftmost [mirrored="true"]
+join Player (virado) leftmost [mirrored="true"]
 join Soldado left
 Soldado (medo): [shake rate=20.0 level=5 connected=1]Ca-camisa de sa-saudade?[/shake]
 leave Player
@@ -61,7 +61,7 @@ Vela: Você podia morrer das duas mortes.
 - A morte é cobrador muito sério: não há documento, mas só recebe uma vez
 - Fiz o que eu sabia e podia fazer.
 Vela: Você é uma pessoa corajosa e esperta.
-Vela: É bom dever favor a gente coragem, porque quem tem coragem não gosta de viver pedindo ajuda.
+Vela: É bom dever favor a gente com coragem, porque quem tem coragem não gosta de viver pedindo ajuda.
 Vela: Mas dever favor a raposa é o mesmo que dormir de porta aberta. O que é que você quer em pagamento?
 leave --All--
 join Galego left [mirrored="true"]
@@ -69,8 +69,8 @@ join Alicate leftmost [mirrored="true"]
 Galego: Bora, {Nome_test}, pede pra ele meter o pipoco nesse soldado e tirar a gente daqui
 Alicate: Odeio admitir, mas Galego tem razão.
 join Vela right
-Vela: Que pedido sem graça o desses dois, {Nome_test}. Não peça covardia. Nem posso perder tempo, vamos falar claro. 
-Vela: Você não tem inimigos?
+Vela (zangado): Que pedido sem graça o desses dois, {Nome_test}. Não peça covardia. Nem posso perder tempo, vamos falar claro. 
+Vela (Neutro): Você não tem inimigos?
 leave Alicate
 leave Galego
 join Player left [mirrored="true"]
@@ -83,6 +83,30 @@ Vela: Diga um nome, {Nome_test}. Pode ser o juiz. O promotor. Você me dá o nom
 Vela (zangado): E então? Diz ou não diz? Você tem inimigos?
 leave Vela
 join Player center [animation="Fade In Up"]
+- O Tenente
+	join Player left [mirrored="true"]
+	join Vela right
+	Vela: Pois bem. Considere feito!
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
+- O Cabo
+	join Player left [mirrored="true"]
+	join Vela right
+	Vela: Pois bem. Considere feito!
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
+- O Soldado
+	join Player left [mirrored="true"]
+	join Vela right
+	Vela: Pois bem. Considere feito!
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
+- A Noiva
+	join Player left [mirrored="true"]
+	join Vela right
+	Vela: Pois bem. Considere feito!
+	[clear time="1.0"]
+	[signal arg="fim_de_jogo"]
 - Tenho, mas quero todos vivos.
 	Player: Por que vou querer eles mortos?
 	Player (virado): Assim, eu também ia matar a morte, a doença, delegados safados, ia matar a velhice e a covardia, chefe.
@@ -117,30 +141,6 @@ join Player center [animation="Fade In Up"]
 	[wait_input]
 	[signal arg="menu"]
 	[end_timeline]
-- O Tenente
-	join Player left [mirrored="true"]
-	join Vela right
-	Vela: Pois bem. Considere feito!
-	[clear time="1.0"]
-	[signal arg="fim_de_jogo"]
-- O Cabo
-	join Player left [mirrored="true"]
-	join Vela right
-	Vela: Pois bem. Considere feito!
-	[clear time="1.0"]
-	[signal arg="fim_de_jogo"]
-- O Soldado
-	join Player left [mirrored="true"]
-	join Vela right
-	Vela: Pois bem. Considere feito!
-	[clear time="1.0"]
-	[signal arg="fim_de_jogo"]
-- A Noiva
-	join Player left [mirrored="true"]
-	join Vela right
-	Vela: Pois bem. Considere feito!
-	[clear time="1.0"]
-	[signal arg="fim_de_jogo"]
 [clear time="1.0"]
 leave --All--
 [wait time="0.5"]

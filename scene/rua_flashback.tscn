@@ -38,12 +38,10 @@ light_color = Color(1, 1, 0.8392157, 1)
 
 [node name="Player" type="Sprite3D" parent="."]
 transform = Transform3D(0.05174404, 0.023025354, -0.0699456, -9.889539e-10, 0.08548718, 0.028141474, 0.073638, -0.016179482, 0.049149465, -0.5940943, 1.4355521, -2.0630856)
-modulate = Color(1, 0.9607843, 0.5294118, 1)
 texture = ExtResource("2_s2skm")
 
 [node name="Vela" type="Sprite3D" parent="."]
 transform = Transform3D(0.17248014, 0.07675118, -0.23315202, -3.296513e-09, 0.28495726, 0.09380492, 0.24545999, -0.05393161, 0.16383155, 0.1103735, 1.4355521, 1.1003056)
-modulate = Color(0.99998325, 0.3221447, 0.33925924, 1)
 billboard = 1
 texture = ExtResource("3_s2skm")
 

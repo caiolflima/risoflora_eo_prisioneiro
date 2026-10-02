@@ -5,10 +5,10 @@ join Player left [mirrored="true"]
 	Vela: Vela de Libra\: Aí está você!
 - Você sobreviveu!
 	join Vela right
-	Vela: Vela de Libra\: Não graças a você!
+	Vela (zangado): Vela de Libra\: Não graças a você!
 join Alicate leftmost [mirrored="true"]
 Alicate: Vela? Não entendi essa! E depois falam que meu vulgo que é esquisito!
-Vela: Vou explicar, velho. Sou um cidadão de bem, um homem religioso.
+Vela (Neutro): Vou explicar, velho. Sou um cidadão de bem, um homem religioso.
 Vela: Quando sou obrigado a estampar camisa de saudade com a cara de um cristão, passo primeiro numa igreja.
 Vela: Acendo uma vela e rezo um pai nosso pela alma.
 leave Alicate
@@ -54,23 +54,27 @@ Vela (Neutro): Por um fim em que me causou tamanha desonra. Vamos, {Nome_test}, 
 		Vela: Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
 		[signal arg="limpar_resultado"]
 		[clear time="1.0"]
+		[signal arg="abrir_cela"]
 	if {resultado_teste} == "Sucesso Completo":
 		audio "res://resources/audio/sucesso.ogg"
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
 		Vela: Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
 		[signal arg="limpar_resultado"]
 		[clear time="1.0"]
+		[signal arg="abrir_cela"]
 	if {resultado_teste} == "Sucesso Parcial":
 		audio "res://resources/audio/sucesso_parcial.ogg"
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
 		Vela: Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
 		[signal arg="limpar_resultado"]
+		[signal arg="abrir_cela"]
 	if {resultado_teste} == "Resultado Ruim":
 		audio "res://resources/audio/resultado_rolagem3.ogg"
 		O maior dos dados foi {resultado} e o seu resultado foi um {resultado_teste}!
 		Vela (zangado): Que deprimente! Você deveria ter vergonha de estar numa situação dessas.
 		Vela (Neutro): Porco, abra a cela. Deixe essa pobre alma desfrutar um momento de liberdade.
 		[signal arg="limpar_resultado"]
+		[signal arg="abrir_cela"]
 	join Soldado center [mirrored="true"]
 	Soldado (medo): Mas...
 	leave Soldado
