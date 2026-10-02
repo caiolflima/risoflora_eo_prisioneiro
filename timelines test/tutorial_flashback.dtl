@@ -1,8 +1,6 @@
 [clear time="1.0"]
 [signal arg="flashback"]
 audio music "res://resources/audio/flashback.ogg" [volume="0.0" loop="true"]
-[background arg="#000000ff" fade="1.0"]
-[background arg="#00000000" fade="1.0"]
 [wait time="2.0"]
 VOCÊ VÊ UM HOMEM DE TERNO BRANCO PARALISADO ENQUANTO UM T4-UR0 DESCONTROLADO AVANÇA NA DIREÇÃO DE VOCÊS
 - FUGIR [ESGUEIRAR] [1]

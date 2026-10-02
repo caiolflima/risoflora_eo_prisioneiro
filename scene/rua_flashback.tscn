@@ -1,21 +1,27 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2ukoixmuor3q"]
+[gd_scene load_steps=17 format=3 uid="uid://c2ukoixmuor3q"]
 
 [ext_resource type="Script" uid="uid://dtuy2y7og6i0u" path="res://scene/rua_flashback.gd" id="1_s2skm"]
+[ext_resource type="PackedScene" uid="uid://cacwgjj83gw7a" path="res://resources/modelos/littlechurch.glb" id="2_mommx"]
 [ext_resource type="Texture2D" uid="uid://ga52mmtf811h" path="res://resources/in_game/buckaneiro2.png" id="2_s2skm"]
 [ext_resource type="Texture2D" uid="uid://cl07xy5xnop43" path="res://resources/in_game/vela.tres" id="3_s2skm"]
 [ext_resource type="Texture2D" uid="uid://diuifj2ws3dmk" path="res://resources/in_game/T4AURO.png" id="4_mommx"]
+[ext_resource type="Texture2D" uid="uid://dob5n73xylebw" path="res://resources/in_game/miniaturas.png" id="5_01r4u"]
 [ext_resource type="Texture2D" uid="uid://6u2i81bkb8hn" path="res://resources/rect.png" id="5_ti3ua"]
 [ext_resource type="Script" uid="uid://cjkufycirrqj" path="res://scene/spawner.gd" id="7_mommx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yehda"]
+atlas = ExtResource("5_01r4u")
+region = Rect2(1410, 594, 205, 464)
 
 [sub_resource type="BoxMesh" id="BoxMesh_eggbe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cmkfn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_cmkfn"]
-size = Vector3(40, 0.1, 40)
+size = Vector3(12.776, 0.1, 15.469)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nicsm"]
-size = Vector3(40, 0.1, 40)
+size = Vector3(12.77594, 0.1, 15.468811)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ti3ua"]
 size = Vector3(9, 12, 1)
@@ -33,25 +39,35 @@ script = ExtResource("1_s2skm")
 [node name="Iluminacao" type="Node" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Iluminacao"]
-transform = Transform3D(1, 0, 0, 0, 0.6526011, 0.75770164, 0, -0.75770164, 0.6526011, 0, 11.561157, 0)
+transform = Transform3D(0.10452842, 0.75398123, -0.64852613, 0, 0.65209836, 0.75813437, 0.9945219, -0.07924659, 0.068162814, 0, 11.561157, 0)
 light_color = Color(1, 1, 0.8392157, 1)
+light_energy = 0.8
+
+[node name="littlechurch" parent="." instance=ExtResource("2_mommx")]
+transform = Transform3D(-0.04477021, 0, -0.99899733, 0, 1, 0, 0.99899733, 0, -0.04477021, 1.1256962, 0.77146626, 2.981964)
 
 [node name="Player" type="Sprite3D" parent="."]
-transform = Transform3D(0.05174404, 0.023025354, -0.0699456, -9.889539e-10, 0.08548718, 0.028141474, 0.073638, -0.016179482, 0.049149465, -0.5940943, 1.4355521, -2.0630856)
+transform = Transform3D(0.03737069, 0.01662942, -0.05051627, -7.1424444e-10, 0.061740737, 0.020324396, 0.053182997, -0.011685179, 0.03549683, -3.013589, 1.7869925, -1.0032711)
 texture = ExtResource("2_s2skm")
 
 [node name="Vela" type="Sprite3D" parent="."]
-transform = Transform3D(0.17248014, 0.07675118, -0.23315202, -3.296513e-09, 0.28495726, 0.09380492, 0.24545999, -0.05393161, 0.16383155, 0.1103735, 1.4355521, 1.1003056)
+transform = Transform3D(0.11498677, 0.051167455, -0.15543467, -2.1976752e-09, 0.1899715, 0.06253661, 0.16363999, -0.035954412, 0.10922104, -2.890298, 1.4355521, 1.0158939)
 billboard = 1
 texture = ExtResource("3_s2skm")
 
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, -0.8460083, 2.965454, 6.004822)
+billboard = 1
+texture = SubResource("AtlasTexture_yehda")
+
 [node name="Taurus" type="Sprite3D" parent="."]
-transform = Transform3D(0.4024536, 0.17908607, -0.54402137, -7.691864e-09, 0.66490024, 0.21887814, 0.57273996, -0.1258404, 0.38227355, -1.5743265, 2.2760062, -5.454687)
+transform = Transform3D(0.28746685, 0.12791865, -0.3885867, -5.4941887e-09, 0.47492877, 0.15634154, 0.4091, -0.08988601, 0.27305254, -3.2883158, 2.2760062, -5.001013)
 modulate = Color(1, 0.49019608, 1, 1)
 billboard = 1
 texture = ExtResource("4_mommx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(28.42, 0, 0, 0, 1.355, 0, 0, 0, 24.235, 0, 0, 0)
@@ -62,10 +78,10 @@ transform = Transform3D(28.42, 0, 0, 0, 1.355, 0, 0, 0, 24.235, 0, 0, 0)
 shape = SubResource("BoxShape3D_cmkfn")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.48633534, 0.6978256, -0.5258493, 0, 0.60181504, 0.79863554, 0.87377226, -0.3884047, 0.29268393, -6.867, 10.126, 1.011)
+transform = Transform3D(0.48633534, 0.6978256, -0.5258492, 0, 0.601815, 0.79863554, 0.87377226, -0.3884047, 0.2926839, -7.14825, 10.126, 1.6779922)
 projection = 1
 fov = 46.3
-size = 7.451
+size = 9.602
 near = 0.015
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -78,6 +94,7 @@ visible = false
 mesh = SubResource("BoxMesh_cmkfn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CanvasLayer/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4510193, 0, 0.23251343)
 shape = SubResource("BoxShape3D_nicsm")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="CanvasLayer"]
@@ -119,6 +136,7 @@ visible = false
 shape = SubResource("BoxShape3D_ti3ua")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CanvasLayer/StaticBody3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, -2.534546)
 mesh = SubResource("BoxMesh_s2skm")
 
 [node name="Tutorial" type="Sprite3D" parent="."]

@@ -31,6 +31,7 @@ func _on_signal(signal_passed_in):
 		Dialogic.VAR.resultado_teste = Global.resultado_teste #as variaveis globais retornam valor para as variaveis dialogicc
 		Dialogic.VAR.resultado = Global.resultado_dado
 		
+			
 	if signal_passed_in =="voltar_cadeia":
 		#AudioManager.stop_music()
 		#AudioManager.play("Main") #Volta para musica do loop principal

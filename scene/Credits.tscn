@@ -51,8 +51,10 @@ script = ExtResource("1_pt2rv")
 [node name="Panel" type="Panel" parent="."]
 clip_contents = true
 layout_mode = 0
-offset_right = 1934.0
-offset_bottom = 1102.0
+offset_left = -3.0
+offset_top = -11.0
+offset_right = 1931.0
+offset_bottom = 1091.0
 theme = SubResource("Theme_8rpc7")
 theme_override_styles/panel = SubResource("StyleBoxTexture_rgvae")
 

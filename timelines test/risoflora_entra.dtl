@@ -126,10 +126,8 @@ Tenente: Cabo, venha comigo.
 Tenente: Vamos ver se o auto-mech da minha menina precisa de reparos.
 Cabo: Sim, senhor.
 leave --All--
-[background arg="#000000ff" fade="1.0" wait="true"]
 [signal arg="risoflora_sai"]
 [wait time="3.0"]
-[background arg="#00000000" fade="0.0"]
 join Soldado center
 Soldado: Finalmente um pouco de paz nessa joça...
 Soldado: Acho que vou tirar um cochilo...
